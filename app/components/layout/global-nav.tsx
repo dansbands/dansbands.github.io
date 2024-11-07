@@ -18,16 +18,16 @@ const GlobalNav = () => {
         <div className="footer2-center" id="navbar-example">
           <ul className="nav nav-pills green" role="tablist">
             <li>
-              <a href="index.html">HOME</a>
+              <a href="#home">HOME</a>
             </li>
             <li>
-              <a href="index.html#professional">PROFESSIONAL</a>
+              <a href="#professional">PROFESSIONAL</a>
             </li>
             <li>
               <a href="#portfolio">PORTFOLIO</a>
             </li>
             <li>
-              <a href="index.html">CONTACT</a>
+              <a href="#contact">CONTACT</a>
             </li>
           </ul>
         </div>

@@ -350,7 +350,7 @@ html {
     background-color: gray;
     height: 600px;*/
   color: white;
-  padding-bottom: 300px;
+  padding-bottom: 500px;
   font-family: Avenir;
 }
 
@@ -559,14 +559,14 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 800px;
+  height: 1000px;
   color: white;
   font-family: Arial;
 }
 
 .professional .container {
   position: relative;
-  width: 90%;
+  width: 100%;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -769,6 +769,7 @@ html {
   text-align: right;
   z-index: 2;
   color: lightgray;
+  margin-bottom: 2px;
 }
 
 #scale {
@@ -819,7 +820,7 @@ html {
 
 .bar {
   float: left;
-  height: 15px;
+  height: 20px;
   margin-bottom: 22.5px;
   position: relative;
   width: 100%;
@@ -974,14 +975,14 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 800px;
+  height: 1000px;
   color: white;
   font-family: Arial;
 }
 
 .portfolio .container {
   position: relative;
-  width: 70%;
+  width: 100%;
   text-align: center;
   top: 15%;
   left: 50%;
@@ -1021,11 +1022,13 @@ html {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /*background-color: #BEC7D5;*/
 }
 
 .contact-inner {
-  height: 400px;
+  height: 500px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
   background-color: #333b50;
   width: 100%;
   margin: 150px 0;
@@ -1033,17 +1036,15 @@ html {
   font-family: Avenir;
 }
 
+.contact-inner h1 {
+  font-weight: 400;
+}
+
 .column1 {
   width: 40%;
   height: 80%;
   display: inline-block;
-  margin-top: 180px;
-  left: 50%;
-  top: 50%;
-  transform: translate(10%, -50%);
   text-align: left;
-  position: static;
-  float: left;
   line-height: 200%;
 }
 
@@ -1110,7 +1111,7 @@ label {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 250px;
+  height: 500px;
   color: white;
   font-family: Arial;
 }
@@ -1222,8 +1223,9 @@ label {
   }
 
   .main .container {
+    height: 800px;
     margin-top: 60px;
-    margin-left: 15%;
+    padding-left: 25%;
   }
 
   .welcome {
