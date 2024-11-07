@@ -1003,6 +1003,9 @@ html {
 .portfolio .row {
   height: 320px;
   margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .portfolio img {
@@ -1189,17 +1192,19 @@ label {
   height: 25px;
 }
 
-.bottom-nav a {
+.bottom-nav button {
   text-decoration: none;
   color: #949eae;
   transition: 0.5s;
+  background: transparent;
+  border: none;
 }
 
-.bottom-nav a:hover {
+.bottom-nav button:hover {
   color: lightgray;
 }
 
-.bottom-nav a:active {
+.bottom-nav button:active {
   color: #21d44f;
 }
 
@@ -1308,6 +1313,13 @@ label {
 
   .portfolio .container {
     top: 5%;
+  }
+
+  .portfolio .row {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .portfolio img {
@@ -1484,7 +1496,7 @@ label {
   }
 
   .portfolio img {
-    width: 65%;
+    width: 300;
     margin: 10px 0;
     text-align: center;
   }
