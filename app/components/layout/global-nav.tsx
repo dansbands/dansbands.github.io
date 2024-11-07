@@ -1,8 +1,15 @@
+'use client'
+
 import Image from "next/image";
 import React from "react";
 import Favicon2 from "@/app/Media/favicon2.png";
 
 const GlobalNav = () => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const element = document.getElementById(e.currentTarget.name);
+    element?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div className="smooth" id="home">
       <div className="footer2">
@@ -18,16 +25,24 @@ const GlobalNav = () => {
         <div className="footer2-center" id="navbar-example">
           <ul className="nav nav-pills green" role="tablist">
             <li>
-              <a href="#home">HOME</a>
+              <button type="button" onClick={handleClick} name="home">
+                HOME
+              </button>
             </li>
             <li>
-              <a href="#professional">PROFESSIONAL</a>
+              <button type="button" onClick={handleClick} name="professional">
+                PROFESSIONAL
+              </button>
             </li>
             <li>
-              <a href="#portfolio">PORTFOLIO</a>
+              <button type="button" onClick={handleClick} name="portfolio">
+                PORTFOLIO
+              </button>
             </li>
             <li>
-              <a href="#contact">CONTACT</a>
+              <button type="button" onClick={handleClick} name="contact">
+                CONTACT
+              </button>
             </li>
           </ul>
         </div>

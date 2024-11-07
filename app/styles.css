@@ -306,23 +306,24 @@ html {
   text-align: left;
 }
 
-.footer2 a {
+.footer2 button {
   text-decoration: none;
   color: #949eae;
   transition: 0.5s;
   margin: 0 20px 0 0;
+  background-color: transparent;
+  border: none;
 }
 
-.footer2 a:hover {
+.footer2 button:hover {
   color: lightgray;
 }
 
-.footer2 a:active {
+.footer2 button:active {
   color: #21d44f;
 }
 
-.footer2 a:focus {
-  padding: 0px;
+.footer2 button:focus {
   background: transparent !important;
   color: #bec7d5;
 }
