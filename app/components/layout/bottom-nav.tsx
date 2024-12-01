@@ -1,11 +1,13 @@
-'use client'
+"use client";
 
 import React from "react";
-import Home from "@/app/Media/Icons/Home.svg";
-import Professional from "@/app/Media/Icons/Professional.svg";
-import Portfolio from "@/app/Media/Icons/Portfolio.svg";
-import Contact from "@/app/Media/Icons/Contact.svg";
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBriefcase,
+  faCode,
+  faEnvelope,
+  faHouse,
+} from "@fortawesome/free-solid-svg-icons";
 
 const BottomNav = () => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -20,22 +22,22 @@ const BottomNav = () => {
           <ul>
             <li>
               <button type="button" name="home" onClick={handleClick}>
-                <Image alt="Home" src={Home} width={40} />
+                <FontAwesomeIcon icon={faHouse} />
               </button>
             </li>
             <li>
               <button type="button" name="professional" onClick={handleClick}>
-                <Image alt="Professional" src={Professional} width={40} />
+                <FontAwesomeIcon icon={faCode} />
               </button>
             </li>
             <li>
               <button type="button" name="portfolio" onClick={handleClick}>
-                <Image alt="Portfolio" src={Portfolio} width={40} />
+                <FontAwesomeIcon icon={faBriefcase} />
               </button>
             </li>
             <li>
               <button type="button" name="contact" onClick={handleClick}>
-                <Image alt="Contact" src={Contact} width={40} />
+                <FontAwesomeIcon icon={faEnvelope} />
               </button>
             </li>
           </ul>
