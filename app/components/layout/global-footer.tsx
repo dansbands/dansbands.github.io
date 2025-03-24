@@ -15,7 +15,7 @@ const GlobalFooter = () => {
         />
       </div>
       <div className="footer-center">
-        <p>{"© 2024 by Dan O'Dea"}</p>
+        <p>{"© 2025 by Dan O'Dea"}</p>
       </div>
     </div>
   );

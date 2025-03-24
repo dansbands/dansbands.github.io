@@ -138,7 +138,6 @@ html {
   font-family: Avenir;
 }
 
-
 .visible-on-scroll {
   display: none;
 }
@@ -269,7 +268,7 @@ html {
     border: 3px white solid;*/
   display: inline-block;
   height: 50px;
-  width: 50%;
+  width: 60%;
   position: absolute;
   font-family: Avenir;
 
@@ -279,6 +278,29 @@ html {
 
   margin-top: 25px;
   margin-left: 25%;
+}
+
+.footer2-center a {
+  color: #949eae;
+  font-family: Avenir;
+  text-align: left;
+  font-size: 14px;
+  margin-right: 20px;
+  transition: color 0.5s;
+  background-color: transparent;
+  text-decoration: none;
+
+  &:hover {
+    color: lightgray;
+    outline: none;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: #bec7d5;
+    outline: none;
+    text-decoration: none;
+  }
 }
 
 .footer2-center p {
@@ -309,7 +331,7 @@ html {
   text-align: left;
 }
 
-.footer2 button {
+.footer2 button, a {
   text-decoration: none;
   color: #949eae;
   transition: 0.5s;

@@ -1,19 +1,23 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import React from "react";
 import Favicon2 from "@/app/Media/favicon2.png";
+import Link from "next/link";
 
 const GlobalNav = () => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (window.location.pathname != "/") {
+      window.location.href = "/";
+    }
     const element = document.getElementById(e.currentTarget.name);
     element?.scrollIntoView({ behavior: "smooth" });
-  }
+  };
 
   return (
     <div className="smooth" id="home">
       <div className="footer2">
-        <div className="footer2-left">
+        <Link href="/" className="footer2-left">
           <Image
             alt="favicon"
             className="icon"
@@ -21,9 +25,9 @@ const GlobalNav = () => {
             height={40}
             width={40}
           />
-        </div>
+        </Link>
         <div className="footer2-center" id="navbar-example">
-          <ul className="nav nav-pills green" role="tablist">
+          <ul className="green" role="tablist">
             <li>
               <button type="button" onClick={handleClick} name="home">
                 HOME
@@ -35,14 +39,20 @@ const GlobalNav = () => {
               </button>
             </li>
             <li>
-              <button type="button" onClick={handleClick} name="portfolio">
-                PORTFOLIO
+              <button type="button" onClick={handleClick} name="recent-work">
+                RECENT WORK
               </button>
             </li>
             <li>
               <button type="button" onClick={handleClick} name="contact">
                 CONTACT
               </button>
+            </li>
+            <li>
+              <Link href="portfolio">PORTFOLIO</Link>
+            </li>
+            <li>
+              <Link href="resume">RESUME</Link>
             </li>
           </ul>
         </div>

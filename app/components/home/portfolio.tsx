@@ -8,14 +8,14 @@ import Image from "next/image";
 const Portfolio = () => {
   return (
     <>
-      <div id="portfolio" className="smooth"></div>
+      <div id="recent-work" className="smooth"></div>
       <div className="portfolio">
         <div className="container">
           <h1 className="title">
-            <span className="gray">02</span> PORTFOLIO
+            <span className="gray">02</span> RECENT WORK
           </h1>
           <h2 className="subtitle">
-            MY LATEST WORK. <a href="portfolio">{"SEE MORE >"}</a>
+            MY LATEST PROJECTS. <a href="portfolio">{"SEE MORE >"}</a>
           </h2>
           <div className="row">
             <Image alt="Album" src={Album} width="300" />
