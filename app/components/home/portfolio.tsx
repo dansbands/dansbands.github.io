@@ -15,7 +15,7 @@ const Portfolio = () => {
             <span className="gray">02</span> PORTFOLIO
           </h1>
           <h2 className="subtitle">
-            MY LATEST WORK. <a href="portfolio.html">{"SEE MORE >"}</a>
+            MY LATEST WORK. <a href="portfolio">{"SEE MORE >"}</a>
           </h2>
           <div className="row">
             <Image alt="Album" src={Album} width="300" />

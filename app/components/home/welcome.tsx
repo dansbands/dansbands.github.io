@@ -14,12 +14,12 @@ const Welcome = () => {
             enjoyable to use.
           </p>
           <p>Feel free to have a look around.</p>
-          <a className="btn" href="portfolio.html">
+          <a className="btn" href="portfolio">
             Recent Work
           </a>
           <a
             className="btn"
-            href="Media/Resume%20-%20Dan%20ODea.pdf"
+            href="/resume"
             target="_blank"
           >
             Résumé
