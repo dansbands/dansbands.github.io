@@ -138,11 +138,14 @@ html {
   font-family: Avenir;
 }
 
-/*
-#scroll {
-    display: none;
+
+.visible-on-scroll {
+  display: none;
 }
-*/
+
+.visible-on-scroll.is-visible {
+  display: block;
+}
 
 .wrapper {
   height: 90%;
@@ -606,7 +609,7 @@ html {
 @import url(http://fonts.googleapis.com/css?family=Oswald:700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
-@-keyframes grow-95 {
+@keyframes grow-95 {
   from {
     right: 100%;
   }
@@ -624,7 +627,7 @@ html {
   }
 }
 
-@-keyframes grow-90 {
+@keyframes grow-90 {
   from {
     right: 100%;
   }
@@ -642,7 +645,7 @@ html {
   }
 }
 
-@-keyframes grow-85 {
+@keyframes grow-85 {
   from {
     right: 100%;
   }

@@ -1,15 +1,44 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useEffect } from "react";
 
 const Professional = () => {
+  const professionalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.children[1].children[2].classList.add("is-visible");
+          } else {
+            entry.target.classList.remove("is-visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (professionalRef.current) {
+      observer.observe(professionalRef.current);
+    }
+
+    return () => {
+      if (professionalRef.current) {
+        observer.unobserve(professionalRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="professional">
+    <div className="professional" ref={professionalRef}>
       <div id="professional" className="smooth"></div>
       <div className="container">
         <h1 className="title">
           <span className="gray">01</span> PROFESSIONAL
         </h1>
         <h2 className="subtitle">MY KNOWLEDGE LEVEL IN SOFTWARE</h2>
-        <div className="center" id="scroll">
+        <div className="visible-on-scroll">
           <div id="skills">
             <div id="apps">
               <p>Sketch</p>
