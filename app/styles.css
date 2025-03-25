@@ -531,12 +531,12 @@ html {
 
 .welcome .container {
   position: relative;
-  width: 50%;
+  width: 60%;
   text-align: center;
   /*top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);*/
-  margin-left: 25%;
+  margin-left: 20%;
   margin-top: 5%;
 }
 
@@ -1054,8 +1054,9 @@ html {
 }
 
 .contact-inner {
-  height: 500px;
-  padding: 20px 20px;
+  min-height: 600px;
+  overflow: auto;
+  padding: 40px 30px;
   display: flex;
   justify-content: space-between;
   background-color: #333b50;
@@ -1070,7 +1071,7 @@ html {
 }
 
 .column1 {
-  width: 40%;
+  width: 45%;
   height: 80%;
   display: inline-block;
   text-align: left;
@@ -1079,7 +1080,7 @@ html {
 
 .column1 h1 {
   font-size: 40px;
-  margin: 15px 0;
+  margin: 0 0 15px 0;
 }
 
 .column1 p {
@@ -1087,15 +1088,15 @@ html {
 }
 
 .column2 {
-  width: 40%;
+  width: 45%;
   height: 80%;
   display: inline-block;
   margin: 0%;
   left: 50%;
   top: 50%;
-  transform: translate(-5%, 10%);
+  /* transform: translate(-5%, 10%); */
   position: static;
-  float: right;
+  /* float: right; */
   text-align: left;
   font-family: Avenir;
   font-weight: 100;
@@ -1107,7 +1108,7 @@ html {
   background: none;
   border: #21d44f 3px solid;
   padding: 10px;
-  width: 100px;
+  width: 150px;
   display: inline-block;
   transition: 0.5s;
   border-radius: 6px;
@@ -1131,6 +1132,10 @@ label {
   max-width: 100%;
   margin-bottom: 5px;
 }
+
+.error-message {
+    color: red;
+  }
 
 .professional2 {
   padding-top: 250px;
