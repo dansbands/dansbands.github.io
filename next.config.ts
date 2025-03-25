@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   assetPrefix: isProd ? "/danodeamedia-next/" : "",
   basePath: isProd ? "/danodeamedia-next" : "",
-  output: "export",
 };
 
 export default nextConfig;
