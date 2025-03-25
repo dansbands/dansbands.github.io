@@ -1,0 +1,26 @@
+{
+  // "workbench.colorCustomizations": {
+  //   "titleBar.activeForeground": "#000",
+  //   "titleBar.inactiveForeground": "#000000CC",
+  //   "titleBar.activeBackground": "#00ff2f",
+  //   "titleBar.inactiveBackground": "#00ff2fc4"
+  // }
+  // "workbench.colorCustomizations": {
+  //     "titleBar.activeForeground": "#000",
+  //     "titleBar.inactiveForeground": "#000000CC",
+  //     "titleBar.activeBackground": "#ffe100",
+  //     "titleBar.inactiveBackground": "#ffe100e2"
+  // },
+  // "workbench.colorCustomizations": {
+  //     "titleBar.activeForeground": "#000",
+  //     "titleBar.inactiveForeground": "#000000CC",
+  //     "titleBar.activeBackground": "#ff2200",
+  //     "titleBar.inactiveBackground": "#e32002"
+  // },
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#000",
+    "titleBar.inactiveForeground": "#000000CC",
+    "titleBar.activeBackground": "#ff00c8",
+    "titleBar.inactiveBackground": "#db03ac"
+  }
+}
