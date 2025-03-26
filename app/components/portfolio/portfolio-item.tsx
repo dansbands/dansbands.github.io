@@ -9,7 +9,7 @@ interface PortfolioItemProps {
   subtitle: string;
   date: string;
   description: string;
-  extendedDescription: string;
+  extendedDescription?: string;
   technologies: string[];
   features: string[];
   links: { title: string; url: string }[]; // Updated links structure
