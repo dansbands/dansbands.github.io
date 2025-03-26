@@ -461,7 +461,6 @@ html {
 }
 
 .main2 p {
-  margin-bottom: 80px !important;
   font-size: 14px !important;
 }
 
@@ -488,8 +487,11 @@ html {
   margin-left: 30px;
 }
 
-.more,
-.less {
+.less-1 {
+  cursor: pointer;
+  margin-bottom: 50px;
+  color: #21d44f;
+
 }
 
 .main2 .p1 {
@@ -509,6 +511,20 @@ html {
   margin: 0;
   background-color: none;
   color: #21d44f;
+}
+
+.p2-1 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.p2-1.expanded {
+  max-height: 500px;
+}
+
+.p2-1.collapsed {
+  max-height: 0;
 }
 
 .welcome-outer {

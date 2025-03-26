@@ -7,6 +7,7 @@ import danodeamedia from "@/app/Media/Photos/danodeamedia.png";
 import ript from "@/app/Media/Photos/ript.png";
 import fox from "@/app/Media/Photos/Fox Album Cover Alt2.jpg";
 import dansbands from "@/app/Media/Photos/DansBands.png";
+import PortfolioItem from "../components/portfolio/portfolio-item";
 
 const Portfolio = () => {
   return (
@@ -15,92 +16,7 @@ const Portfolio = () => {
         <div className="jumbotron" id="portfolio">
           <div className="main2">
             <div className="container">
-              <div className="row">
-                <div className="col-md-6">
-                  <Image
-                    src={yumble}
-                    width={380}
-                    height={380}
-                    alt="Yumble project screenshot"
-                  />
-                </div>
-                <div className="col-md-4" id="yumble">
-                  <h2>Yumble</h2>
-                  <h3>
-                    ReactJS and Ruby on Rails web application with responsive
-                    design
-                  </h3>
-                  <h6 style={{ color: "silver" }}>February 2018</h6>
-                  <p className="p1">
-                    It’s like Bumble and Yelp had a baby - pick a dining partner
-                    and find a restaurant you’ll both love in minutes!
-                  </p>
-                  <span className="more-1" id="view">
-                    ...Read More
-                  </span>
-                  <div className="p2-1">
-                    <ul>
-                      <li>+ Technologies: ReactJS, Ruby on Rails, AJAX, CSS</li>
-                      <li>
-                        + Employed Responsive Design Principles to build a
-                        Mobile-First application that expands into an immersive
-                        Desktop Experience
-                      </li>
-                      <li>
-                        + Integrated the Yelp Business Search API to bring a
-                        wide array of restaurant data to users
-                      </li>
-                      <li>
-                        + Made use of Location Services to expedite the user’s
-                        onboarding process
-                      </li>
-                      <li>
-                        + Incorporated the swiping interactions and the “It’s a
-                        Match” modal to provide an authentic user experience.
-                      </li>
-                    </ul>
-                    <p>
-                      <a
-                        href="https://dansbands.github.io/yumble/"
-                        target="_blank"
-                        id="view"
-                      >
-                        Try it Live
-                      </a>{" "}
-                      |
-                      <a
-                        href="https://youtu.be/10hwYAqOaKw"
-                        target="_blank"
-                        id="view"
-                      >
-                        Demo Video
-                      </a>{" "}
-                      |
-                      <a
-                        href="https://github.com/dansbands/yumble"
-                        target="_blank"
-                        id="view"
-                      >
-                        Front End Repo
-                      </a>{" "}
-                      |
-                      <a
-                        href="https://github.com/dansbands/yumble-backend"
-                        target="_blank"
-                        id="view"
-                      >
-                        Back End Repo
-                      </a>
-                      <br /> - Username: stormy
-                      <br />- Password: 123
-                      <br />
-                      <span className="less-1" id="view">
-                        Show Less
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <PortfolioItem image={yumble} />
               <div className="row">
                 <div className="col-md-6">
                   <Image
