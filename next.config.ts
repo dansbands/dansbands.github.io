@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? "/danodeamedia-next/" : "",
+  assetPrefix: isProd ? "/danodeamedia-next" : "",
   basePath: isProd ? "/danodeamedia-next" : "",
 };
 
