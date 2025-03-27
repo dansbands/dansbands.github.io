@@ -418,7 +418,7 @@ html {
 
 .main2 {
   background-size: cover;
-  min-height: 3600px;
+  min-height: 2500px;
   color: white;
   font-family: Avenir;
 }
@@ -1406,7 +1406,7 @@ label {
   }
 
   .main2 {
-    min-height: 2500px;
+    min-height: 3000px;
   }
 
   .main2 img {
@@ -1582,7 +1582,7 @@ label {
   }
 
   .main2 {
-    min-height: 2500px;
+    min-height: 3000px;
   }
 
   .main2 img {
