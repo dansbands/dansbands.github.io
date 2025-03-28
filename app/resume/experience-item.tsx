@@ -2,6 +2,7 @@ import React from 'react'
 
 interface ExperienceItemProps {
   featured: boolean;
+  isFlexColumn?: boolean;
   key: string;
   company: string;
   title: string;
@@ -9,13 +10,22 @@ interface ExperienceItemProps {
   responsibilities: string[];
 }
 
-function ExperienceItem({ featured, company, title, dates, responsibilities }: ExperienceItemProps) {
+function ExperienceItem({
+  featured,
+  isFlexColumn,
+  company,
+  title,
+  dates,
+  responsibilities,
+}: ExperienceItemProps) {
   return (
     <div className={featured ? "body-section" : "body-section-slim"}>
       <div className="section-header">
         <div
           className={
-            featured ? "section-header-left" : "section-header-left-column"
+            !featured || isFlexColumn
+              ? "section-header-left-column"
+              : "section-header-left"
           }
         >
           <div className="company-name">{company}</div>

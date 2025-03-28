@@ -22,5 +22,10 @@
     "titleBar.inactiveForeground": "#000000CC",
     "titleBar.activeBackground": "#ff00c8",
     "titleBar.inactiveBackground": "#db03ac"
-  }
+  },
+  "cSpell.words": [
+    "danodeamedia",
+    "toolshare",
+    "yumble"
+  ]
 }

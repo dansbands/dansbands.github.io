@@ -3,6 +3,19 @@ import boozer from "@/app/Media/Photos/boozer.png";
 import toolshare from "@/app/Media/Photos/toolshare.png";
 import danodeamedia from "@/app/Media/Photos/danodeamedia.png";
 
+import Express from "@/app/Media/Icons/Express.svg";
+import MongoDB from "@/app/Media/Icons/MongoDB.svg";
+import MUI from "@/app/Media/Icons/MUI.svg";
+import Next from "@/app/Media/Icons/Next.svg";
+import Node from "@/app/Media/Icons/Node.svg";
+import Postgres from "@/app/Media/Icons/Postgres.svg";
+import Rails from "@/app/Media/Icons/Rails.svg";
+import React from "@/app/Media/Icons/React.svg";
+import Redux from "@/app/Media/Icons/Redux.svg";
+import StyledComponents from "@/app/Media/Icons/StyledComponents.svg";
+import TypeScript from "@/app/Media/Icons/TypeScript.svg";
+import xState from "@/app/Media/Icons/xState.svg";
+
 export const experience = [
   {
     featured: true,
@@ -78,6 +91,87 @@ export const experience = [
     ],
   },
 ];
+
+export const education = [
+  {
+    featured: true,
+    isFlexColumn: true,
+    id: 1,
+    company: "Rutgers University",
+    title: "Bachlelor of Arts in Music (violin)",
+    dates: "2007",
+    responsibilities: [
+      "Teaching Certificate in Music, K-12",
+      "Rutgers University Salsa Band - Violinist, Assistant Director",
+      "New Jersey Folk Festival - Graphics Coordinator, Music Director",
+    ],
+  },
+  {
+    featured: true,
+    isFlexColumn: true,
+    id: 2,
+    company: "General Assembly",
+    title: "User Experience Design",
+    dates: "2017",
+    responsibilities: [],
+  },
+  {
+    featured: true,
+    isFlexColumn: true,
+    id: 3,
+    company: "Flatiron School",
+    title: "Software Engineering Immersive",
+    dates: "2018",
+    responsibilities: [],
+  },
+];
+
+export const otherWork = [
+  {
+    featured: true,
+    isFlexColumn: true,
+    id: 1,
+    company: "Dan's Music Studio",
+    title: "Founder/ Lead Instructor",
+    dates: "2006-2016",
+    responsibilities: [
+      "Managed a team of 20 instructors and support personnel",
+      "Scaled from 30 to 200 students in 2 years",
+      "Delivered instruction on 10 instruments to students of all ages and skill levels",
+    ],
+  },
+  {
+    featured: true,
+    isFlexColumn: true,
+    id: 2,
+    company: "Edison Middle School",
+    title: "Teacher of String Orchestra",
+    dates: "2008-2015",
+    responsibilities: [
+      "Managed a 160 students in 4 ensembles",
+      "Developed curriculum for grade 6",
+      "Incorporated digital content through SmartMusic, Sibelius Scorch, and Sharepoint",
+      "Prepared each orchestra to perform 3 full length selections in 3 yearly concerts (36 total selections)",
+    ],
+  },
+];
+
+export const icons = [
+  Express,
+  MongoDB,
+  MUI,
+  Next,
+  Node,
+  Postgres,
+  Rails,
+  React,
+  Redux,
+  StyledComponents,
+  TypeScript,
+  xState,
+];
+
+export const otherExperience = "React Native, CSS, Angular, jQuery, Figma, Photoshop, Logic Pro X, Audio and Video Editing, A/V Equipment setup, Live Sound";
 
 export const portfolioItems = [
   {
