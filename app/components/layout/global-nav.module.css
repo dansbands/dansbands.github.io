@@ -1,0 +1,143 @@
+/* Global Navigation Container */
+.globalNav {
+  position: relative;
+}
+
+/* Top Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(106,116,134,.5);
+  box-shadow: 0 3px 2px hsla(0,0%,9%,.2);
+  color: #fff;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  margin-top: 25px;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none; /* Hidden by default for larger screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Drawer for Mobile */
+.drawer {
+  display: none; /* Hidden by default for larger screens */
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(106,116,134,.9);
+  color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding-top: 100px;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+/* Drawer Menu */
+.menu {
+  list-style: none;
+  padding: 2rem 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu li button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu li button:hover {
+  color: #00ff2f;
+}
+
+/* Original Navigation Links for Larger Screens */
+.navLinks {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navLinks li button:hover {
+  color: #00ff2f;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hide original navigation links on smaller screens */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu on smaller screens */
+  }
+
+  .drawer {
+    display: block; /* Enable drawer for smaller screens */
+  }
+
+  .footer2 {
+
+  }
+}
