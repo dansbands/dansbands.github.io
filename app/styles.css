@@ -248,7 +248,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 2;
 }
 
 .footer2-left {
@@ -331,7 +331,8 @@ html {
   text-align: left;
 }
 
-.footer2 button, a {
+.footer2 button,
+a {
   text-decoration: none;
   color: #949eae;
   transition: 0.5s;
@@ -491,7 +492,6 @@ html {
   cursor: pointer;
   margin-bottom: 50px;
   color: #21d44f;
-
 }
 
 .main2 .p1 {
@@ -1158,8 +1158,8 @@ label {
 }
 
 .error-message {
-    color: red;
-  }
+  color: red;
+}
 
 .professional2 {
   padding-top: 250px;
@@ -1268,6 +1268,9 @@ label {
   (max-width: 760px) and (orientation: landscape) {
   .footer2 {
     height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footer2-center ul {
@@ -1284,8 +1287,10 @@ label {
 
   .main .container {
     height: 800px;
-    margin-top: 60px;
-    padding-left: 25%;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 0;
+    padding-left: 10%;
   }
 
   .welcome {
@@ -1315,7 +1320,7 @@ label {
 
   .professional {
     padding-top: 50px;
-    height: 660px;
+    height: 900px;
   }
 
   .professional .center {
@@ -1362,25 +1367,28 @@ label {
 
   .portfolio {
     padding-top: 250px;
-    height: 1200px;
+    height: 600px;
   }
 
   .portfolio .container {
     top: 5%;
+    overflow: hidden;
   }
 
   .portfolio .row {
+    height: 250px;
+    margin-top: 0;
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
     gap: 20px;
+    overflow: scroll;
+    scrollbar-width: none;
   }
 
   .portfolio img {
-    width: 80%;
-    margin: 10px 10%;
+    width: 200px;
+    height: 200px;
     display: block;
-    text-align: center;
   }
 
   #contact {
@@ -1395,6 +1403,7 @@ label {
   .contact-inner {
     width: 100%;
     margin: 50px 0;
+    height: 300px
   }
 
   .column1 h1 {
@@ -1441,8 +1450,6 @@ label {
 
 @media only screen and (min-width: 450px) and (max-width: 780px) and (orientation: portrait),
   (min-width: 700px) and (max-width: 1040px) and (orientation: landscape) {
-  .footer2 {
-  }
 
   .footer2-center ul {
     display: none;
@@ -1452,10 +1459,6 @@ label {
     height: 400px;
   }
 
-  .main h1 {
-    /*  font-size: 40px;  */
-  }
-
   .main .container {
     margin-top: 140px;
     margin-left: 25%;
@@ -1463,15 +1466,6 @@ label {
 
   .welcome {
     margin-top: -230px;
-  }
-
-  .welcome h2 {
-    /*  margin: 0; */
-  }
-
-  .welcome img {
-    /*  height: 50px;
-        width: 50px;*/
   }
 
   .welcome .container {
@@ -1497,6 +1491,7 @@ label {
   }
 
   .professional .container {
+    margin-top: 50px;
     top: 40%;
   }
 
@@ -1512,32 +1507,6 @@ label {
   .bar {
     height: 18px;
     margin-bottom: 24px;
-  }
-  /*
-    .bar.pct-95 .right{
-        width: 115%;
-    }
-
-    .bar.pct-85 .right{
-        width: 105%;
-    }
-
-    .bar.pct-75 .right{
-        width: 95%;
-    }
-
-    #scale p{
-      /*  font-size: 12px;
-    }
-    */
-
-  .title {
-    /*  font-size: 24px;
-        letter-spacing: 3px;  */
-  }
-
-  .subtitle {
-    /* font-size: 16px; */
   }
 
   .portfolio {
@@ -1623,9 +1592,3 @@ label {
     display: inline-block;
   }
 }
-
-/*
-@-ms-viewport{
-    width: device-width;
-}
-*/

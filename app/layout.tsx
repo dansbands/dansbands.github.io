@@ -3,7 +3,6 @@ import "./styles.css";
 import GlobalFooter from "./components/layout/global-footer";
 import GlobalNav from "./components/layout/global-nav";
 import Head from "./components/layout/head";
-import BottomNav from "./components/layout/bottom-nav";
 
 export const metadata: Metadata = {
   title: "Dan O'Dea Media",
@@ -22,7 +21,6 @@ export default function RootLayout({
         <GlobalNav />
         {children}
         <GlobalFooter />
-        <BottomNav />
       </body>
     </html>
   );
