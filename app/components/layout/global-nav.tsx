@@ -75,6 +75,48 @@ const GlobalNav = () => {
             <span />
           </button>
         </div>
+        <button
+          className={`${styles.hamburger} ${isDrawerOpen ? styles.open : ""}`}
+          onClick={toggleDrawer}
+          aria-label="Toggle navigation menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </div>
+      <div
+        className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}
+        role="menu"
+      >
+        <ul className="green" role="tablist">
+          <li>
+            <button type="button" onClick={handleClick} name="home">
+              HOME
+            </button>
+          </li>
+          <li>
+            <button type="button" onClick={handleClick} name="professional">
+              PROFESSIONAL
+            </button>
+          </li>
+          <li>
+            <button type="button" onClick={handleClick} name="recent-work">
+              RECENT WORK
+            </button>
+          </li>
+          <li>
+            <button type="button" onClick={handleClick} name="contact">
+              CONTACT
+            </button>
+          </li>
+          <li>
+            <Link href="portfolio">PORTFOLIO</Link>
+          </li>
+          <li>
+            <Link href="resume">RESUME</Link>
+          </li>
+        </ul>
       </div>
       <div
         className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}
