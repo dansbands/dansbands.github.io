@@ -5,13 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Favicon2 from "@/public/favicon2.png";
 import styles from "./global-nav.module.css";
-import { useWindowWidth } from "@/app/hooks/useWindowWidth";
 
 const GlobalNav = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const windowWidth = useWindowWidth();
-  const isMobile = windowWidth <= 768;
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (window.location.pathname !== "/") {
