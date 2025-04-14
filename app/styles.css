@@ -1254,6 +1254,159 @@ label {
 }
 
 /*Media Query - Mobile*/
+@media only screen and (min-width: 450px) and (max-width: 768px) and (orientation: portrait),
+  (min-width: 700px) and (max-width: 1040px) and (orientation: landscape) {
+  .footer2 {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer2-container {
+    height: unset;
+  }
+
+  .footer2-center ul {
+    display: none;
+  }
+
+  .main {
+    height: 700px;
+  }
+
+  .welcome {
+    margin-top: -230px;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .welcome .container {
+    width: 90%;
+    margin: 10% 5% 0 5%;
+  }
+
+  .welcome .btn {
+    border: #21d44f 1px solid;
+  }
+
+  .professional {
+    padding-top: 50px;
+    height: 1200px;
+  }
+
+  #professional {
+    margin-top: 200px;
+  }
+
+  .professional .center {
+    width: 100%;
+  }
+
+  .professional .container {
+    margin-top: 50px;
+    top: 40%;
+  }
+
+  #apps {
+    width: 20%;
+    font-size: 20px;
+  }
+
+  .grid {
+    width: 60%;
+  }
+
+  .bar {
+    height: 18px;
+    margin-bottom: 24px;
+  }
+
+  .portfolio {
+    padding-top: 250px;
+    height: 1000px;
+  }
+
+  .portfolio .container {
+    top: 5%;
+    overflow: hidden;
+  }
+
+  .portfolio .row {
+    height: 250px;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+
+  .portfolio img {
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+
+  #contact {
+    width: 80%;
+    height: 700px;
+  }
+
+  .column2 .btn {
+    border: #21d44f 1px solid;
+  }
+
+  .professional2 {
+    height: 500px;
+  }
+
+  .contact-inner {
+    width: 100%;
+    margin: 150px 0;
+  }
+
+  .column1 h1 {
+    font-size: 28px;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .main2 {
+    min-height: 3000px;
+  }
+
+  .main2 img {
+    width: 80%;
+    margin: 0 25px;
+  }
+
+  .main2 .container {
+    margin-top: 0;
+  }
+
+  .main2 .row {
+    margin-top: 50px;
+    min-height: 550px;
+    padding: 25px 0;
+  }
+
+  .main2 h2 {
+    font-size: 32px;
+  }
+
+  .main2 p {
+    margin-bottom: 30px !important;
+  }
+
+  #even {
+    background: #41495d;
+  }
+}
+
+/*Media Query - Mobile*/
 
 @media only screen and (max-width: 480px),
   (max-width: 760px) and (orientation: landscape) {
@@ -1273,7 +1426,7 @@ label {
   }
 
   .main {
-    height: 800px;
+    height: 720px;
   }
 
   .main h1 {
@@ -1404,160 +1557,6 @@ label {
     width: 100%;
     margin: 50px 0;
     height: 300px;
-  }
-
-  .column1 h1 {
-    font-size: 28px;
-  }
-
-  .footer {
-    display: none;
-  }
-
-  .main2 {
-    min-height: 3000px;
-  }
-
-  .main2 img {
-    width: 80%;
-    margin: 0 25px;
-  }
-
-  .main2 .container {
-    margin-top: 0;
-  }
-
-  .main2 .row {
-    margin-top: 50px;
-    min-height: 550px;
-    padding: 25px 0;
-  }
-
-  .main2 h2 {
-    font-size: 32px;
-  }
-
-  .main2 p {
-    margin-bottom: 30px !important;
-  }
-
-  #even {
-    background: #41495d;
-  }
-}
-
-/*Media Query - Tablet*/
-
-@media only screen and (min-width: 450px) and (max-width: 768px) and (orientation: portrait),
-  (min-width: 700px) and (max-width: 1040px) and (orientation: landscape) {
-  .footer2 {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer2-container {
-    height: unset;
-  }
-
-  .footer2-center ul {
-    display: none;
-  }
-
-  .main {
-    height: 700px;
-  }
-
-  .welcome {
-    margin-top: -230px;
-    width: 80%;
-    margin-left: 10%;
-  }
-
-  .welcome .container {
-    width: 90%;
-    margin: 10% 5% 0 5%;
-  }
-
-  .welcome .btn {
-    border: #21d44f 1px solid;
-  }
-
-  .professional {
-    padding-top: 50px;
-    height: 1200px;
-  }
-
-  #professional {
-    margin-top: 200px;
-  }
-
-  .professional .center {
-    width: 100%;
-  }
-
-  .professional .container {
-    margin-top: 50px;
-    top: 40%;
-  }
-
-  #apps {
-    width: 20%;
-    font-size: 20px;
-  }
-
-  .grid {
-    width: 60%;
-  }
-
-  .bar {
-    height: 18px;
-    margin-bottom: 24px;
-  }
-
-  .portfolio {
-    padding-top: 250px;
-    height: 1000px;
-  }
-
-  .portfolio .container {
-    top: 5%;
-    overflow: hidden;
-  }
-
-  .portfolio .row {
-    height: 250px;
-    margin-top: 0;
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    overflow: scroll;
-    scrollbar-width: none;
-  }
-
-  .portfolio img {
-    width: 200px;
-    height: 200px;
-    display: block;
-  }
-
-  #contact {
-    width: 80%;
-    height: 700px;
-  }
-
-  .column2 .btn {
-    border: #21d44f 1px solid;
-  }
-
-  .professional2 {
-    height: 500px;
-  }
-
-  .contact-inner {
-    width: 100%;
-    margin: 150px 0;
   }
 
   .column1 h1 {
