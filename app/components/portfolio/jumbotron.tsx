@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Jumbotron = () => {
@@ -7,7 +8,7 @@ const Jumbotron = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <img src="Media/Photos/yumble.png" width="380px" />
+              <Image src="Media/Photos/yumble.png" alt="Yumble" width={380} />
             </div>
           </div>
         </div>
