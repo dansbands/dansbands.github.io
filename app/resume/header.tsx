@@ -18,7 +18,7 @@ export default function Header() {
           <Image alt="dan pic" src={SantoriniCircle} width={114} />
           <div className="resume-header-left-text">
             <h1>Dan</h1>
-            <h1>O'Dea</h1>
+            <h1>O&apos;Dea</h1>
           </div>
         </div>
         <div className="resume-header-right">
