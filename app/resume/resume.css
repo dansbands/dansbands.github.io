@@ -392,6 +392,7 @@
   .resume-header {
     flex-wrap: wrap;
     justify-content: center;
+    padding: 0;
   }
 
   .resume-header-left,
