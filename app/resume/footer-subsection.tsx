@@ -52,16 +52,17 @@ const FooterSubsection: React.FC<{
         {icons && (
           <div className="icon-grid">
             {icons?.map((icon, index) => {
-              console.log("icon", icon);
               return (
-                <Image
-                  key={index}
-                  className="icon-container"
-                  src={icon.src}
-                  height={icon.height}
-                  width={icon.width}
-                  alt={`icon-${index}`}
-                />
+                <div className="icon-container" key={index}>
+                  <Image
+                    key={index}
+                    className="icon-container"
+                    src={icon.src}
+                    height={icon.height}
+                    width={icon.width}
+                    alt={`icon-${index}`}
+                  />
+                </div>
               );
             })}
           </div>
