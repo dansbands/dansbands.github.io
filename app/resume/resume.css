@@ -4,6 +4,7 @@
 .resume {
   background-color: #333b50fa;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .resume-frame {
@@ -79,21 +80,9 @@
   }
 }
 
-.contact-header {
-  display: none;
-}
-
+.contact-header,
 .toggle-button {
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 20px;
-  height: 20px;
-  position: fixed;
-  right: 20px;
-  transition: transform 0.2s ease-in-out;
+  display: none;
 }
 
 .subheader-section {
@@ -338,6 +327,10 @@
     font-size: 16px;
   }
 
+  .toggle-button {
+    display: none;
+  }
+
   .subheader-links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -448,7 +441,7 @@
   .resume-header-right h3 {
     font-size: 14px;
   }
-  
+
   .subheader-links {
     display: grid;
     grid-template-columns: 1fr;
@@ -471,7 +464,21 @@
     gap: 15px;
     margin-bottom: 5px;
     margin-top: 10px;
+    padding-left: 5px;
     cursor: pointer;
+  }
+
+  .toggle-button {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.2s ease-in-out;
   }
 
   .subheader-section {
@@ -498,6 +505,9 @@
     font-size: 18px;
     letter-spacing: 2px;
     align-items: flex-start;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-left: 5px;
   }
 
   .icon-circle-lg {
@@ -512,6 +522,14 @@
   .work-experience-list {
     flex-direction: column;
     gap: 8px;
+    padding: 0;
+    max-height: 1450px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .work-experience-list.collapsed {
+    max-height: 0;
   }
 
   .body-section-slim {
@@ -527,11 +545,27 @@
     width: 100%;
     border-right: none;
     padding: 0;
+    border-bottom: 1px solid #171717;
+  }
+
+  .subsection-header {
+    cursor: pointer;
+    padding-left: 5px;
   }
 
   .subsection-title {
     font-size: 18px;
     letter-spacing: 2px;
+  }
+
+  .subsection-body {
+    max-height: 1450px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .subsection-body.collapsed {
+    max-height: 0;
   }
 
   .icon-grid {
