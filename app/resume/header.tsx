@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import SantoriniCircle from "../Media/Photos/Santorini Circle.png";
 import "./resume.css";
@@ -10,8 +12,15 @@ import {
   faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useState } from "react";
 
 export default function Header() {
+  const [isContactCollapsed, setIsContactCollapsed] = useState(true);
+
+  const toggleContact = () => {
+    setIsContactCollapsed(!isContactCollapsed);
+  };
+
   return (
     <>
       <div className="resume-header">
@@ -28,60 +37,69 @@ export default function Header() {
         </div>
       </div>
       <div className="resume-subheader">
-        <div className="contact-header">
+        <div className="contact-header" onClick={toggleContact}>
           <div className="icon-circle-lg">
             <FontAwesomeIcon icon={faAddressCard} width={20} />
           </div>
           <span>CONTACT</span>
+          <span className="toggle-button">
+            {isContactCollapsed ? "+" : "-"}
+          </span>
         </div>
-        <div className="subheader-section">
-          <div className="subheader-section-content">
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faEnvelope} />
+        <div className={`subheader-links${isContactCollapsed ? " collapsed" : ""}`}>
+          <div className="subheader-section">
+            <div className="subheader-section-content">
+              <div className="icon-circle">
+                <FontAwesomeIcon icon={faEnvelope} />
+              </div>
+              <a href="mailto:danodeawebdev@gmail.com">
+                danodeawebdev@gmail.com
+              </a>
             </div>
-            <a href="mailto:danodeawebdev@gmail.com">danodeawebdev@gmail.com</a>
           </div>
-        </div>
-        <div className="subheader-section">
-          <div className="subheader-section-content">
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faGlobe} />
+          <div className="subheader-section">
+            <div className="subheader-section-content">
+              <div className="icon-circle">
+                <FontAwesomeIcon icon={faGlobe} />
+              </div>
+              <a href="https://dansbands.github.io">dansbands.github.io</a>
             </div>
-            <a href="https://dansbands.github.io">dansbands.github.io</a>
           </div>
-        </div>
-        <div className="subheader-section">
-          <div className="subheader-section-content">
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faPhone} />
+          <div className="subheader-section">
+            <div className="subheader-section-content">
+              <div className="icon-circle">
+                <FontAwesomeIcon icon={faPhone} />
+              </div>
+              <a href="tel:+19734864884">973-486-4884</a>
             </div>
-            <a href="tel:+19734864884">973-486-4884</a>
           </div>
-        </div>
-        <div className="subheader-section">
-          <div className="subheader-section-content">
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faLinkedin} />
+          <div className="subheader-section">
+            <div className="subheader-section-content">
+              <div className="icon-circle">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </div>
+              <a href="https://linkedin.com/in/dan-odea">
+                linkedin.com/in/dan-odea
+              </a>
             </div>
-            <a href="https://linkedin.com/in/dan-odea">
-              linkedin.com/in/dan-odea
-            </a>
           </div>
-        </div>
-        <div className="subheader-section">
-          <div className="subheader-section-content">
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faGithub} />
+          <div className="subheader-section">
+            <div className="subheader-section-content">
+              <div className="icon-circle">
+                <FontAwesomeIcon icon={faGithub} />
+              </div>
+              <a href="https://www.github.com/dansbands">
+                github.com/dansbands
+              </a>
             </div>
-            <a href="https://www.github.com/dansbands">github.com/dansbands</a>
           </div>
-        </div>
-        <div className="subheader-section">
-          <div className="subheader-section-content">
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faHome} />
+          <div className="subheader-section">
+            <div className="subheader-section-content">
+              <div className="icon-circle">
+                <FontAwesomeIcon icon={faHome} />
+              </div>
+              <a href="/resume">Jersey City, NJ</a>
             </div>
-            <a href="/resume">Jersey City, NJ</a>
           </div>
         </div>
       </div>
