@@ -273,7 +273,7 @@ html {
   width: 80%;
   position: absolute;
   font-family: Avenir;
-  margin-left: 200px;
+  margin-left: 20vw;
 }
 
 .footer2-center a {
@@ -1254,8 +1254,7 @@ label {
 }
 
 /*Media Query - Mobile*/
-@media only screen and (min-width: 450px) and (max-width: 768px) and (orientation: portrait),
-  (min-width: 700px) and (max-width: 1040px) and (orientation: landscape) {
+@media only screen and (min-width: 450px) and (max-width: 768px) {
   .footer2 {
     height: 50px;
     display: flex;

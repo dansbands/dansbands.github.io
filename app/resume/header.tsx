@@ -7,6 +7,7 @@ import {
   faGlobe,
   faPhone,
   faHome,
+  faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
@@ -27,6 +28,12 @@ export default function Header() {
         </div>
       </div>
       <div className="resume-subheader">
+        <div className="contact-header">
+          <div className="icon-circle-lg">
+            <FontAwesomeIcon icon={faAddressCard} width={20} />
+          </div>
+          <span>CONTACT</span>
+        </div>
         <div className="subheader-section">
           <div className="subheader-section-content">
             <div className="icon-circle">
