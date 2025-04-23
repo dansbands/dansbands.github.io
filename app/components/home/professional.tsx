@@ -41,13 +41,13 @@ const Professional = () => {
         <div className="visible-on-scroll">
           <div id="skills">
             <div id="apps">
-              <p>Sketch</p>
-              <p>InVision</p>
-              <p>Photoshop</p>
-              <p>Illustrator</p>
+              <p>JavaScript</p>
               <p>HTML5</p>
               <p>CSS3</p>
-              <p>JavaScript</p>
+              <p>Express</p>
+              <p>React</p>
+              <p>NextJS</p>
+              <p>Figma</p>
             </div>
 
             <div className="grid">

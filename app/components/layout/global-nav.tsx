@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Favicon2 from "@/public/favicon2.png";
-import styles from "./global-nav.module.css";
+import "./global-nav.css";
 
 const GlobalNav = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -25,10 +25,10 @@ const GlobalNav = () => {
   return (
     <div className="smooth" id="home">
       <div className={`footer2`}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" className={"logo"}>
           <Image
             alt="favicon"
-            className={styles.icon}
+            className={"icon"}
             src={Favicon2}
             height={40}
             width={40}
@@ -65,19 +65,19 @@ const GlobalNav = () => {
               </li>
             </ul>
           </div>
-          <button
-            className={`${styles.hamburger} ${isDrawerOpen ? styles.open : ""}`}
-            onClick={toggleDrawer}
-            aria-label="Toggle navigation menu"
-          >
-            <span />
-            <span />
-            <span />
-          </button>
         </div>
+        <button
+          className={`${"hamburger"} ${isDrawerOpen ? "open" : ""}`}
+          onClick={toggleDrawer}
+          aria-label="Toggle navigation menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
       <div
-        className={`${styles.overlay} ${isDrawerOpen ? styles.open : ""}`}
+        className={`${"overlay"} ${isDrawerOpen ? "open" : ""}`}
         onClick={toggleDrawer}
         role="button"
         tabIndex={0}
@@ -87,11 +87,8 @@ const GlobalNav = () => {
           }
         }}
       />
-      <div
-        className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}
-        role="menu"
-      >
-        <ul className={styles.green} role="tablist">
+      <div className={`${"drawer"} ${isDrawerOpen ? "open" : ""}`} role="menu">
+        <ul className={"green"} role="tablist">
           <li>
             <button type="button" onClick={handleClick} name="home">
               HOME

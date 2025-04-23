@@ -11,8 +11,7 @@ const Main = () => {
         <h1>
           O<span className="green">&apos;</span>DEA<span className="green">.</span>
         </h1>
-        <h2 id="top">FULL STACK WEB DEVELOPER</h2>
-        <h2>& UX/UI DESIGNER</h2>
+        <h2 id="top">SENIOR SOFTWARE ENGINEER</h2>
       </div>
     </div>
   );

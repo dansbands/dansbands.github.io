@@ -23,9 +23,11 @@
   }
 }
 
-/* Hamburger Button */
 .hamburger {
-  display: none; /* Hidden by default for larger screens */
+  display: none; 
+  position: absolute;
+  right: 20px;
+  top: 15px;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
@@ -34,21 +36,27 @@
   border: none;
   cursor: pointer;
   z-index: 1100;
+    transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease; 
+  -webkit-tap-highlight-color: transparent; 
 }
 
 .hamburger span {
-  display: block;
-  height: 3px;
-  background-color: #fff;
+  display: flex;
+  height: 2px;
+  width: 30px;
+  background-color: lightgrey;
   border-radius: 2px;
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease; 
 }
 
-/* Hamburger Animation */
+.hamburger.open  {
+  transform: rotate(180deg) translate(-10px, 0px);
+}
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.open span:nth-child(2) {
   opacity: 0;
 }
@@ -57,9 +65,9 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Drawer for Mobile */
+
 .drawer {
-  display: none; /* Hidden by default for larger screens */
+  display: none;
   position: fixed;
   top: 50px;
   right: -100%;
@@ -77,7 +85,6 @@
   right: 0;
 }
 
-/* Drawer Menu */
 .menu {
   list-style: none;
   padding: 2rem 1rem;
@@ -101,7 +108,6 @@
   color: #00ff2f;
 }
 
-/* Original Navigation Links for Larger Screens */
 .navLinks {
   display: flex;
   gap: 1rem;
@@ -130,43 +136,47 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none; /* Hidden by default */
+  display: none; 
   z-index: 2;
   transition: opacity 0.3s ease;
 }
 
 .open {
-  display: block; /* Show overlay when drawer is open */
+  display: block;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .navLinks {
-    display: none; /* Hide original navigation links on smaller screens */
+    display: none; 
   }
 
   .hamburger {
-    display: flex; /* Show hamburger menu on smaller screens */
+    display: flex;
   }
 
   .drawer {
-    display: block; /* Enable drawer for smaller screens */
+    display: block;
   }
-}
-
-@media (max-width: 768px) {
+  
   .icon {
     margin-top: 0;
   }
 
+  .green li {
+    margin-bottom: 10px;
+  }
+  
   .green button,
-  .green a {
+  .green li a {
     background-color: transparent;
     border: none;
-    color: #fff;
+    color: lightgrey;
     margin-left: 20px;
     padding-left: 0;
-
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: 300;
+  
     &:hover {
       color: #00ff2f;
       text-decoration: none;
