@@ -148,7 +148,7 @@ export const otherWork = [
     title: "Teacher of String Orchestra",
     dates: "2008-2015",
     responsibilities: [
-      "Managed a 160 students in 4 ensembles",
+      "Managed 160 students in 4 ensembles",
       "Developed curriculum for grade 6",
       "Incorporated digital content through SmartMusic, Sibelius Scorch, and Sharepoint",
       "Prepared each orchestra to perform 3 full length selections in 3 yearly concerts (36 total selections)",
