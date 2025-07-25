@@ -5,13 +5,50 @@
   background-color: #333b50fa;
   padding-top: 200px;
   padding-bottom: 200px;
+  display: flex;
 }
 
 .resume-frame {
+  margin: 0 auto;
   max-width: 1250px;
   justify-self: center;
   background-color: #d9d9d9;
   padding: 20px;
+}
+
+.print-container {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.print-button {
+  position: absolute;
+  top: 110px;
+  right: 0;
+  text-decoration: none;
+  color: white;
+  border: #21d44f 1px solid;
+  background-color: transparent;
+  padding: 10px;
+  min-width: 120px;
+  display: inline-block;
+  transition: 0.5s;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #21d44f;
+    color: #333b50;
+    transition: 0.5s;
+  }
+}
+
+.icon-margin-left {
+  margin-left: 10px;
 }
 
 .resume-header {
@@ -287,6 +324,21 @@
     padding-top: 100px;
   }
 
+  .print-container {
+    position: relative;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+  .print-button {
+    top: 45px;
+    right: 20px;
+    padding: 4px;
+    min-width: 100px;
+    font-size: 12px;
+  }
+
   .resume-header {
     flex-wrap: wrap;
     justify-content: center;
@@ -395,6 +447,14 @@
 @media (max-width: 425px) {
   .resume-frame {
     padding: 20px 10px;
+  }
+
+  .print-button {
+    top: 45px;
+    right: 20px;
+    padding: 6px;
+    min-width: 80px;
+    font-size: 12px;
   }
 
   .resume-header {
@@ -570,5 +630,111 @@
 
   .icon-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media print {
+  body {
+    margin: 0;
+    width: 1100px;
+    max-width: 1200px;
+  }
+
+  .resume {
+    width: 100%; /* Force the resume to use the full width */
+    max-width: 1200px; /* Simulate the largest breakpoint width */
+    height: 22in;
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add some padding for print aesthetics */
+    background-color: white;
+    box-shadow: none;
+    page-break-after: always;
+    /* overflow: hidden; */
+  }
+
+  .print-button {
+    display: none; /* Hide the print button during printing */
+  }
+
+  .footer,
+  .footer2 {
+    display: none; /* Hide footer2 during printing */
+  }
+
+  .section {
+    page-break-inside: avoid; /* Prevent sections from breaking across pages */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  .resume-content {
+    max-height: calc(
+      11in * 2 - 40px
+    ); /* Constrain content to two pages minus padding */
+    overflow: hidden; /* Hide any overflow */
+  }
+
+  /* full styles  */
+
+  .resume-header {
+    font-weight: 700;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #171717;
+  }
+
+  a[href]::after {
+    content: none !important;
+  }
+
+  .resume-header-left {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    margin: 0;
+  }
+  .resume-header-left-text {
+    letter-spacing: 7px;
+    margin-left: 20px;
+  }
+  .resume-header-left img {
+    margin-right: 12px;
+  }
+  .resume-header-left h1 {
+    font-weight: bold;
+    font-size: 46px;
+    margin: 0;
+    text-align: left;
+  }
+  .resume-header-right {
+    width: 65%;
+    text-align: center;
+    text-align: right;
+  }
+
+  .resume-header-right h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+
+  .resume-header-right h3 {
+    font-weight: 400;
+    font-family: "Satisfy", cursive;
+    font-size: 20px;
+  }
+
+  .subheader-links {
+    font-size: 12px;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin-left: 10%;
+    text-align: center;
+    padding: 5px 0;
   }
 }

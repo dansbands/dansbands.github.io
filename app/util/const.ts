@@ -20,9 +20,23 @@ export const experience = [
   {
     featured: true,
     id: 1,
+    company: "TD Bank/ TD Securities",
+    title: "Senior Software Engineer",
+    dates: "February 2025 - present",
+    responsibilities: [
+      "Architected a multi-step form flow with API-based account validation, contextual state management, and dynamic modals",
+      "Implemented a reusable form filler utility to support future edit workflows and simplify state handling",
+      "Established unit testing and code coverage with Vitest; resolved legacy test failures and console warnings",
+      "Drove development in coordination with product analysts and backend engineers to ensure aligned API delivery and robust mock data for frontend testing",
+      "Participated in code reviews and mentored a junior developer on repo architecture and Git best practices",
+    ],
+  },
+  {
+    featured: true,
+    id: 2,
     company: "Care/of",
     title: "Software Engineer",
-    dates: "June 2022 - present",
+    dates: "June 2022 - July 2024",
     responsibilities: [
       "Contributing to an enterprise grade eCommerce web application",
       "Owned development of a collection of 350+ Articles pages, and related Article Builder tool",
@@ -32,7 +46,7 @@ export const experience = [
   },
   {
     featured: true,
-    id: 2,
+    id: 3,
     company: "Comcast Business",
     title: "Senior Software Engineer/ Technical Lead",
     dates: "June 2021 - June 2022",
@@ -44,7 +58,7 @@ export const experience = [
   },
   {
     featured: true,
-    id: 3,
+    id: 4,
     company: "American Express",
     title: "Software Engineer",
     dates: "June 2020 - June 2021",
@@ -56,7 +70,7 @@ export const experience = [
   },
   {
     featured: false,
-    id: 4,
+    id: 5,
     company: "Vertex Group",
     title: "Senior Software Engineer",
     dates: "Dec 2019 - Apr 2020",
@@ -68,7 +82,7 @@ export const experience = [
   },
   {
     featured: false,
-    id: 5,
+    id: 6,
     company: "Attck/ TimeRepublik",
     title: "Front End Developer",
     dates: "May 2019 - Dec 2019",
@@ -80,7 +94,7 @@ export const experience = [
   },
   {
     featured: false,
-    id: 6,
+    id: 7,
     company: "Crane.ai",
     title: "React Developer",
     dates: "April 2018 - Feb 2019",
