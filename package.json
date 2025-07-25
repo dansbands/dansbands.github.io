@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d out --nojekyll"
+    "deploy": "gh-pages -d out --nojekyll  --repo https://github.com/dansbands/dansbands.github.io.git"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
