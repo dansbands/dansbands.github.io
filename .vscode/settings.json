@@ -17,15 +17,23 @@
   //     "titleBar.activeBackground": "#ff2200",
   //     "titleBar.inactiveBackground": "#e32002"
   // },
-  "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#000",
-    "titleBar.inactiveForeground": "#000000CC",
-    "titleBar.activeBackground": "#ff00c8",
-    "titleBar.inactiveBackground": "#db03ac"
-  },
+  // "workbench.colorCustomizations": {
+  //   "titleBar.activeForeground": "#000",
+  //   "titleBar.inactiveForeground": "#000000CC",
+  //   "titleBar.activeBackground": "#ff00c8",
+  //   "titleBar.inactiveBackground": "#db03ac"
+  // },
   "cSpell.words": [
     "danodeamedia",
     "toolshare",
     "yumble"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#ff0101d7",
+    "editorWarning.foreground": "#ffe60033",
+    "editorInfo.foreground": "#00ff0088",
+    "activityBar.background": "#11350D",
+    "titleBar.activeBackground": "#174A12",
+    "titleBar.activeForeground": "#F6FDF5"
+  }
 }
