@@ -71,7 +71,7 @@ export const experience = [
   {
     featured: false,
     id: 5,
-    company: "Vertex Group",
+    company: "AllSocial",
     title: "Senior Software Engineer",
     dates: "Dec 2019 - Apr 2020",
     responsibilities: [
