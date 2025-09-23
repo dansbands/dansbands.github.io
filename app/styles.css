@@ -1426,7 +1426,8 @@ label {
   }
 
   .column2 .btn {
-    border: #21d44f 1px solid;
+    border: var(--primary-color) 1px solid;
+    width: 100%;
   }
 
   .professional2 {
@@ -1436,6 +1437,16 @@ label {
   .contact-inner {
     width: 100%;
     margin: 150px 0;
+    flex-direction: column;
+  }
+
+  .column1 {
+    width: unset;
+    margin-bottom: 30px;
+  }
+
+  .column2 {
+    width: unset;
   }
 
   .column1 h1 {
@@ -1622,13 +1633,25 @@ label {
   }
 
   .column2 .btn {
-    border: #21d44f 1px solid;
+    border: var(--primary-color) 1px solid;
+    width: 100%;
   }
 
   .contact-inner {
     width: 100%;
     margin: 50px 0;
-    height: 300px;
+    height: auto;
+    flex-direction: column;
+    min-height: unset;
+  }
+
+  .column1 {
+    width: unset;
+    margin-bottom: 30px;
+  }
+
+  .column2 {
+    width: unset;
   }
 
   .column1 h1 {
