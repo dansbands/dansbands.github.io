@@ -134,8 +134,20 @@ table {
 /**
     END RESET
  */
+
+/* CSS Custom Properties for consistency */
+:root {
+  --primary-color: #21d44f;
+  --primary-color-dark: #1bb340;
+  --text-dark: #333b50;
+  --text-light: #bec7d5;
+  --font-primary: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition-standard: all 0.3s ease;
+  --border-radius: 6px;
+}
+
 html {
-  font-family: Avenir;
+  font-family: var(--font-primary);
 }
 
 .visible-on-scroll {
@@ -153,21 +165,21 @@ html {
 .green a {
   font-size: 16px;
   margin: 0 10px;
-  padding: 0px !important;
+  padding: 0;
 }
 
 .green a:hover {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 .green .active a,
 .green .active a:hover {
-  background-color: transparent !important;
-  color: #21d44f !important;
+  background-color: transparent;
+  color: var(--primary-color);
 }
 
 .gray {
-  color: #bec7d5;
+  color: var(--text-light);
 }
 
 .title {
@@ -186,7 +198,7 @@ html {
 .header {
   background-color: rgba(106, 116, 134, 0.5);
   box-shadow: 0 3px 2px rgba(24, 24, 24, 0.2);
-  font-family: arial;
+  font-family: var(--font-primary);
   position: absolute;
   height: 100px;
   width: 100%;
@@ -443,41 +455,41 @@ a {
 }
 
 .main2 h3 {
-  color: #21d44f;
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 700;
 }
 
 .main2 .button {
   background-color: transparent;
-  border: 3px solid #21d44f;
+  border: 3px solid var(--primary-color);
   padding: 20px;
   color: white;
-  transition: all 0.3s ease;
+  transition: var(--transition-standard);
   cursor: pointer;
   text-decoration: none;
 }
 
 .main2 .button:hover {
-  background-color: #21d44f;
-  color: #333b50;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
   text-decoration: none;
 }
 
 .main2 .button:focus {
   outline: none;
-  background-color: #21d44f;
-  color: #333b50;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
 }
 
 .main2 .button:active {
-  background-color: #1bb340;
-  color: #333b50;
+  background-color: var(--primary-color-dark);
+  color: var(--text-dark);
   transform: translateY(1px);
 }
 
 .main2 p {
-  font-size: 14px !important;
+  font-size: 14px;
 }
 
 .main2 .container {
@@ -496,7 +508,7 @@ a {
 }
 
 .main2 .col-md-6 {
-  text-align: center !important;
+  text-align: center;
 }
 
 .main2 .col-md-4 {
@@ -589,12 +601,12 @@ a {
   text-decoration: none;
   color: white;
   background-color: transparent;
-  border: #21d44f 3px solid;
+  border: var(--primary-color) 3px solid;
   padding: 10px;
   min-width: 120px;
   display: inline-block;
-  transition: all 0.3s ease;
-  border-radius: 6px;
+  transition: var(--transition-standard);
+  border-radius: var(--border-radius);
   margin-top: 15px;
   font-size: 16px;
   font-weight: 500;
@@ -606,20 +618,20 @@ a {
 }
 
 .welcome .btn:hover {
-  background-color: #21d44f;
-  color: #333b50;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
   text-decoration: none;
 }
 
 .welcome .btn:focus {
   outline: none;
-  background-color: #21d44f;
-  color: #333b50;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
 }
 
 .welcome .btn:active {
-  background-color: #1bb340;
-  color: #333b50;
+  background-color: var(--primary-color-dark);
+  color: var(--text-dark);
   transform: translateY(1px);
 }
 
@@ -627,13 +639,10 @@ a {
   padding-top: 150px;
   background: url(./Media/laptop-journal-book-coffee.jpg) no-repeat center
     center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   height: 1000px;
   color: white;
-  font-family: Arial;
+  font-family: var(--font-primary);
 }
 
 .professional .container {
@@ -731,7 +740,7 @@ a {
   }
 }
 
-@-keyframes grow-80 {
+@keyframes grow-80 {
   from {
     right: 100%;
   }
@@ -749,7 +758,7 @@ a {
   }
 }
 
-@-keyframes grow-75 {
+@keyframes grow-75 {
   from {
     right: 100%;
   }
@@ -767,7 +776,7 @@ a {
   }
 }
 
-@-keyframes grow-60 {
+@keyframes grow-60 {
   from {
     right: 100%;
   }
@@ -785,7 +794,7 @@ a {
   }
 }
 
-@-keyframes grow-50 {
+@keyframes grow-50 {
   from {
     right: 100%;
   }
@@ -803,13 +812,12 @@ a {
   }
 }
 
-@-keyframes text-dissolve {
+@keyframes text-dissolve {
   from {
     opacity: 0;
   }
-
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -879,6 +887,7 @@ a {
   position: relative;
   width: 70%;
   -webkit-animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 .wrapper75 {
@@ -902,13 +911,15 @@ a {
 .bar .right {
   -webkit-animation-duration: 10s;
   -webkit-animation-name: text-dissolve;
+  animation-duration: 10s;
+  animation-name: text-dissolve;
 }
 
 .bar .inner,
 .inner2,
 .inner3,
 .inner4 {
-  background-color: #21d44f;
+  background-color: var(--primary-color);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -928,24 +939,32 @@ a {
 .bar.pct-95 .inner {
   -webkit-animation-duration: 2s;
   -webkit-animation-name: grow-95;
+  animation-duration: 2s;
+  animation-name: grow-95;
   right: 5%;
 }
 
 .bar.pct-95 .inner2 {
   -webkit-animation-duration: 3s;
   -webkit-animation-name: grow-95;
+  animation-duration: 3s;
+  animation-name: grow-95;
   right: 5%;
 }
 
 .bar.pct-95 .inner3 {
   -webkit-animation-duration: 4s;
   -webkit-animation-name: grow-95;
+  animation-duration: 4s;
+  animation-name: grow-95;
   right: 5%;
 }
 
 .bar.pct-95 .inner4 {
   -webkit-animation-duration: 6s;
   -webkit-animation-name: grow-95;
+  animation-duration: 6s;
+  animation-name: grow-95;
   right: 5%;
 }
 
@@ -958,6 +977,8 @@ a {
 .bar.pct-90 .inner {
   -webkit-animation-duration: 2s;
   -webkit-animation-name: grow-90;
+  animation-duration: 2s;
+  animation-name: grow-90;
   right: 10%;
 }
 
@@ -970,12 +991,16 @@ a {
 .bar.pct-85 .inner {
   -webkit-animation-duration: 4s;
   -webkit-animation-name: grow-85;
+  animation-duration: 4s;
+  animation-name: grow-85;
   right: 15%;
 }
 
 .bar.pct-85 .inner2 {
   -webkit-animation-duration: 7s;
   -webkit-animation-name: grow-85;
+  animation-duration: 7s;
+  animation-name: grow-85;
   right: 15%;
 }
 
@@ -1001,6 +1026,8 @@ a {
 .bar.pct-75 .inner {
   -webkit-animation-duration: 8s;
   -webkit-animation-name: grow-75;
+  animation-duration: 8s;
+  animation-name: grow-75;
   right: 25%;
 }
 
@@ -1013,18 +1040,20 @@ a {
 .bar.pct-50 .inner {
   -webkit-animation-duration: 5s;
   -webkit-animation-name: grow-50;
+  animation-duration: 5s;
+  animation-name: grow-50;
   right: 50%;
 }
 
 .bar.pct-50 .right {
   right: 10%;
   text-align: right;
-  background-color: #bec7d5;
+  background-color: var(--text-light);
   width: 60%;
 }
 
 .v-divider {
-  border-right: 1px dotted #bec7d5;
+  border-right: 1px dotted var(--text-light);
   position: absolute;
   left: 0;
   right: 25%;
@@ -1042,10 +1071,8 @@ a {
 
 .portfolio {
   padding-top: 300px;
-  background: url(./Media/chrysler-center-bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(./Media/chrysler-center-bg.jpg) no-repeat center center
+    fixed;
   background-size: cover;
   height: 1000px;
   color: white;
@@ -1154,31 +1181,31 @@ a {
   text-decoration: none;
   color: white;
   background-color: transparent;
-  border: #21d44f 3px solid;
+  border: var(--primary-color) 3px solid;
   padding: 10px;
   width: 150px;
   display: inline-block;
-  transition: all 0.3s ease;
-  border-radius: 6px;
+  transition: var(--transition-standard);
+  border-radius: var(--border-radius);
   margin-top: 20px;
   cursor: pointer;
 }
 
 .column2 .btn:hover {
-  background-color: #21d44f;
-  color: #333b50;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
   text-decoration: none;
 }
 
 .column2 .btn:focus {
   outline: none;
-  background-color: #21d44f;
-  color: #333b50;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
 }
 
 .column2 .btn:active {
-  background-color: #1bb340;
-  color: #333b50;
+  background-color: var(--primary-color-dark);
+  color: var(--text-dark);
   transform: translateY(1px);
 }
 
