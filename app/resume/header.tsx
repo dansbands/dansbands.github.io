@@ -62,7 +62,7 @@ export default function Header() {
               <div className="icon-circle">
                 <FontAwesomeIcon icon={faGlobe} />
               </div>
-              <a href="https://dansbands.github.io">dansbands.github.io</a>
+              <a href="https://danodeamedia.com">danodeamedia.com</a>
             </div>
           </div>
           <div className="subheader-section">
