@@ -36,7 +36,10 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           className="portfolio-image"
           src={image}
           alt={`${title} project screenshot`}
-          width={380}
+          width={image.width}
+          height={image.height}
+          sizes="(max-width: 991px) 100vw, 380px"
+          style={{ width: "100%", height: "auto" }}
         />
       </div>
       <div className="col-md-5 portfolio-text">
