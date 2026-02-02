@@ -497,6 +497,43 @@ a {
   position: absolute;
 }
 
+/* Portfolio page: keep content within the same visual boundaries as the header menu */
+.main2 .portfolio-container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 100px auto 0;
+  padding: 0 24px;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .main2 .portfolio-container {
+    max-width: 960px;
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main2 .portfolio-container {
+    padding: 0 14px;
+  }
+}
+
+.main2 .portfolio-row {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+.main2 .portfolio-media,
+.main2 .portfolio-text {
+  text-align: left;
+}
+
+.main2 .portfolio-image {
+  margin-left: 0;
+}
+
 .main2 .row {
   min-height: 400px;
 }
@@ -683,8 +720,8 @@ a {
 
 /*Bar Graph Animation CSS*/
 
-@import url(http://fonts.googleapis.com/css?family=Oswald:700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
 
 @keyframes grow-95 {
   from {
@@ -1101,11 +1138,6 @@ a {
 .portfolio .row {
   height: 320px;
   margin-top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  overflow: scroll;
-  scrollbar-width: none;
 }
 
 .portfolio img {

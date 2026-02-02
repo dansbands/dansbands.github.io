@@ -1,0 +1,10 @@
+- Write 3 case studies (Comcast speed test, TD form flow, Care/of Article Builder)
+- Add anonymized architecture diagram for each project
+- Add “problem / constraints / role / approach / outcome” bullets per project
+- Add measurable outcomes with verification method (funnel, latency, tickets, adoption)
+- Add one “tradeoff + what I’d do differently” bullet per project
+- Create a small public demo repo for one pattern (e.g., XState flow or multi-step form)
+- Add accessibility notes per project (keyboard, semantics, focus, ARIA)
+- Add performance notes per project (bundles, rendering strategy, caching)
+- Add testing strategy notes per project (unit/integration/e2e scope)
+- Add “artifact links” list per project (ADR, rollout plan, monitoring)

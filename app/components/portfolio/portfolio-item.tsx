@@ -29,11 +29,17 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   return (
-    <div className="row">
-      <div className="col-md-6">
-        <Image src={image} alt={`${title} project screenshot`} width={380} />
+    <div className="row portfolio-row">
+      <div className="col-md-1" />
+      <div className="col-md-5 portfolio-media">
+        <Image
+          className="portfolio-image"
+          src={image}
+          alt={`${title} project screenshot`}
+          width={380}
+        />
       </div>
-      <div className="col-md-4">
+      <div className="col-md-5 portfolio-text">
         <h2>{title}</h2>
         <h3>{subtitle}</h3>
         <h6 style={{ color: "silver" }}>{date}</h6>
@@ -70,6 +76,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           {isExpanded ? "Show Less" : "Read More"}
         </span>
       </div>
+      <div className="col-md-1" />
     </div>
   );
 };

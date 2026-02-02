@@ -6,6 +6,8 @@ const Professional = () => {
   const professionalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const element = professionalRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -19,13 +21,13 @@ const Professional = () => {
       { threshold: 0.1 }
     );
 
-    if (professionalRef.current) {
-      observer.observe(professionalRef.current);
+    if (element) {
+      observer.observe(element);
     }
 
     return () => {
-      if (professionalRef.current) {
-        observer.unobserve(professionalRef.current);
+      if (element) {
+        observer.unobserve(element);
       }
     };
   }, []);

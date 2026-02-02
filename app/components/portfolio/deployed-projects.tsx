@@ -30,27 +30,28 @@ const DeployedProjects = () => {
   ];
   return (
     <>
-      {/* // This is gross. Change it */}
-      <div className="col-md-1"></div>
-      <div className="col-md-10">
-        <h3>Deployed Projects</h3>
-        <div>Yet to be documented</div>
-        {links.map((link) =>
-          // This is gross. Change it
-          !link.hide ? (
-            <div className="project-card" key={link.title}>
-              <div>{link.title}</div>
-              <div>
-                {" - "}
-                <Link href={link.repoUrl}>Repo</Link>
+      <div className="row portfolio-row">
+        <div className="col-md-1" />
+        <div className="col-md-10">
+          <h3>Deployed Projects</h3>
+          <div>Yet to be documented</div>
+          {links.map((link) =>
+            !link.hide ? (
+              <div className="project-card" key={link.title}>
+                <div>{link.title}</div>
+                <div>
+                  {" - "}
+                  <Link href={link.repoUrl}>Repo</Link>
+                </div>
+                <div>
+                  {" - "}
+                  <Link href={link.liveUrl}>Live App</Link>
+                </div>
               </div>
-              <div>
-                {" - "}
-                <Link href={link.liveUrl}>Live App</Link>
-              </div>
-            </div>
-          ) : null
-        )}
+            ) : null
+          )}
+        </div>
+        <div className="col-md-1" />
       </div>
     </>
   );
