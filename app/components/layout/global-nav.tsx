@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Favicon2 from "@/public/favicon2.png";
@@ -8,6 +8,17 @@ import "./global-nav.css";
 
 const GlobalNav = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (window.location.pathname !== "/") {
@@ -24,7 +35,7 @@ const GlobalNav = () => {
 
   return (
     <div className="smooth" id="home">
-      <div className={`footer2`}>
+      <div className={`footer2 ${isScrolled ? "is-scrolled" : ""}`.trim()}>
         <Link href="/" className={"logo"}>
           <Image
             alt="favicon"
