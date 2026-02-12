@@ -146,6 +146,229 @@ table {
   --border-radius: 6px;
 }
 
+/* ------------------------------ */
+/* Work / Case Studies            */
+/* ------------------------------ */
+
+.work-page .main2 {
+  /* Override the portfolio page's extra-tall default */
+  min-height: 100vh;
+}
+
+.work-page .work-index,
+.work-page .case-study {
+  color: rgba(238, 242, 255, 0.86);
+  line-height: 1.6;
+}
+
+.work-page a {
+  color: rgba(238, 242, 255, 0.86);
+  text-decoration: none;
+}
+
+.work-page a:hover {
+  color: lightgray;
+}
+
+.work-index {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 124px 16px 48px;
+}
+
+.work-page .work-index-title {
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0 0 6px;
+}
+
+.work-index-intro {
+  max-width: 70ch;
+  opacity: 0.95;
+}
+
+.work-index-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.work-index-card {
+  grid-column: 1 / -1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(51, 59, 80, 0.42);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.work-index-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.work-index-card-title {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* Override .main2 h2 typography inside /work */
+.work-page .work-index-card-title {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.work-index-status {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  border: 1px solid rgba(33, 212, 79, 0.4);
+  background: rgba(33, 212, 79, 0.1);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.work-index-card-blurb {
+  margin: 10px 0 12px;
+  max-width: 90ch;
+}
+
+.work-index-card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.work-index-card-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.case-study {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 124px 16px 56px;
+}
+
+.case-study-breadcrumbs a {
+  text-decoration: underline;
+  color: rgba(238, 242, 255, 0.82);
+}
+
+.case-study-title {
+  margin: 10px 0 0;
+}
+
+.work-page .case-study-title {
+  font-size: 46px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.case-study-subtitle {
+  margin: 10px 0 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.case-study-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.case-study-summary {
+  margin-top: 14px;
+  max-width: 90ch;
+}
+
+.case-study-block {
+  margin-top: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(51, 59, 80, 0.34);
+  padding: 16px;
+}
+
+.work-page .case-study-block h3 {
+  margin: 0;
+}
+
+.work-page .case-study-block h4 {
+  margin: 14px 0 0;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.case-study-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 0;
+}
+
+.case-study-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.case-study-checklist li:last-child {
+  border-bottom: 0;
+}
+
+.case-study-checklist input[type="checkbox"] {
+  margin-top: 2px;
+}
+
+.case-study-bullets {
+  margin: 12px 0 0;
+}
+
+.case-study-links {
+  margin: 12px 0 0;
+}
+
+.case-study-body {
+  max-width: 95ch;
+}
+
+/* Restore readable list styling (reset removes bullets globally) */
+.work-page .case-study-body ul {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 10px 0 0;
+}
+
+.work-page .case-study-body ul ul {
+  list-style: circle;
+  margin-top: 8px;
+}
+
+.work-page .case-study-body li {
+  margin: 6px 0;
+}
+
+.portfolio-work-link {
+  margin: 10px 0 18px;
+  text-align: right;
+}
+
+.portfolio-work-link a {
+  display: inline-block;
+  text-decoration: underline;
+}
+
 html {
   font-family: var(--font-primary);
 }

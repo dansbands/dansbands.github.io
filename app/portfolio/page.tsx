@@ -23,7 +23,10 @@ const Portfolio = () => {
                 links={item.links}
               />
             ))}
-            <DeployedProjects />
+              <div className="portfolio-work-link">
+                <a href="/work">See full case studies →</a>
+              </div>
+              <DeployedProjects />
           </div>
         </div>
       </div>
