@@ -4,7 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 interface PortfolioItemProps {
-  image: StaticImageData;
+  image: StaticImageData | string;
   title: string;
   subtitle: string;
   date: string;
@@ -28,6 +28,9 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
+  const imageWidth = typeof image === "string" ? 1200 : image.width;
+  const imageHeight = typeof image === "string" ? 750 : image.height;
+
   return (
     <div className="row portfolio-row">
       <div className="col-md-1" />
@@ -36,8 +39,8 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           className="portfolio-image"
           src={image}
           alt={`${title} project screenshot`}
-          width={image.width}
-          height={image.height}
+          width={imageWidth}
+          height={imageHeight}
           sizes="(max-width: 991px) 100vw, 380px"
           style={{ width: "100%", height: "auto" }}
         />

@@ -1,3 +1,4 @@
+import aiTodoList from "@/app/Media/Photos/ai-todo-list.png";
 import yumble from "@/app/Media/Photos/yumble.png";
 import boozer from "@/app/Media/Photos/boozer.png";
 import toolshare from "@/app/Media/Photos/toolshare.png";
@@ -189,70 +190,39 @@ export const otherExperience = "React Native, CSS, Angular, jQuery, Figma, Photo
 
 export const portfolioItems = [
   {
-    image: yumble,
-    title: "Yumble",
-    subtitle:
-      "ReactJS and Ruby on Rails web application with responsive design",
-    date: "February 2018",
+    image: aiTodoList,
+    title: "AI Todo List",
+    subtitle: "MERN + OpenAI-powered task planning",
+    date: "May 2024",
     description:
-      "It’s like Bumble and Yelp had a baby - pick a dining partner and find a restaurant you’ll both love in minutes!",
-    technologies: ["ReactJS", "Ruby on Rails", "AJAX", "CSS"],
+      "A full-stack to-do app where each task can generate an AI-powered plan, curated resources, and a suggested Google search query.",
+    extendedDescription:
+      "Built with a React client and an Express API backed by MongoDB. Users can sign up / sign in, manage a personal task list, and expand any task to call an OpenAI Chat Completions endpoint that returns a structured JSON response (plan + links + search string), which is then persisted on the task.",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "OpenAI API",
+      "JWT auth",
+    ],
     features: [
-      "Employed Responsive Design Principles to build a Mobile-First application that expands into an immersive Desktop Experience",
-      "Integrated the Yelp Business Search API to bring a wide array of restaurant data to users",
-      "Made use of Location Services to expedite the user’s onboarding process",
-      "Incorporated the swiping interactions and the 'It’s a Match' modal to provide an authentic user experience.",
+      "Sign up / sign in with JWT + protected routes",
+      "Create, complete, edit, and delete tasks with a responsive UI",
+      "Per-task AI assistant generates a plan + resources + search term",
+      "Persists AI responses to MongoDB for later review",
+      "Light/dark mode toggle",
     ],
     links: [
-      { title: "Try it Live", url: "https://dansbands.github.io/yumble/" },
-      { title: "Demo Video", url: "https://youtu.be/10hwYAqOaKw" },
-      { title: "Front End Repo", url: "https://github.com/dansbands/yumble" },
       {
-        title: "Back End Repo",
-        url: "https://github.com/dansbands/yumble-backend",
+        title: "Live App",
+        url: "https://dansbands.github.io/ai-todo-list/#/sign-in",
       },
-    ],
-  },
-  {
-    image: boozer,
-    title: "Boozer",
-    subtitle: "ReactJS and Ruby on Rails web application",
-    date: "January 2018",
-    description:
-      "Search our database of cocktails, save your favorites, and update them with your own custom recipes.",
-    technologies: ["ReactJS", "Ruby on Rails", "AJAX", "CSS"],
-    features: [
-      "Extended Bootstrap with custom styles to build an elegant, intuitive interface",
-      "Enabled a shared library of cocktails while also allowing unique customizations per user through data modeling",
-      "Integrated a search feature to quickly find cocktails by name or ingredients",
-    ],
-    links: [
-      { title: "Try it Live", url: "https://dansbands.github.io/boozer/" },
-      { title: "Demo Video", url: "https://youtu.be/demo-boozer" },
-      { title: "Front End Repo", url: "https://github.com/dansbands/boozer" },
+      { title: "GitHub", url: "https://github.com/dansbands/ai-todo-list" },
       {
-        title: "Back End Repo",
-        url: "https://github.com/dansbands/boozer-backend",
+        title: "Roadmap",
+        url: "https://github.com/users/dansbands/projects/1",
       },
-    ],
-  },
-  {
-    image: toolshare,
-    title: "ToolShare",
-    subtitle: "A peer-to-peer tool lending platform",
-    date: "March 2018",
-    description:
-      "ToolShare connects people who need tools with those who have them, fostering a sharing economy.",
-    technologies: ["ReactJS", "Node.js", "Express", "MongoDB"],
-    features: [
-      "Built a secure user authentication system with JWT",
-      "Implemented a tool search and reservation system",
-      "Designed a responsive UI for both desktop and mobile users",
-    ],
-    links: [
-      { title: "Try it Live", url: "https://dansbands.github.io/toolshare/" },
-      { title: "Demo Video", url: "https://youtu.be/demo-toolshare" },
-      { title: "Github Repo", url: "https://github.com/dansbands/toolshare" },
     ],
   },
   {
@@ -269,4 +239,71 @@ export const portfolioItems = [
       { title: "Original Wix Site", url: "https://www.danodeamedia.com" },
     ],
   },
+  // {
+  //   image: yumble,
+  //   title: "Yumble",
+  //   subtitle:
+  //     "ReactJS and Ruby on Rails web application with responsive design",
+  //   date: "February 2018",
+  //   description:
+  //     "It’s like Bumble and Yelp had a baby - pick a dining partner and find a restaurant you’ll both love in minutes!",
+  //   technologies: ["ReactJS", "Ruby on Rails", "AJAX", "CSS"],
+  //   features: [
+  //     "Employed Responsive Design Principles to build a Mobile-First application that expands into an immersive Desktop Experience",
+  //     "Integrated the Yelp Business Search API to bring a wide array of restaurant data to users",
+  //     "Made use of Location Services to expedite the user’s onboarding process",
+  //     "Incorporated the swiping interactions and the 'It’s a Match' modal to provide an authentic user experience.",
+  //   ],
+  //   links: [
+  //     { title: "Try it Live", url: "https://dansbands.github.io/yumble/" },
+  //     { title: "Demo Video", url: "https://youtu.be/10hwYAqOaKw" },
+  //     { title: "Front End Repo", url: "https://github.com/dansbands/yumble" },
+  //     {
+  //       title: "Back End Repo",
+  //       url: "https://github.com/dansbands/yumble-backend",
+  //     },
+  //   ],
+  // },
+  // {
+  //   image: boozer,
+  //   title: "Boozer",
+  //   subtitle: "ReactJS and Ruby on Rails web application",
+  //   date: "January 2018",
+  //   description:
+  //     "Search our database of cocktails, save your favorites, and update them with your own custom recipes.",
+  //   technologies: ["ReactJS", "Ruby on Rails", "AJAX", "CSS"],
+  //   features: [
+  //     "Extended Bootstrap with custom styles to build an elegant, intuitive interface",
+  //     "Enabled a shared library of cocktails while also allowing unique customizations per user through data modeling",
+  //     "Integrated a search feature to quickly find cocktails by name or ingredients",
+  //   ],
+  //   links: [
+  //     { title: "Try it Live", url: "https://dansbands.github.io/boozer/" },
+  //     { title: "Demo Video", url: "https://youtu.be/demo-boozer" },
+  //     { title: "Front End Repo", url: "https://github.com/dansbands/boozer" },
+  //     {
+  //       title: "Back End Repo",
+  //       url: "https://github.com/dansbands/boozer-backend",
+  //     },
+  //   ],
+  // },
+  // {
+  //   image: toolshare,
+  //   title: "ToolShare",
+  //   subtitle: "A peer-to-peer tool lending platform",
+  //   date: "March 2018",
+  //   description:
+  //     "ToolShare connects people who need tools with those who have them, fostering a sharing economy.",
+  //   technologies: ["ReactJS", "Node.js", "Express", "MongoDB"],
+  //   features: [
+  //     "Built a secure user authentication system with JWT",
+  //     "Implemented a tool search and reservation system",
+  //     "Designed a responsive UI for both desktop and mobile users",
+  //   ],
+  //   links: [
+  //     { title: "Try it Live", url: "https://dansbands.github.io/toolshare/" },
+  //     { title: "Demo Video", url: "https://youtu.be/demo-toolshare" },
+  //     { title: "Github Repo", url: "https://github.com/dansbands/toolshare" },
+  //   ],
+  // },
 ];
