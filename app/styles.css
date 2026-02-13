@@ -555,7 +555,7 @@ html {
   position: absolute;
   margin-top: 15px;
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     margin-top: 0;
     left: 3%; 
   }
@@ -1653,8 +1653,8 @@ label {
   color: #21d44f;
 }
 
-/*Media Query - Mobile*/
-@media only screen and (min-width: 450px) and (max-width: 768px) {
+/* Tablet styles (<= 1024px) */
+@media only screen and (min-width: 450px) and (max-width: 1024px) {
   .footer2 {
     height: 50px;
     display: flex;
@@ -1684,7 +1684,6 @@ label {
     width: 100%;
     margin: 0;
     padding: 90px 10% 22px;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
