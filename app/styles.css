@@ -649,8 +649,7 @@ a {
 }
 
 .main {
-  background: url(./Media/hero.png) no-repeat center
-    center fixed;
+  background: url(./Media/hero.png) no-repeat right center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -665,6 +664,48 @@ a {
   color: white;
   padding-bottom: 500px;
   font-family: Avenir;
+}
+
+/* Desktop refinements (>= 1025px) */
+@media only screen and (min-width: 1025px) {
+  .main {
+    height: 90vh;
+    min-height: 720px;
+    padding-bottom: 0;
+    background-position: right center;
+  }
+
+  .main .container {
+    height: 90vh;
+    /* Keep original positioning from the base rule */
+  }
+
+  /* Keep the card centered and out of the face area */
+  .welcome-outer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -28px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .welcome {
+    position: relative;
+    width: min(640px, 72vw);
+    height: auto;
+    margin: 0;
+    border-radius: 18px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+    pointer-events: auto;
+  }
+
+  .welcome .container {
+    margin-top: 0;
+    padding: 28px 0 26px;
+  }
 }
 
 .main::before {
@@ -1675,7 +1716,7 @@ label {
     min-height: 520px;
     padding-bottom: 0;
     background-attachment: scroll;
-    background-position: 82% center;
+    background-position: right center;
   }
 
   .main .container {
@@ -1845,7 +1886,7 @@ label {
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .main {
     background-attachment: scroll;
-    background-position: 76% center;
+    background-position: right center;
   }
 }
 
@@ -1873,7 +1914,7 @@ label {
     min-height: 420px;
     padding-bottom: 0;
     background-attachment: scroll;
-    background-position: 88% center;
+    background-position: right center;
   }
 
   .main h1 {
