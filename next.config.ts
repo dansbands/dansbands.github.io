@@ -1,15 +1,16 @@
+import { execSync } from "child_process";
 import type { NextConfig } from "next";
-
-// const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
   images: {
-    unoptimized: true, // Disable default image optimization
+    unoptimized: true,
   },
-  // assetPrefix: isProd ? "/danodeamedia-next" : "",
-  // basePath: isProd ? "/danodeamedia-next" : "",
+  env: {
+    NEXT_PUBLIC_BUILD_SHA: process.env.NEXT_PUBLIC_BUILD_SHA || execSync("git rev-parse --short HEAD").toString().trim() || "unknown",
+    NEXT_PUBLIC_BUILD_TIME: process.env.NEXT_PUBLIC_BUILD_TIME || JSON.stringify(new Date().toLocaleString().trim()) || "unknown",
+  },
 };
 
 export default nextConfig;
