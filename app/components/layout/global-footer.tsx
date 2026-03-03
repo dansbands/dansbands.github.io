@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Favicon from "@/app/Media/favicon2.png";
+import Favicon from "@/app/Media/Favicon2.png";
 
 const GlobalFooter = () => {
   return (

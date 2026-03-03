@@ -1,5 +1,5 @@
 import React from "react";
-import Favicon2 from "@/app/Media/favicon2.png";
+import Favicon2 from "@/app/Media/Favicon2.png";
 import Image from "next/image";
 
 const Welcome = () => {

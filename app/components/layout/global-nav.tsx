@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Favicon2 from "@/public/favicon2.png";
+import Favicon2 from "@/public/Favicon2.png";
 import "./global-nav.css";
 
 const GlobalNav = () => {
