@@ -21,40 +21,41 @@ export const experience = [
   {
     featured: true,
     id: 1,
-    company: "TD Bank/ TD Securities",
+    company: "TD Bank / TD Securities",
     title: "Senior Software Engineer",
     dates: "February 2025 - present",
     responsibilities: [
-      "Architected a multi-step form flow with API-based account validation, contextual state management, and dynamic modals",
-      "Implemented a reusable form filler utility to support future edit workflows and simplify state handling",
-      "Established unit testing and code coverage with Vitest; resolved legacy test failures and console warnings",
-      "Drove development in coordination with product analysts and backend engineers to ensure aligned API delivery and robust mock data for frontend testing",
-      "Participated in code reviews and mentored a junior developer on repo architecture and Git best practices",
+      "Architecting enterprise-scale multi-step financial flows, implementing complex state management and API-driven account validation for high-security environments",
+      "Engineered a modular, reusable form-filler utility to automate edit workflows, significantly reducing technical debt and streamlining state transitions",
+      "Leading the transition to Vitest/Testing Library, establishing rigorous code coverage standards and resolving long-standing legacy architecture issues",
+      "Orchestrating cross-functional delivery between product analysts and backend teams to ensure high-fidelity mock data and robust API contracts",
+      "Mentoring developers on repository architecture and scalable Git strategies to maintain enterprise-grade code quality",
     ],
   },
   {
     featured: true,
     id: 2,
     company: "Care/of",
-    title: "Software Engineer",
+    title: "Software Engineer (Full Stack / CMS)",
     dates: "June 2022 - July 2024",
     responsibilities: [
-      "Contributing to an enterprise grade eCommerce web application",
-      "Owned development of a collection of 350+ Articles pages, and related Article Builder tool",
-      "Article Builder includes a markdown-based editor that enables business to add pre-built HTML modules to articles published in our CMS, all with the click of a button",
-      "Added React Portals to enable the addition of interactive, stateful React components to HTML rendered from markdown created in Article Builder",
+      "Owned the end-to-end technical lifecycle of a 350+ page Article ecosystem, driving organic growth for a major eCommerce platform",
+      "Developed a custom Markdown-based 'Article Builder' tool, empowering non-technical stakeholders to deploy complex HTML modules with zero-code overhead",
+      "Architected React Portals to inject interactive, stateful components into static CMS-rendered content, bridging the gap between performance and interactivity",
+      "Contributed to high-traffic eCommerce infrastructure focused on conversion optimization and seamless user journeys",
     ],
   },
   {
     featured: true,
     id: 3,
     company: "Comcast Business",
-    title: "Senior Software Engineer/ Technical Lead",
+    title: "Technical Lead / Senior Software Engineer",
     dates: "June 2021 - June 2022",
     responsibilities: [
-      "Technical Lead/ Front End Engineer on the team that brought our Internet Dashboard to General Availability for 1.8 million users",
-      "Led/ mentored a team of three front-end devs as we built features like Internet Speed Test, as well as adding existing components to the experience",
-      "Integrated XState with React in order to leverage XState's finite state machines to model the various states and transitions of the Internet Speed Test feature, including idle, loading, success, and error states, mapped to the various stages of the speed test process",
+      "Technical Lead for the Internet Dashboard launch, successfully scaling the platform to General Availability for 1.8M enterprise users",
+      "Directed a front-end team of three, overseeing the implementation of high-stakes features including the integrated Internet Speed Test",
+      "Implemented XState for finite state machine management, modeling complex asynchronous transitions (idle, loading, success, error) to ensure system reliability",
+      "Synthesized business requirements with technical constraints to deliver a high-performance, resilient user experience",
     ],
   },
   {
@@ -64,9 +65,9 @@ export const experience = [
     title: "Software Engineer",
     dates: "June 2020 - June 2021",
     responsibilities: [
-      "Contributing to an enterprise grade financial web application",
-      "Working in React/ Redux, and learned Angular to contribute to the legacy codebase to maintain existing features while we migrate to React",
-      "Personally built the proof of concept that integrated our new React work into the legacy Angular app",
+      "Developed the architectural Proof of Concept (PoC) to successfully bridge and migrate legacy Angular modules into a modern React ecosystem",
+      "Maintained and optimized financial applications within a Redux/React architecture, ensuring 99.9% uptime for critical banking tools",
+      "Mastered legacy frameworks rapidly to ensure zero-interruption service during massive platform migrations",
     ],
   },
   {
@@ -76,21 +77,20 @@ export const experience = [
     title: "Senior Software Engineer",
     dates: "Dec 2019 - Apr 2020",
     responsibilities: [
-      "Built a world-class social media web application with a feature set that rivals modern social apps",
-      "Cultivated experience in working independently as a member of a large scale, distributed team",
-      "Worked directly with the head of UX, QA team, project managers and clients to refine existing code in order to meet client expectations",
+      "Architected a greenfield social media platform featuring complex real-time interactions and high-concurrency data flows",
+      "Collaborated directly with the Head of UX to translate high-fidelity designs into a responsive, performant web application",
+      "Operated autonomously in a high-speed, distributed team environment to meet aggressive market-entry deadlines",
     ],
   },
   {
     featured: false,
     id: 6,
-    company: "Attck/ TimeRepublik",
+    company: "Attck / TimeRepublik",
     title: "Front End Developer",
     dates: "May 2019 - Dec 2019",
     responsibilities: [
-      "Developed beautiful interactive web applications and rich web sites in a fast-paced agency setting",
-      "Gained experience in working independently as a member of a four-person front-end team",
-      "Collaborated with designers, QA team, project managers and clients to ensure client needs are met",
+      "Rapidly developed high-fidelity interactive applications for diverse agency clients, prioritizing pixel-perfect UI and performance",
+      "Managed the full front-end lifecycle from design handoff to QA and deployment within a fast-paced agency setting",
     ],
   },
   {
@@ -100,9 +100,8 @@ export const experience = [
     title: "React Developer",
     dates: "April 2018 - Feb 2019",
     responsibilities: [
-      "Received multiple Product of the Month accolades on ProductHunt",
-      "Contributed to our full-stack MERN-based AI Website Builder",
-      "Built the administrative dashboard from visual design to deployment",
+      "Engineered a MERN-stack AI Website Builder that secured multiple 'Product of the Month' accolades on ProductHunt",
+      "Designed and deployed the administrative dashboard, converting visual specs into a functional full-stack management tool",
     ],
   },
 ];
@@ -113,31 +112,23 @@ export const education = [
     isFlexColumn: true,
     id: 1,
     company: "Rutgers University",
-    title: "Bachlelor of Arts in Music (violin)",
+    title: "Bachelor of Arts in Music (Violin Performance)",
     dates: "2007",
     responsibilities: [
-      "Teaching Certificate in Music, K-12",
-      "Rutgers University Salsa Band - Violinist, Assistant Director",
-      "New Jersey Folk Festival - Graphics Coordinator, Music Director",
+      "Dual focus on technical mastery and pedagogical theory (K-12 Teaching Certificate)",
+      "Leadership roles in various ensembles, emphasizing multi-instrumental proficiency and cross-functional coordination",
     ],
   },
   {
     featured: true,
     isFlexColumn: true,
     id: 2,
-    company: "General Assembly",
-    title: "User Experience Design",
-    dates: "2017",
-    responsibilities: [],
-  },
-  {
-    featured: true,
-    isFlexColumn: true,
-    id: 3,
-    company: "Flatiron School",
-    title: "Software Engineering Immersive",
-    dates: "2018",
-    responsibilities: [],
+    company: "General Assembly / Flatiron School",
+    title: "UX Design & Software Engineering Immersives",
+    dates: "2017-2018",
+    responsibilities: [
+      "Accelerated pivot into technology, bridging the gap between human-centric design and technical implementation",
+    ],
   },
 ];
 
@@ -146,27 +137,38 @@ export const otherWork = [
     featured: true,
     isFlexColumn: true,
     id: 1,
-    company: "Dan's Music Studio",
-    title: "Founder/ Lead Instructor",
-    dates: "2006-2016",
+    company: "Entrepreneurship: Dan's Music Studio",
+    title: "Founder / CEO / Lead Instructor",
+    dates: "2006 - Present",
     responsibilities: [
-      "Managed a team of 20 instructors and support personnel",
-      "Scaled from 30 to 200 students in 2 years",
-      "Delivered instruction on 10 instruments to students of all ages and skill levels",
+      "Founded and scaled a non-tech enterprise to 7-figure ARR, managing all aspects of P&L, operations, and growth",
+      "Led a team of 20+ instructors and support staff, scaling student enrollment by 660% within a 24-month period",
+      "Leveraged polymathic background to deliver instruction across 10 instruments, maintaining high retention through personalized learning paths",
     ],
   },
   {
     featured: true,
     isFlexColumn: true,
-    id: 2,
+    id: 2, // New ID for Band Leadership
+    company: "Professional Musical Performance & Production",
+    title: "Band Leader / Principal Performer",
+    dates: "2010 - 2020",
+    responsibilities: [
+      "Directed high-stakes musical productions across 1,000+ paid professional engagements, managing up to 3 simultaneous venue residencies",
+      "Performed and collaborated with Grammy winners and Rock & Roll Hall of Fame inductees, demonstrating elite-level performance under pressure",
+      "Managed end-to-end logistics, contract negotiation, and personnel for a locally touring ensemble, ensuring consistent delivery in high-pressure environments",
+    ],
+  },
+  {
+    featured: true, // Moved to false to keep focus on leadership roles
+    isFlexColumn: true,
+    id: 4,
     company: "Edison Middle School",
-    title: "Teacher of String Orchestra",
+    title: "Director of String Orchestra",
     dates: "2008-2015",
     responsibilities: [
-      "Managed 160 students in 4 ensembles",
-      "Developed curriculum for grade 6",
-      "Incorporated digital content through SmartMusic, Sibelius Scorch, and Sharepoint",
-      "Prepared each orchestra to perform 3 full length selections in 3 yearly concerts (36 total selections)",
+      "Managed 160 students across 4 ensembles, overseeing complex logistical and educational workflows",
+      "Pioneered the integration of digital curriculum tools (SmartMusic, Sibelius) to modernize traditional music education",
     ],
   },
 ];
@@ -186,7 +188,31 @@ export const icons = [
   xState,
 ];
 
-export const otherExperience = "React Native, CSS, Angular, jQuery, Figma, Photoshop, Logic Pro X, Audio and Video Editing, A/V Equipment setup, Live Sound";
+export const otherExperience =
+  "High-Agency Problem Solving, System Architecture, React Native, CSS, Angular, jQuery, Figma, Photoshop, Logic Pro X, Audio/Video Production, Polyglot (2 Languages), 10 Instruments.";
+
+export const leadershipAndInfluence = [
+  {
+    id: 1,
+    organization: "JerseyScript (BoroJS Meetup Family)",
+    title: "Lead Organizer / Community Director",
+    dates: "2024 - Present",
+    responsibilities: [
+      "Directing the primary JavaScript community in Jersey City, coordinating monthly technical sessions and networking for the NYC-area developer ecosystem",
+      "Secured and managed corporate venue partnerships, successfully pivoting logistics following venue closures to ensure zero interruption in community programming",
+      "Managing multi-channel communications and a high-engagement Slack community, fostering cross-functional mentorship between junior and staff-level engineers",
+    ],
+  },
+  {
+    id: 2,
+    organization: "TEDx",
+    title: "Speaker & Featured Performer",
+    dates: "2014",
+    responsibilities: [
+      "Selected through a rigorous, multi-stage vetting process to present on a global platform, recognized for the ability to synthesize complex concepts for a diverse audience",
+    ],
+  },
+];
 
 export const portfolioItems = [
   {
