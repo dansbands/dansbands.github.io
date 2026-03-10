@@ -160,7 +160,7 @@ export const otherWork = [
     ],
   },
   {
-    featured: true, // Moved to false to keep focus on leadership roles
+    featured: true,
     isFlexColumn: true,
     id: 4,
     company: "Edison Middle School",
@@ -193,8 +193,10 @@ export const otherExperience =
 
 export const leadershipAndInfluence = [
   {
+    featured: true,
+    isFlexColumn: true,
     id: 1,
-    organization: "JerseyScript (BoroJS Meetup Family)",
+    company: "JerseyScript (BoroJS Meetup Family)",
     title: "Lead Organizer / Community Director",
     dates: "2024 - Present",
     responsibilities: [
@@ -204,8 +206,10 @@ export const leadershipAndInfluence = [
     ],
   },
   {
+    featured: true,
+    isFlexColumn: true,
     id: 2,
-    organization: "TEDx",
+    company: "TEDx",
     title: "Speaker & Featured Performer",
     dates: "2014",
     responsibilities: [
@@ -254,15 +258,18 @@ export const portfolioItems = [
   {
     image: danodeamedia,
     title: "This Website",
-    subtitle: "Web Development",
-    date: "May 2017, March 2025",
+    subtitle: "Modern portfolio platform",
+    date: "May 2017, March 2026",
     description:
-      "I built this site as a place to demonstrate my skills with HTML5, CSS3, JavaScript and related libraries like jQuery. The design is based on one I adapted from a template on Wix.com, a drag-and-drop editor.",
+      "A continuously evolving portfolio rebuilt from an older Wix migration into a modern React/Next.js application.",
     extendedDescription:
-      "My initial goal was to rebuild my Wix site using purely the development skills I had at the time. As it has progressed, I have improved the experience by adding a fixed global navigation element, and by repositioning content to prioritize the needs of my users. I hope to continue to demonstrate good User Experience principles through my design as I learn new skills and attempt to incorporate them. Keep in mind, it is a work in progress. Enjoy!",
-    technologies: ["NextJS", "EmailJS"],
+      "Originally recreated in jQuery/HTML/CSS from a drag-and-drop site, this project has since been modernized with a Next.js architecture, typed React components, and improved content structure. The UX has been refined over time with stronger layout hierarchy, responsive behavior, and maintainable component patterns designed for iterative growth.",
+    technologies: ["Next.js", "React", "TypeScript", "EmailJS"],
     links: [
-      { title: "Original Wix Site", url: "https://www.danodeamedia.com" },
+      {
+        title: "Original Wix Site",
+        url: "https://dansbands.wixsite.com/design-lite",
+      },
     ],
   },
   // {

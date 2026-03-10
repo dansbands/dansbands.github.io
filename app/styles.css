@@ -2064,6 +2064,7 @@ label {
     height: auto;
     flex-direction: column;
     min-height: unset;
+    border-radius: unset;
   }
 
   .column1 {
