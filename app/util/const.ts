@@ -26,8 +26,8 @@ export const experience = [
     dates: "February 2025 - present",
     responsibilities: [
       "Architecting enterprise-scale multi-step financial flows, implementing complex state management and API-driven account validation for high-security environments",
-      "Engineered a modular, reusable form-filler utility to automate edit workflows, significantly reducing technical debt and streamlining state transitions",
-      "Leading the transition to Vitest/Testing Library, establishing rigorous code coverage standards and resolving long-standing legacy architecture issues",
+      "Engineered a modular, reusable form-filler utility to automate payment creation workflows, removing friction of manual data entry, thus facilitating increased development velocity ",
+      "Implemented SonarQube / Vitest code coverage reporting, establishing rigorous code coverage standards and resolving long-standing legacy regulatory issues",
       "Orchestrating cross-functional delivery between product analysts and backend teams to ensure high-fidelity mock data and robust API contracts",
       "Mentoring developers on repository architecture and scalable Git strategies to maintain enterprise-grade code quality",
     ],
