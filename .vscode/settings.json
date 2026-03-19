@@ -34,6 +34,14 @@
     "editorInfo.foreground": "#00ff0088",
     "activityBar.background": "#11350D",
     "titleBar.activeBackground": "#174A12",
-    "titleBar.activeForeground": "#F6FDF5"
+    "titleBar.activeForeground": "#F6FDF5",
+    "titleBar.inactiveBackground": "#11350D",
+    "titleBar.inactiveForeground": "#F6FDF5",
+    "statusBar.background": "#11350D",
+    "statusBar.foreground": "#F6FDF5",
+    "statusBar.debuggingBackground": "#11350D",
+    "statusBar.debuggingForeground": "#F6FDF5",
+    "statusBar.noFolderBackground": "#11350D",
+    "statusBar.noFolderForeground": "#F6FDF5"
   }
 }
