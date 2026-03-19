@@ -1,0 +1,425 @@
+name: Setup Senior Signal Sprint
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+  repository-projects: write
+  projects: write
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      OWNER: ${{ github.repository_owner }}
+      REPO: ${{ github.repository }}
+
+    steps:
+      - name: Create Labels
+        run: |
+          gh label create "track:github-cleanup"   --repo "$REPO" --color "0075ca" --description "Track 1: GitHub Cleanup" || true
+          gh label create "track:flagship-repo"    --repo "$REPO" --color "e4e669" --description "Track 2: Flagship Repo"  || true
+          gh label create "track:upgrade-existing" --repo "$REPO" --color "d93f0b" --description "Track 3: Upgrade Existing Repos" || true
+          gh label create "track:resume-site"      --repo "$REPO" --color "0e8a16" --description "Track 4: Resume + Site" || true
+
+      - name: Create Issue 1 — Bulk Privatize Repos
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Make all non-essential repos private" \
+            --label "track:github-cleanup" \
+            --body "## Description
+          Reduce noise by making all repositories private except a curated allowlist of high-signal projects.
+
+          ## Acceptance Criteria
+          - [ ] Only 3–5 repos remain public
+          - [ ] No coursework/tutorial repos visible
+          - [ ] GitHub profile immediately looks intentional
+
+          ## Agent Prompt
+          Write a script using GitHub CLI that:
+          1. Lists all repos under the user \`dansbands\`
+          2. Filters out a provided allowlist of repo names
+          3. Sets all other repos to private
+
+          Include instructions for execution."
+
+      - name: Create Issue 2 — GitHub Profile README
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Add high-signal GitHub profile README" \
+            --label "track:github-cleanup" \
+            --body "## Description
+          Create a clean, senior-level profile README that highlights positioning and key projects.
+
+          ## Acceptance Criteria
+          - [ ] Clear headline (AI + product + senior signal)
+          - [ ] 3 featured projects with links
+          - [ ] No fluff or buzzwords
+          - [ ] Reads in under 20 seconds
+
+          ## Agent Prompt
+          Generate a senior-level GitHub profile README for a frontend/product engineer.
+
+          Include:
+          - Strong headline (AI-powered product development)
+          - Short positioning paragraph
+          - 3 featured projects with descriptions
+          - Clean formatting
+
+          Avoid buzzwords and keep it concise."
+
+      - name: Create Issue 3 — Scaffold Agentic Workflow Repo
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Create \"agentic-product-starter\" repo" \
+            --label "track:flagship-repo" \
+            --body "## Description
+          Build a minimal Next.js app demonstrating an AI-driven workflow from user input → task generation → execution.
+
+          ## Acceptance Criteria
+          - [ ] Next.js App Router project
+          - [ ] API route for AI interaction
+          - [ ] Simple UI (input + output)
+          - [ ] No unnecessary dependencies
+          - [ ] No Axios
+
+          ## Agent Prompt
+          Create a minimal Next.js App Router project that:
+          - Accepts a user goal
+          - Sends it to an AI API
+          - Returns structured tasks (JSON)
+          - Displays them in the UI
+
+          Constraints:
+          - No Axios
+          - Keep architecture simple
+          - Use fetch
+          - Clean file structure
+
+          Focus on clarity over complexity."
+
+      - name: Create Issue 4 — Add Workflow Logic
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Implement task generation + execution flow" \
+            --label "track:flagship-repo" \
+            --body "## Description
+          Extend the repo to simulate an agentic workflow.
+
+          ## Acceptance Criteria
+          - [ ] AI returns structured tasks
+          - [ ] Tasks rendered step-by-step
+          - [ ] Basic state persistence (local or simple store)
+          - [ ] User can re-run or modify input
+
+          ## Agent Prompt
+          Extend the existing app to:
+          - Parse AI response into structured tasks
+          - Display tasks in sequence
+          - Allow basic interaction (rerun, edit input)
+
+          Keep implementation simple and readable."
+
+      - name: Create Issue 5 — Senior-Level README (CRITICAL)
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Add case-study README to agentic repo" \
+            --label "track:flagship-repo" \
+            --body "## Description
+          Turn the repo into a portfolio artifact.
+
+          ## Acceptance Criteria
+          - [ ] Sections: Problem, Solution, Architecture, Tradeoffs, Next Steps
+          - [ ] Explains decisions clearly
+          - [ ] Reads like a case study, not a tutorial
+
+          ## Agent Prompt
+          Write a senior-level README for this project.
+
+          Include:
+          - Problem statement
+          - Solution overview
+          - Architecture decisions
+          - Tradeoffs
+          - Future improvements
+
+          Keep it concise, clear, and professional."
+
+      - name: Create Issue 6 — Upgrade AI Todo List README
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Convert AI Todo List into case study" \
+            --label "track:upgrade-existing" \
+            --body "## Description
+          Rewrite README to reflect product thinking and engineering decisions.
+
+          ## Acceptance Criteria
+          - [ ] Problem clearly defined
+          - [ ] Why AI is used explained
+          - [ ] Architecture + tradeoffs included
+          - [ ] Demo link visible
+
+          ## Agent Prompt
+          Rewrite this README as a senior-level case study.
+
+          Focus on:
+          - Problem being solved
+          - Why AI is used
+          - Architecture decisions
+          - Tradeoffs
+
+          Avoid generic language."
+
+      - name: Create Issue 7 — Replace Weak Pinned Repo
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Remove low-signal repo from pinned list" \
+            --label "track:upgrade-existing" \
+            --body "## Description
+          Replace weaker project (e.g., Star Wars app) with stronger signal repo.
+
+          ## Acceptance Criteria
+          - [ ] Only high-quality repos pinned
+          - [ ] Each repo demonstrates product or system thinking"
+
+      - name: Create Issue 8 — Trim Resume Skills
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Remove low-signal items from resume" \
+            --label "track:resume-site" \
+            --body "## Description
+          Clean up skills section to focus on engineering signal.
+
+          ## Acceptance Criteria
+          - [ ] Remove: Photoshop, Logic Pro, Instruments
+          - [ ] Keep only relevant technical + product skills"
+
+      - name: Create Issue 9 — Homepage Hero Update
+        run: |
+          gh issue create \
+            --repo "$REPO" \
+            --title "Strengthen homepage positioning" \
+            --label "track:resume-site" \
+            --body "## Description
+          Update hero text to reflect senior-level impact.
+
+          ## Acceptance Criteria
+          - [ ] Clear positioning in 1–2 lines
+          - [ ] Emphasis on product + AI + ownership
+          - [ ] No generic UI language
+
+          ## Agent Prompt
+          Rewrite a homepage hero section for a senior frontend/product engineer.
+
+          Focus on:
+          - Building AI-powered products
+          - Ownership and impact
+          - Clear, concise messaging
+
+          Avoid generic phrases like \"passionate developer\"."
+
+      - name: Create Project Board and Configure Columns
+        run: |
+          # Create the project under the owner account
+          PROJECT_DATA=$(gh project create \
+            --owner "$OWNER" \
+            --title "Senior Signal Sprint" \
+            --format json)
+
+          echo "Project created: $PROJECT_DATA"
+          PROJECT_NUMBER=$(echo "$PROJECT_DATA" | python3 -c "import sys,json; print(json.load(sys.stdin)['number'])")
+          echo "Project number: $PROJECT_NUMBER"
+
+          # GitHub Projects v2 comes with a default "Status" field.
+          # Retrieve the Status field ID and current option IDs via GraphQL.
+          STATUS_FIELD=$(gh api graphql -f query='
+            query($owner: String!, $number: Int!) {
+              user(login: $owner) {
+                projectV2(number: $number) {
+                  id
+                  fields(first: 20) {
+                    nodes {
+                      ... on ProjectV2SingleSelectField {
+                        id
+                        name
+                        options { id name }
+                      }
+                    }
+                  }
+                }
+              }
+            }' \
+            -f owner="$OWNER" \
+            -F number="$PROJECT_NUMBER")
+
+          echo "Status field data: $STATUS_FIELD"
+
+          PROJECT_ID=$(echo "$STATUS_FIELD" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          print(d['data']['user']['projectV2']['id'])
+          ")
+
+          FIELD_ID=$(echo "$STATUS_FIELD" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          fields = d['data']['user']['projectV2']['fields']['nodes']
+          for f in fields:
+              if f.get('name') == 'Status':
+                  print(f['id'])
+                  break
+          ")
+
+          echo "Project ID: $PROJECT_ID"
+          echo "Status Field ID: $FIELD_ID"
+
+          # Rename existing Status options and add new ones to match our columns.
+          # First, get existing option IDs.
+          OPTIONS=$(echo "$STATUS_FIELD" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          fields = d['data']['user']['projectV2']['fields']['nodes']
+          for f in fields:
+              if f.get('name') == 'Status':
+                  for opt in f.get('options', []):
+                      print(opt['id'], opt['name'])
+          ")
+          echo "Existing options: $OPTIONS"
+
+          # Update the Status field to have exactly our 5 columns using GraphQL mutation.
+          gh api graphql -f query='
+            mutation($projectId: ID!, $fieldId: ID!) {
+              updateProjectV2Field(input: {
+                projectId: $projectId
+                fieldId: $fieldId
+                singleSelectField: {
+                  options: [
+                    { name: "Backlog", color: GRAY, description: "Not yet started" }
+                    { name: "Ready for Agent", color: BLUE, description: "Ready for AI agent to work on" }
+                    { name: "In Progress", color: YELLOW, description: "Currently being worked on" }
+                    { name: "Review", color: ORANGE, description: "Under review" }
+                    { name: "Done", color: GREEN, description: "Completed" }
+                  ]
+                }
+              }) {
+                projectV2Field {
+                  ... on ProjectV2SingleSelectField {
+                    id
+                    name
+                    options { id name }
+                  }
+                }
+              }
+            }' \
+            -f projectId="$PROJECT_ID" \
+            -f fieldId="$FIELD_ID"
+
+          echo "Columns configured successfully."
+
+          # Get updated Backlog option ID
+          UPDATED_FIELD=$(gh api graphql -f query='
+            query($owner: String!, $number: Int!) {
+              user(login: $owner) {
+                projectV2(number: $number) {
+                  fields(first: 20) {
+                    nodes {
+                      ... on ProjectV2SingleSelectField {
+                        id
+                        name
+                        options { id name }
+                      }
+                    }
+                  }
+                }
+              }
+            }' \
+            -f owner="$OWNER" \
+            -F number="$PROJECT_NUMBER")
+
+          BACKLOG_OPTION_ID=$(echo "$UPDATED_FIELD" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          fields = d['data']['user']['projectV2']['fields']['nodes']
+          for f in fields:
+              if f.get('name') == 'Status':
+                  for opt in f.get('options', []):
+                      if opt['name'] == 'Backlog':
+                          print(opt['id'])
+                          break
+          ")
+
+          echo "Backlog option ID: $BACKLOG_OPTION_ID"
+
+          # Add all issues to the project and set status to Backlog
+          ISSUES=$(gh issue list --repo "$REPO" --json number,id --limit 20)
+          echo "Issues to add: $ISSUES"
+
+          echo "$ISSUES" | python3 -c "
+          import sys, json
+          issues = json.load(sys.stdin)
+          for i in issues:
+              print(i['number'])
+          " | while read ISSUE_NUMBER; do
+            echo "Adding issue #$ISSUE_NUMBER to project..."
+
+            # Get issue node ID
+            ISSUE_NODE_ID=$(gh issue view "$ISSUE_NUMBER" --repo "$REPO" --json id -q '.id')
+
+            # Add issue to project
+            ITEM_DATA=$(gh api graphql -f query='
+              mutation($projectId: ID!, $contentId: ID!) {
+                addProjectV2ItemById(input: {
+                  projectId: $projectId
+                  contentId: $contentId
+                }) {
+                  item {
+                    id
+                  }
+                }
+              }' \
+              -f projectId="$PROJECT_ID" \
+              -f contentId="$ISSUE_NODE_ID")
+
+            ITEM_ID=$(echo "$ITEM_DATA" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          print(d['data']['addProjectV2ItemById']['item']['id'])
+          ")
+
+            echo "Item ID: $ITEM_ID, setting to Backlog..."
+
+            # Set item status to Backlog
+            gh api graphql -f query='
+              mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+                updateProjectV2ItemFieldValue(input: {
+                  projectId: $projectId
+                  itemId: $itemId
+                  fieldId: $fieldId
+                  value: { singleSelectOptionId: $optionId }
+                }) {
+                  projectV2Item {
+                    id
+                  }
+                }
+              }' \
+              -f projectId="$PROJECT_ID" \
+              -f itemId="$ITEM_ID" \
+              -f fieldId="$FIELD_ID" \
+              -f optionId="$BACKLOG_OPTION_ID"
+
+            echo "Issue #$ISSUE_NUMBER added to Backlog."
+          done
+
+          echo "✅ Senior Signal Sprint project board setup complete!"
+          echo "View your project at: https://github.com/users/$OWNER/projects/"
