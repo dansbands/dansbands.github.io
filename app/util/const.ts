@@ -189,7 +189,7 @@ export const icons = [
 ];
 
 export const otherExperience =
-  "High-Agency Problem Solving, System Architecture, React Native, CSS, Angular, jQuery, Figma, Photoshop, Logic Pro X, Audio/Video Production, 10 Instruments.";
+  "High-Agency Problem Solving, System Architecture, AI Integration, React Native, CSS, Angular, jQuery, Figma, REST APIs, TypeScript.";
 
 export const leadershipAndInfluence = [
   {

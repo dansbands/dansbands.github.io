@@ -32,8 +32,8 @@ export default function Header() {
           </div>
         </div>
         <div className="resume-header-right">
-          <h2>Senior Front End Engineer</h2>
-          <h3>My Unique Experience is Exactly What You Need</h3>
+          <h2>Senior Software Engineer</h2>
+          <h3>AI-Powered Products · Enterprise-Scale Frontend Architecture</h3>
         </div>
       </div>
       <div className="resume-subheader">

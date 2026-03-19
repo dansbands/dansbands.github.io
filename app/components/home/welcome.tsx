@@ -8,12 +8,14 @@ const Welcome = () => {
       <div className="welcome">
         <div className="container" id="welcome">
           <Image src={Favicon2} alt="favicon" height={140} width={140} />
-          <p>Welcome to my site. </p>
           <p>
-            I strive to create beautiful interfaces that are intuitive and
-            enjoyable to use.
+            I build AI-powered products end to end — architecture,
+            implementation, and shipping.
           </p>
-          <p>Feel free to have a look around.</p>
+          <p>
+            Senior engineer with a track record at TD Bank, Comcast, and
+            American Express.
+          </p>
           <a className="btn" href="portfolio">
             Recent Work
           </a>
