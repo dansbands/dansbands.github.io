@@ -27,7 +27,7 @@ Minimal Next.js App Router project that demonstrates an agentic workflow: user s
 ## Currently
 
 - **Senior Software Engineer @ TD Bank / TD Securities** — architecting enterprise-scale multi-step financial flows, state management, and cross-functional delivery
-- Organizing [JerseyScript](https://jerseyScript.dev) — the primary JS meetup for the Jersey City / NYC developer community
+- Organizing [JerseyScript](https://jerseyscript.dev) — the primary JS meetup for the Jersey City / NYC developer community
 
 ---
 

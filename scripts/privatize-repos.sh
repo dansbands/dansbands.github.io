@@ -43,7 +43,7 @@ echo "Fetching repos for @${GITHUB_USER}..."
 # gh repo list returns <owner>/<name>; strip the owner prefix.
 mapfile -t ALL_REPOS < <(
   gh repo list "$GITHUB_USER" \
-    --limit 200 \
+    --limit 1000 \
     --json name \
     --jq '.[].name'
 )
