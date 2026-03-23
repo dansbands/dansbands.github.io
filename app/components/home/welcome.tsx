@@ -8,6 +8,11 @@ const Welcome = () => {
       <div className="welcome">
         <div className="container" id="welcome">
           <Image src={Favicon2} alt="favicon" height={140} width={140} />
+          <h2>Applied AI • Product delivery</h2>
+          <p>
+            I turn ambiguous product ideas into clear, shippable systems with
+            strong UX and maintainable implementation.
+          </p>
           <p>
             I focus on AI-assisted workflows, product-quality interfaces, and
             scoped delivery that is clear to maintain.

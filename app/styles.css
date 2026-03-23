@@ -740,13 +740,6 @@ a {
   margin: 0;
 }
 
-.main .hero-lede {
-  max-width: 520px;
-  margin: 14px 0 0;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
 #top {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -1931,11 +1924,6 @@ label {
 
   .main h1 {
     font-size: 54px;
-  }
-
-  .main .hero-lede {
-    max-width: 100%;
-    font-size: 16px;
   }
 
   .main .container {
