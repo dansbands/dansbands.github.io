@@ -8,19 +8,27 @@ const Welcome = () => {
       <div className="welcome">
         <div className="container" id="welcome">
           <Image src={Favicon2} alt="favicon" height={140} width={140} />
-          <p>Welcome to my site. </p>
+          <h2>Applied AI • Product delivery</h2>
           <p>
-            I strive to create beautiful interfaces that are intuitive and
-            enjoyable to use.
+            I turn ambiguous product ideas into clear, shippable systems with
+            strong UX and maintainable implementation.
           </p>
-          <p>Feel free to have a look around.</p>
+          <p>
+            I focus on AI-assisted workflows, product-quality interfaces, and
+            scoped delivery that is clear to maintain.
+          </p>
+          <p>
+            Start with selected work to see how I frame problems, make
+            tradeoffs, and ship usable systems.
+          </p>
           <a className="btn" href="portfolio">
-            Recent Work
+            Selected Work
           </a>
           <a
             className="btn"
             href="/resume"
             target="_blank"
+            rel="noreferrer"
           >
             Résumé
           </a>
