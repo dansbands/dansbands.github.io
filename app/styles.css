@@ -695,7 +695,7 @@ a {
   .welcome {
     position: relative;
     width: min(640px, 72vw);
-    height: auto;
+    height: 400px;
     margin: 0;
     border-radius: 18px;
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
@@ -704,7 +704,7 @@ a {
 
   .welcome .container {
     margin-top: 0;
-    padding: 28px 0 26px;
+    padding: 26px 0;
   }
 }
 
@@ -953,17 +953,21 @@ a {
   position: relative;
   width: 90%;
   text-align: center;
-  margin-left: 5%;
-  margin-top: 35px;
+  margin: 0 auto;
+  padding: 26px 0;
+  box-sizing: border-box;
 }
 
 .welcome p {
-  line-height: 1.6;
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .welcome img {
   height: 100px;
   width: 100px;
+  margin-bottom: 12px;
 }
 
 .welcome h1 {
@@ -971,7 +975,9 @@ a {
 }
 
 .welcome h2 {
-  margin: 0 0 15px;
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .welcome .btn {
@@ -985,7 +991,7 @@ a {
   transition: var(--transition-standard);
   border-radius: var(--border-radius);
   margin-top: 15px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
 }
