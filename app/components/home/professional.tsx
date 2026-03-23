@@ -39,7 +39,7 @@ const Professional = () => {
         <h1 className="title">
           <span className="gray">01</span> PROFESSIONAL
         </h1>
-        <h2 className="subtitle">MY KNOWLEDGE LEVEL IN SOFTWARE</h2>
+        <h2 className="subtitle">CORE TECHNOLOGIES USED IN SHIPPED WORK</h2>
         <div className="visible-on-scroll">
           <div id="skills">
             <div id="apps">
