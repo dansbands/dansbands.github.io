@@ -8,19 +8,22 @@ const Welcome = () => {
       <div className="welcome">
         <div className="container" id="welcome">
           <Image src={Favicon2} alt="favicon" height={140} width={140} />
-          <p>Welcome to my site. </p>
           <p>
-            I strive to create beautiful interfaces that are intuitive and
-            enjoyable to use.
+            I focus on AI-assisted workflows, product-quality interfaces, and
+            scoped delivery that is clear to maintain.
           </p>
-          <p>Feel free to have a look around.</p>
+          <p>
+            Start with selected work to see how I frame problems, make
+            tradeoffs, and ship usable systems.
+          </p>
           <a className="btn" href="portfolio">
-            Recent Work
+            Selected Work
           </a>
           <a
             className="btn"
             href="/resume"
             target="_blank"
+            rel="noreferrer"
           >
             Résumé
           </a>
