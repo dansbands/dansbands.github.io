@@ -1,7 +1,7 @@
 import aiTodoList from "@/app/Media/Photos/ai-todo-list.png";
-import yumble from "@/app/Media/Photos/yumble.png";
-import boozer from "@/app/Media/Photos/boozer.png";
-import toolshare from "@/app/Media/Photos/toolshare.png";
+// import yumble from "@/app/Media/Photos/yumble.png";
+// import boozer from "@/app/Media/Photos/boozer.png";
+// import toolshare from "@/app/Media/Photos/toolshare.png";
 import danodeamedia from "@/app/Media/Photos/danodeamedia.png";
 import tonegrid from "@/app/Media/Photos/tonegrid.png";
 
@@ -262,7 +262,7 @@ export const portfolioItems = [
     subtitle: "Interactive web app",
     date: "March 2026",
     description:
-      "A browser-based demo that rivals existing commercially available instrument conditioning software. The paid version available for signup through the free app adds groundbreaking features like automated conditioning flows and expanded instrument coverage.",
+      "A browser-based app that rivals existing commercially available instrument conditioning software. The paid version, available for signup through the free app, adds groundbreaking features like automated conditioning flows, session recall, and expanded instrument coverage.",
     technologies: ["React", "Next.js", "TypeScript", "Web Audio API"],
     features: [],
     // TODO: Replace placeholder ToneGrid URLs with the production/live repo links.
