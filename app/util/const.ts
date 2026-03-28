@@ -3,6 +3,7 @@ import yumble from "@/app/Media/Photos/yumble.png";
 import boozer from "@/app/Media/Photos/boozer.png";
 import toolshare from "@/app/Media/Photos/toolshare.png";
 import danodeamedia from "@/app/Media/Photos/danodeamedia.png";
+import tonegrid from "@/app/Media/Photos/tonegrid.png";
 
 import Express from "@/app/Media/Icons/Express.svg";
 import MongoDB from "@/app/Media/Icons/MongoDB.svg";
@@ -253,6 +254,21 @@ export const portfolioItems = [
         title: "Roadmap",
         url: "https://github.com/users/dansbands/projects/1",
       },
+    ],
+  },
+  {
+    image: tonegrid,
+    title: "ToneGrid",
+    subtitle: "Interactive web app",
+    date: "March 2026",
+    description:
+      "A browser-based tool for running sustained tones and simple note sequences to explore instrument response, conditioning workflows, and practice-adjacent resonance use cases.",
+    technologies: ["React", "Next.js", "TypeScript", "Web Audio API"],
+    features: [],
+    // TODO: Replace placeholder ToneGrid URLs with the production/live repo links.
+    links: [
+      { title: "Live Demo", url: "https://tonegrid.example.com" },
+      { title: "GitHub", url: "https://github.com/your-org/tonegrid" },
     ],
   },
   {
