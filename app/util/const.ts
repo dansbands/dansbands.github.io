@@ -262,7 +262,8 @@ export const portfolioItems = [
     subtitle: "Interactive web app",
     date: "March 2026",
     description:
-      "A browser-based app that rivals existing commercially available instrument conditioning software. The paid version, available for signup through the free app, adds groundbreaking features like automated conditioning flows, session recall, and expanded instrument coverage.",
+      "A browser-based app that rivals existing commercially available instrument conditioning software.",
+    extendedDescription: "The paid version, available for signup through the free app, adds groundbreaking features like automated conditioning flows, multiple simultaneous sessions, session recall, and expanded instrument coverage. All this for $15/month vs. $300 per unit for the leading competitor.",
     technologies: ["React", "Next.js", "TypeScript", "Web Audio API"],
     features: [],
     // TODO: Replace placeholder ToneGrid URLs with the production/live repo links.
