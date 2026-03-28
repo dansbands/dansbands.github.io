@@ -1941,15 +1941,15 @@ label {
   }
 
   .main {
-    height: 56svh;
-    min-height: 420px;
+    height: 50svh;
+    min-height: 370px;
     padding-bottom: 0;
     background-attachment: scroll;
     background-position: right center;
   }
 
   .main h1 {
-    font-size: 54px;
+    font-size: 48px;
   }
 
   .main .container {
@@ -1957,7 +1957,7 @@ label {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 74px 10% 18px;
+    padding: 66px 10% 12px;
     /* display: flex; */
     flex-direction: column;
     justify-content: flex-start;
@@ -1973,21 +1973,23 @@ label {
     position: relative;
     width: 100%;
     height: auto;
-    margin: 0;
+    margin: -16px 0 0;
   }
 
   .welcome .container {
     margin-top: 0;
-    padding: 20px 0 18px;
+    padding: 14px 0 12px;
   }
 
   .welcome h2 {
     margin: 0;
+    font-size: 15px;
   }
 
   .welcome img {
-    height: 50px;
-    width: 50px;
+    height: 36px;
+    width: 36px;
+    margin-bottom: 6px;
   }
 
   .welcome .container {
@@ -1996,13 +1998,23 @@ label {
     margin-left: 5%;
   }
 
+  .welcome p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
   .welcome .btn {
     border: #21d44f 1px solid;
     width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
   }
 
   .welcome-actions {
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
   }
 
   .professional {
