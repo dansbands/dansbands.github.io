@@ -3,6 +3,7 @@ import aiTodoList from "@/app/Media/Photos/ai-todo-list.png";
 // import boozer from "@/app/Media/Photos/boozer.png";
 // import toolshare from "@/app/Media/Photos/toolshare.png";
 import danodeamedia from "@/app/Media/Photos/danodeamedia.png";
+import tonegrid from "@/app/Media/Photos/tonegrid.png";
 
 import Express from "@/app/Media/Icons/Express.svg";
 import MongoDB from "@/app/Media/Icons/MongoDB.svg";
@@ -253,6 +254,22 @@ export const portfolioItems = [
         title: "Roadmap",
         url: "https://github.com/users/dansbands/projects/1",
       },
+    ],
+  },
+  {
+    image: tonegrid,
+    title: "ToneGrid",
+    subtitle: "Interactive web app",
+    date: "March 2026",
+    description:
+      "A browser-based app that rivals existing commercially available instrument conditioning software.",
+    extendedDescription: "The paid version, available for signup through the free app, adds groundbreaking features like automated conditioning flows, multiple simultaneous sessions, session recall, and expanded instrument coverage. All this for $15/month vs. $300 per unit for the leading competitor.",
+    technologies: ["React", "Next.js", "TypeScript", "Web Audio API"],
+    features: [],
+    // TODO: Replace placeholder ToneGrid URLs with the production/live repo links.
+    links: [
+      { title: "Live Demo", url: "https://tonegrid.example.com" },
+      { title: "GitHub", url: "https://github.com/your-org/tonegrid" },
     ],
   },
   {
