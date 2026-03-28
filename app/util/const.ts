@@ -262,7 +262,7 @@ export const portfolioItems = [
     subtitle: "Interactive web app",
     date: "March 2026",
     description:
-      "A browser-based tool for running sustained tones and simple note sequences to explore instrument response, conditioning workflows, and practice-adjacent resonance use cases.",
+      "A browser-based demo that rivals existing commercially available instrument conditioning software. The paid version available for signup through the free app adds groundbreaking features like automated conditioning flows and expanded instrument coverage.",
     technologies: ["React", "Next.js", "TypeScript", "Web Audio API"],
     features: [],
     // TODO: Replace placeholder ToneGrid URLs with the production/live repo links.
