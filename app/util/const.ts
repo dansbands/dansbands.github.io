@@ -1,7 +1,7 @@
 import aiTodoList from "@/app/Media/Photos/ai-todo-list.png";
-import yumble from "@/app/Media/Photos/yumble.png";
-import boozer from "@/app/Media/Photos/boozer.png";
-import toolshare from "@/app/Media/Photos/toolshare.png";
+// import yumble from "@/app/Media/Photos/yumble.png";
+// import boozer from "@/app/Media/Photos/boozer.png";
+// import toolshare from "@/app/Media/Photos/toolshare.png";
 import danodeamedia from "@/app/Media/Photos/danodeamedia.png";
 
 import Express from "@/app/Media/Icons/Express.svg";
