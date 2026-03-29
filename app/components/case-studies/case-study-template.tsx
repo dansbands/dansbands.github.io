@@ -32,7 +32,6 @@ export default function CaseStudyTemplate({
   subtitle,
   meta,
   summary,
-  checklist,
   highlights,
   links,
   sections,
@@ -48,18 +47,6 @@ export default function CaseStudyTemplate({
         {meta ? <div className="case-study-meta">{meta}</div> : null}
         {summary ? <p className="case-study-summary">{summary}</p> : null}
       </div>
-
-      <section className="case-study-block">
-        <h3>Checklist (gather these items)</h3>
-        <ul className="case-study-checklist">
-          {checklist.map((item) => (
-            <li key={item.label}>
-              <input type="checkbox" checked={Boolean(item.checked)} readOnly />
-              <span>{item.label}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
 
       {highlights?.length ? (
         <section className="case-study-block">
