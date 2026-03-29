@@ -3,6 +3,7 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
+import { SCROLL_KEY } from "./scroll-restorer";
 
 interface PortfolioItemProps {
   image: StaticImageData | string;
@@ -55,7 +56,11 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         <h6 style={{ color: "silver" }}>{date}</h6>
         <p className="p1">{description}</p>
         {caseStudyUrl ? (
-          <Link href={caseStudyUrl} className="portfolio-case-study-link">
+          <Link
+            href={caseStudyUrl}
+            className="portfolio-case-study-link"
+            onClick={() => sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))}
+          >
             Read Full Case Study <span aria-hidden="true">→</span>
           </Link>
         ) : (
