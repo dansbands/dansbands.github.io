@@ -278,7 +278,6 @@ table {
 }
 
 .portfolio-section-heading {
-  margin: 48px 0 8px;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -286,6 +285,22 @@ table {
   color: silver;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding-bottom: 8px;
+}
+
+.portfolio-case-study-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 50px;
+  color: #21d44f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-case-study-link:hover {
+  opacity: 0.8;
+  color: #21d44f;
 }
 
 html {

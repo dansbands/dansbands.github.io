@@ -1,6 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface PortfolioItemProps {
@@ -13,6 +14,8 @@ interface PortfolioItemProps {
   technologies: string[];
   features: string[];
   links: { title: string; url: string }[]; // Updated links structure
+  /** When set, replaces the expand panel with a direct navigation button */
+  caseStudyUrl?: string;
 }
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({
@@ -25,6 +28,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   technologies,
   features,
   links,
+  caseStudyUrl,
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
@@ -50,37 +54,45 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         <h3>{subtitle}</h3>
         <h6 style={{ color: "silver" }}>{date}</h6>
         <p className="p1">{description}</p>
-        <div className={`p2-1 ${isExpanded ? "expanded" : "collapsed"}`}>
-          <p className="p1">{extendedDescription}</p>
-          <ul>
-            <li>+ Technologies: {technologies.join(", ")}</li>
-            {features?.map((feature, index) => (
-              <li key={index}>+ {feature}</li>
-            ))}
-          </ul>
-          <p>
-            {links.map((link, index) => (
-              <React.Fragment key={index}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  id="view"
-                >
-                  {link.title}
-                </a>
-                {index < links.length - 1 && " | "}
-              </React.Fragment>
-            ))}
-          </p>
-        </div>
-        <span
-          onClick={() => setIsExpanded((prev) => !prev)}
-          className="less-1"
-          id="view"
-        >
-          {isExpanded ? "Show Less" : "Read More"}
-        </span>
+        {caseStudyUrl ? (
+          <Link href={caseStudyUrl} className="portfolio-case-study-link">
+            Read Full Case Study <span aria-hidden="true">→</span>
+          </Link>
+        ) : (
+          <>
+            <div className={`p2-1 ${isExpanded ? "expanded" : "collapsed"}`}>
+              <p className="p1">{extendedDescription}</p>
+              <ul>
+                <li>+ Technologies: {technologies.join(", ")}</li>
+                {features?.map((feature, index) => (
+                  <li key={index}>+ {feature}</li>
+                ))}
+              </ul>
+              <p>
+                {links.map((link, index) => (
+                  <React.Fragment key={index}>
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      id="view"
+                    >
+                      {link.title}
+                    </a>
+                    {index < links.length - 1 && " | "}
+                  </React.Fragment>
+                ))}
+              </p>
+            </div>
+            <span
+              onClick={() => setIsExpanded((prev) => !prev)}
+              className="less-1"
+              id="view"
+            >
+              {isExpanded ? "Show Less" : "Read More"}
+            </span>
+          </>
+        )}
       </div>
       <div className="col-md-1" />
     </div>
