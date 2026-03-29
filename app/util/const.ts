@@ -4,6 +4,8 @@ import aiTodoList from "@/app/Media/Photos/ai-todo-list.png";
 // import toolshare from "@/app/Media/Photos/toolshare.png";
 import danodeamedia from "@/app/Media/Photos/danodeamedia.png";
 import tonegrid from "@/app/Media/Photos/tonegrid.png";
+import articleBuilder from "@/app/Media/Photos/article-builder.png";
+import wirePaymentFlow from "@/app/Media/Photos/wire-payment-form.png";
 
 import Express from "@/app/Media/Icons/Express.svg";
 import MongoDB from "@/app/Media/Icons/MongoDB.svg";
@@ -221,6 +223,7 @@ export const leadershipAndInfluence = [
 
 export const portfolioItems = [
   {
+    section: "personal" as const,
     image: aiTodoList,
     title: "AI Todo List",
     subtitle: "MERN + OpenAI-powered task planning",
@@ -257,6 +260,7 @@ export const portfolioItems = [
     ],
   },
   {
+    section: "personal" as const,
     image: tonegrid,
     title: "ToneGrid",
     subtitle: "Interactive web app",
@@ -273,6 +277,7 @@ export const portfolioItems = [
     ],
   },
   {
+    section: "personal" as const,
     image: danodeamedia,
     title: "This Website",
     subtitle: "Modern portfolio platform",
@@ -288,6 +293,50 @@ export const portfolioItems = [
         url: "https://dansbands.wixsite.com/design-lite",
       },
     ],
+  },
+  {
+    section: "professional" as const,
+    image: articleBuilder,
+    title: "Care/of Article Builder",
+    subtitle: "Internal content platform",
+    date: "2021",
+    description:
+      "Built an internal publishing tool that helped scale a library of hundreds of doctor-written SEO articles, supporting a content strategy designed to make Care/of the WebMD of vitamins.",
+    extendedDescription:
+      "Developed a custom Markdown-based authoring tool that let non-technical stakeholders publish complex HTML modules with zero engineering overhead. Architected React Portals to inject interactive, stateful components into CMS-rendered content, bridging the gap between performance and interactivity across a 350+ page article ecosystem.",
+    technologies: ["React", "TypeScript", "Node.js", "Markdown", "CMS"],
+    features: [
+      "Modular article authoring with reusable content blocks",
+      "Self-serve publishing for non-technical content teams",
+      "React Portals for injecting interactive components into static content",
+      "SEO-optimized output at scale",
+    ],
+    links: [
+      { title: "Read More", url: "/work/careof-article-builder" },
+    ],
+    caseStudyUrl: "/work/careof-article-builder",
+  },
+  {
+    section: "professional" as const,
+    image: wirePaymentFlow,
+    title: "Wire Payment Flow",
+    subtitle: "Enterprise financial workflow",
+    date: "2025",
+    description:
+      "Refined a complex multi-step internal wire payment flow for bank employees, improving validation clarity, conditional logic, accessibility, and overall form usability in a compliance-sensitive environment.",
+    extendedDescription:
+      "Architected a modular, reusable form-filler utility to automate payment creation workflows, removing friction from manual data entry and increasing development velocity. Implemented rigorous validation patterns and state management for a nine-step flow handling high-security financial transactions.",
+    technologies: ["React", "TypeScript", "XState", "React Hook Form"],
+    features: [
+      "Multi-step form with robust conditional logic",
+      "API-driven account validation",
+      "Accessibility improvements for compliance-sensitive UI",
+      "Reusable form-filler utility for automated workflow testing",
+    ],
+    links: [
+      { title: "Read More", url: "/work/payment-form-flow" },
+    ],
+    caseStudyUrl: "/work/payment-form-flow",
   },
   // {
   //   image: yumble,

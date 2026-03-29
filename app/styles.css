@@ -147,7 +147,7 @@ table {
 }
 
 /* ------------------------------ */
-/* Work / Case Studies            */
+/* Case Studies                   */
 /* ------------------------------ */
 
 .work-page .main2 {
@@ -155,7 +155,6 @@ table {
   min-height: 100vh;
 }
 
-.work-page .work-index,
 .work-page .case-study {
   color: rgba(238, 242, 255, 0.86);
   line-height: 1.6;
@@ -168,87 +167,6 @@ table {
 
 .work-page a:hover {
   color: lightgray;
-}
-
-.work-index {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 124px 16px 48px;
-}
-
-.work-page .work-index-title {
-  font-size: 44px;
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin: 0 0 6px;
-}
-
-.work-index-intro {
-  max-width: 70ch;
-  opacity: 0.95;
-}
-
-.work-index-list {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
-  margin-top: 18px;
-}
-
-.work-index-card {
-  grid-column: 1 / -1;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(51, 59, 80, 0.42);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
-}
-
-.work-index-card-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.work-index-card-title {
-  margin: 0;
-  font-size: 22px;
-}
-
-/* Override .main2 h2 typography inside /work */
-.work-page .work-index-card-title {
-  font-size: 22px;
-  font-weight: 300;
-}
-
-.work-index-status {
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.9;
-  border: 1px solid rgba(33, 212, 79, 0.4);
-  background: rgba(33, 212, 79, 0.1);
-  border-radius: 999px;
-  padding: 4px 10px;
-}
-
-.work-index-card-blurb {
-  margin: 10px 0 12px;
-  max-width: 90ch;
-}
-
-.work-index-card-link {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-.work-index-card-link:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
 }
 
 .case-study {
@@ -359,14 +277,30 @@ table {
   margin: 6px 0;
 }
 
-.portfolio-work-link {
-  margin: 10px 0 18px;
-  text-align: right;
+.portfolio-section-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: silver;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 8px;
 }
 
-.portfolio-work-link a {
-  display: inline-block;
-  text-decoration: underline;
+.portfolio-case-study-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 50px;
+  color: #21d44f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-case-study-link:hover {
+  opacity: 0.8;
+  color: #21d44f;
 }
 
 html {
@@ -895,6 +829,11 @@ a {
   cursor: pointer;
   margin-bottom: 50px;
   color: #21d44f;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  display: inline;
 }
 
 .main2 .p1 {

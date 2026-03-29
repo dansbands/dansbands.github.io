@@ -40,7 +40,7 @@ export default function CaseStudyTemplate({
     <div className="case-study">
       <div className="case-study-header">
         <div className="case-study-breadcrumbs">
-          <Link href="/work">← All case studies</Link>
+          <Link href="/portfolio">← All Portfolio Items</Link>
         </div>
         <h1 className="case-study-title">{title}</h1>
         {subtitle ? <h2 className="case-study-subtitle">{subtitle}</h2> : null}
