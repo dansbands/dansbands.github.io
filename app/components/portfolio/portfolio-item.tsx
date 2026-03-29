@@ -51,7 +51,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         />
       </div>
       <div className="col-md-5 portfolio-text">
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <h3>{subtitle}</h3>
         <h6 style={{ color: "silver" }}>{date}</h6>
         <p className="p1">{description}</p>
@@ -59,7 +59,18 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
           <Link
             href={caseStudyUrl}
             className="portfolio-case-study-link"
-            onClick={() => sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))}
+            onClick={(event: React.MouseEvent<HTMLAnchorElement>) => {
+              if (
+                event.button !== 0 ||
+                event.metaKey ||
+                event.ctrlKey ||
+                event.shiftKey ||
+                event.altKey
+              ) {
+                return;
+              }
+              sessionStorage.setItem(SCROLL_KEY, String(window.scrollY));
+            }}
           >
             Read Full Case Study <span aria-hidden="true">→</span>
           </Link>
@@ -89,13 +100,14 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
                 ))}
               </p>
             </div>
-            <span
+            <button
+              type="button"
               onClick={() => setIsExpanded((prev) => !prev)}
               className="less-1"
-              id="view"
+              aria-expanded={isExpanded}
             >
               {isExpanded ? "Show Less" : "Read More"}
-            </span>
+            </button>
           </>
         )}
       </div>

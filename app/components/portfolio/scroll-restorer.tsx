@@ -10,7 +10,10 @@ const ScrollRestorer = () => {
     const saved = sessionStorage.getItem(SCROLL_KEY);
     if (saved !== null) {
       sessionStorage.removeItem(SCROLL_KEY);
-      window.scrollTo({ top: parseInt(saved, 10), behavior: "instant" });
+      const top = Number(saved);
+      if (Number.isFinite(top)) {
+        window.scrollTo({ top, behavior: "auto" });
+      }
     }
   }, []);
 

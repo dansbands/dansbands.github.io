@@ -314,6 +314,7 @@ export const portfolioItems = [
     links: [
       { title: "Read More", url: "/work/careof-article-builder" },
     ],
+    caseStudyUrl: "/work/careof-article-builder",
   },
   {
     section: "professional" as const,
@@ -335,6 +336,7 @@ export const portfolioItems = [
     links: [
       { title: "Read More", url: "/work/payment-form-flow" },
     ],
+    caseStudyUrl: "/work/payment-form-flow",
   },
   // {
   //   image: yumble,

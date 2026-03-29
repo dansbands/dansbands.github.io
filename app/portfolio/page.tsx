@@ -41,7 +41,7 @@ const Portfolio = () => {
                 technologies={item.technologies}
                 features={item.features || []}
                 links={item.links}
-                caseStudyUrl={item.links[0]?.url}
+                caseStudyUrl={item.caseStudyUrl}
               />
             ))}
           </div>
