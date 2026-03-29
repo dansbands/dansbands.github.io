@@ -8,7 +8,7 @@ export default function CareofArticleBuilderCaseStudyPage() {
           title="Care/of — Article builder & publishing"
           subtitle="Anonymized case study (selected details redacted)"
           meta="Role: Software Engineer (Full Stack / CMS) • Stack: React/TypeScript • Scope: content systems + SEO-driven publishing"
-          summary="I built a modular article system that transformed Care/of’s content strategy into a scalable growth engine, enabling 200+ SEO-driven articles to be published without engineering involvement."
+          summary="I built a modular article system that turned Care/of’s SEO content into a scalable growth engine, enabling 200+ articles to be published without engineering involvement."
           checklist={[
             { label: "Why This Mattered", checked: true },
             { label: "Context", checked: true },
@@ -33,19 +33,16 @@ export default function CareofArticleBuilderCaseStudyPage() {
               body: (
                 <>
                   <p>
-                    At a time when customer acquisition costs were rising and
-                    influencer marketing dominated paid channels, Care/of invested in
-                    organic growth through expert-written content.
+                    At a time of rising customer acquisition costs and
+                    influencer-heavy paid channels, Care/of invested in organic
+                    growth through expert-written content.
                   </p>
                   <p>
                     The goal was to become the “WebMD of vitamins”—a trusted source
-                    for health and wellness information that would rank highly in
-                    search results.
+                    for health and wellness information that could rank highly in
+                    search.
                   </p>
-                  <p>
-                    This article system became the foundation that made that strategy
-                    viable.
-                  </p>
+                  <p>This article system made that strategy scalable.</p>
                 </>
               ),
             },
@@ -108,6 +105,11 @@ export default function CareofArticleBuilderCaseStudyPage() {
                     Product managers could assemble and publish articles without
                     engineering involvement.
                   </p>
+                  <p>
+                    Example: a &quot;Hair, Skin, and Nails&quot; article could be assembled
+                    using structured sections, product modules, and SEO metadata,
+                    then published exactly as previewed.
+                  </p>
                 </>
               ),
             },
@@ -164,10 +166,10 @@ export default function CareofArticleBuilderCaseStudyPage() {
                     dependency into a scalable growth channel.
                   </p>
                   <ul>
-                    <li>Enabled 200+ expert-written articles to be published efficiently</li>
                     <li>Became the primary driver of organic acquisition</li>
-                    <li>Reduced engineering workload by hundreds of hours</li>
-                    <li>Supported a shift away from expensive paid acquisition channels</li>
+                    <li>Enabled 200+ expert-written articles to scale efficiently</li>
+                    <li>Eliminated hundreds of hours of engineering work</li>
+                    <li>Shifted content from a cost center to a self-serve growth engine</li>
                   </ul>
                 </>
               ),
@@ -176,7 +178,6 @@ export default function CareofArticleBuilderCaseStudyPage() {
               title: "Scalable Content System",
               body: (
                 <>
-                  <p>The builder supported modular content composition, including:</p>
                   <ul>
                     <li>Rich text sections</li>
                     <li>Highlighted facts and callouts</li>
@@ -238,7 +239,7 @@ export default function CareofArticleBuilderCaseStudyPage() {
                 <p>
                   By investing in a reusable system rather than one-off
                   implementations, we transformed content from an engineering
-                  bottleneck into a scalable growth channel.
+                  bottleneck into a self-serve growth engine.
                 </p>
               ),
             },
