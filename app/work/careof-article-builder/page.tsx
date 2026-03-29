@@ -8,26 +8,47 @@ export default function CareofArticleBuilderCaseStudyPage() {
           title="Care/of — Article builder & publishing"
           subtitle="Anonymized case study (selected details redacted)"
           meta="Role: Software Engineer (Full Stack / CMS) • Stack: React/TypeScript • Scope: content systems + SEO-driven publishing"
+          summary="I built a modular article system that transformed Care/of’s content strategy into a scalable growth engine, enabling 200+ SEO-driven articles to be published without engineering involvement."
           checklist={[
+            { label: "Why This Mattered", checked: true },
             { label: "Context", checked: true },
             { label: "Problem", checked: true },
             { label: "Solution", checked: true },
+            { label: "Before vs After", checked: true },
+            { label: "SEO-Driven Architecture", checked: true },
             { label: "Impact & Business Value", checked: true },
-            { label: "Eliminating the Engineering Bottleneck", checked: true },
             { label: "Scalable Content System", checked: true },
-            {
-              label: "Technical Detail: SEO-Driven Structured Content",
-              checked: true,
-            },
             { label: "My Contributions", checked: true },
             { label: "Related Work: Product Catalog", checked: true },
+            { label: "Closing Statement", checked: true },
           ]}
           highlights={[
-            "The article builder became a key driver of organic growth during a period of rising customer acquisition costs.",
-            "This enabled product managers to assemble fully designed, production-ready articles without engineering involvement.",
-            "This eliminated hundreds of hours of engineering effort and removed a major bottleneck between content and publishing.",
+            "Reframed around business impact, SEO-driven growth, and system design.",
+            "Shows the before/after shift from engineering dependency to self-serve publishing.",
+            "Clarifies technical ownership and the elimination of engineering bottlenecks.",
           ]}
           sections={[
+            {
+              title: "Why This Mattered",
+              body: (
+                <>
+                  <p>
+                    At a time when customer acquisition costs were rising and
+                    influencer marketing dominated paid channels, Care/of invested in
+                    organic growth through expert-written content.
+                  </p>
+                  <p>
+                    The goal was to become the “WebMD of vitamins”—a trusted source
+                    for health and wellness information that would rank highly in
+                    search results.
+                  </p>
+                  <p>
+                    This article system became the foundation that made that strategy
+                    viable.
+                  </p>
+                </>
+              ),
+            },
             {
               title: "Context",
               body: (
@@ -39,9 +60,8 @@ export default function CareofArticleBuilderCaseStudyPage() {
                     product presentation.
                   </p>
                   <p>
-                    I partnered closely with design to bring new systems to life in
-                    production, translating evolving concepts into scalable,
-                    maintainable frontend architecture.
+                    I partnered closely with design to translate evolving concepts into
+                    scalable, maintainable frontend architecture.
                   </p>
                 </>
               ),
@@ -51,20 +71,17 @@ export default function CareofArticleBuilderCaseStudyPage() {
               body: (
                 <>
                   <p>
-                    The existing content workflow was fragmented and difficult to
-                    scale. Editors lacked a structured way to compose rich, branded
-                    content, and engineering lacked a reusable system to support
-                    evolving layouts and components.
+                    The content workflow was fragmented and did not scale.
                   </p>
+                  <ul>
+                    <li>Editors lacked structured tools for building rich, branded content</li>
+                    <li>Engineering had to implement articles manually</li>
+                    <li>Each article required 1–3 points of engineering work</li>
+                    <li>Scaling to 200+ articles would require multiple sprints</li>
+                  </ul>
                   <p>
-                    This created bottlenecks between design, content, and engineering,
-                    slowing down iteration and increasing implementation cost.
-                  </p>
-                  <p>
-                    Additionally, Care/of was investing heavily in expert-written SEO
-                    content, with over 200 scholarly articles authored by in-house
-                    doctors. Without a scalable system, each article risked becoming a
-                    one-off engineering effort.
+                    This created a bottleneck between content, product, and
+                    engineering.
                   </p>
                 </>
               ),
@@ -75,22 +92,65 @@ export default function CareofArticleBuilderCaseStudyPage() {
                 <>
                   <p>
                     I built a modular article builder that allowed non-technical users
-                    to construct content using reusable components aligned with the new
-                    design system.
+                    to construct fully designed, production-ready content using
+                    reusable components aligned with the design system.
                   </p>
                   <p>The system supported:</p>
                   <ul>
                     <li>Flexible content blocks (text, media, product references)</li>
                     <li>Structured data for consistency and reuse</li>
-                    <li>Real-time previewing for faster iteration</li>
+                    <li>Real-time previewing</li>
                     <li>
-                      A scalable architecture that could evolve alongside the design
-                      system
+                      A scalable architecture that could evolve with the design system
                     </li>
                   </ul>
                   <p>
-                    This enabled product managers to assemble fully designed,
-                    production-ready articles without engineering involvement.
+                    Product managers could assemble and publish articles without
+                    engineering involvement.
+                  </p>
+                </>
+              ),
+            },
+            {
+              title: "Before vs After",
+              body: (
+                <>
+                  <h4>Before</h4>
+                  <ul>
+                    <li>Engineering required for every article</li>
+                    <li>1–3 point tickets per page</li>
+                    <li>Slow, sprint-dependent publishing</li>
+                  </ul>
+
+                  <h4>After</h4>
+                  <ul>
+                    <li>Articles built entirely by product managers</li>
+                    <li>~15 minutes to publish</li>
+                    <li>~1 hour total creation time per article</li>
+                    <li>Zero engineering involvement after launch</li>
+                  </ul>
+                </>
+              ),
+            },
+            {
+              title: "SEO-Driven Architecture",
+              body: (
+                <>
+                  <p>
+                    To support search visibility, I implemented structured data
+                    (schema markup) directly in the article output, dynamically
+                    populated from CMS data.
+                  </p>
+                  <p>This ensured:</p>
+                  <ul>
+                    <li>Strong indexing by search engines</li>
+                    <li>Eligibility for rich search results</li>
+                    <li>Alignment between content structure and SEO strategy</li>
+                  </ul>
+                  <p>
+                    Combined with SEO strategy, these articles consistently ranked
+                    among top search results and became the largest driver of organic
+                    growth.
                   </p>
                 </>
               ),
@@ -100,55 +160,15 @@ export default function CareofArticleBuilderCaseStudyPage() {
               body: (
                 <>
                   <p>
-                    The article builder became a key driver of organic growth during a
-                    period of rising customer acquisition costs.
+                    The article system transformed content from an engineering
+                    dependency into a scalable growth channel.
                   </p>
-                  <p>
-                    Care/of’s strategy was to become the “WebMD of vitamins,” creating
-                    authoritative content that would rank highly in search results for
-                    health-related queries.
-                  </p>
-                  <p>
-                    By combining structured content with strong SEO strategy, these
-                    articles consistently ranked among top search results and became
-                    the single largest driver of organic growth.
-                  </p>
-                </>
-              ),
-            },
-            {
-              title: "Eliminating the Engineering Bottleneck",
-              body: (
-                <>
-                  <p>
-                    Prior to this system, each article would have required individual
-                    engineering tickets, estimated at 1–3 points per article, spread
-                    across multiple sprints.
-                  </p>
-                  <p>
-                    Instead, I invested 2–3 sprints upfront to build a reusable
-                    system.
-                  </p>
-                  <p>This transformed the workflow:</p>
                   <ul>
-                    <li>
-                      Product managers could assemble articles using modular
-                      components
-                    </li>
-                    <li>Articles could be previewed in real time</li>
-                    <li>
-                      Final output could be copied into the CMS and published in ~15
-                      minutes
-                    </li>
+                    <li>Enabled 200+ expert-written articles to be published efficiently</li>
+                    <li>Became the primary driver of organic acquisition</li>
+                    <li>Reduced engineering workload by hundreds of hours</li>
+                    <li>Supported a shift away from expensive paid acquisition channels</li>
                   </ul>
-                  <p>
-                    Each article took roughly one hour to produce, without requiring
-                    engineering support.
-                  </p>
-                  <p>
-                    This eliminated hundreds of hours of engineering effort and
-                    removed a major bottleneck between content and publishing.
-                  </p>
                 </>
               ),
             },
@@ -156,35 +176,17 @@ export default function CareofArticleBuilderCaseStudyPage() {
               title: "Scalable Content System",
               body: (
                 <>
-                  <p>The builder supported a flexible set of modules, including:</p>
+                  <p>The builder supported modular content composition, including:</p>
                   <ul>
                     <li>Rich text sections</li>
                     <li>Highlighted facts and callouts</li>
                     <li>Pull quotes and large-format typography</li>
-                    <li>Embedded product modules such as carousels</li>
+                    <li>Embedded product modules (e.g., carousels)</li>
                   </ul>
                   <p>
-                    This allowed content to feel dynamic and on-brand, without
-                    requiring custom development for each article.
+                    This allowed content to feel dynamic and on-brand without custom
+                    development.
                   </p>
-                </>
-              ),
-            },
-            {
-              title: "Technical Detail: SEO-Driven Structured Content",
-              body: (
-                <>
-                  <p>
-                    To support search visibility, I implemented structured data
-                    (schema markup) directly within the article output, dynamically
-                    populated from CMS data.
-                  </p>
-                  <p>This ensured:</p>
-                  <ul>
-                    <li>Better indexing by search engines</li>
-                    <li>Eligibility for rich search results</li>
-                    <li>Alignment between content structure and SEO strategy</li>
-                  </ul>
                 </>
               ),
             },
@@ -193,24 +195,21 @@ export default function CareofArticleBuilderCaseStudyPage() {
               body: (
                 <ul>
                   <li>
+                    Designed and implemented a modular content system for dynamic
+                    article rendering
+                  </li>
+                  <li>
                     Translated design system concepts into reusable frontend
                     components
                   </li>
-                  <li>
-                    Defined component architecture for dynamic content rendering
-                  </li>
-                  <li>Built a modular system for structured content composition</li>
+                  <li>Defined architecture for structured content composition</li>
                   <li>Implemented SEO-focused structured data integration</li>
                   <li>
-                    Collaborated closely with design to refine UX and edge cases
+                    Enabled cross-functional teams (PM, content, SEO) to operate
+                    independently of engineering
                   </li>
                   <li>
-                    Balanced flexibility for content creators with system constraints
-                    for consistency
-                  </li>
-                  <li>
-                    Delivered a scalable solution that reduced engineering
-                    involvement in content publishing
+                    Eliminated engineering bottlenecks in the publishing workflow
                   </li>
                 </ul>
               ),
@@ -221,9 +220,8 @@ export default function CareofArticleBuilderCaseStudyPage() {
                 <>
                   <p>
                     In addition to the article builder, I contributed to the product
-                    catalog experience, helping implement structured product
-                    presentation aligned with the new hierarchy and personalization
-                    strategy.
+                    catalog experience, implementing structured product presentation
+                    aligned with the new hierarchy and personalization strategy.
                   </p>
                   <p>Focus areas included:</p>
                   <ul>
@@ -232,6 +230,16 @@ export default function CareofArticleBuilderCaseStudyPage() {
                     <li>Consistency across surfaces</li>
                   </ul>
                 </>
+              ),
+            },
+            {
+              title: "Closing Statement",
+              body: (
+                <p>
+                  By investing in a reusable system rather than one-off
+                  implementations, we transformed content from an engineering
+                  bottleneck into a scalable growth channel.
+                </p>
               ),
             },
           ]}
