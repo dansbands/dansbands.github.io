@@ -311,7 +311,9 @@ export const portfolioItems = [
       "React Portals for injecting interactive components into static content",
       "SEO-optimized output at scale",
     ],
-    links: [],
+    links: [
+      { title: "Read More", url: "/work/careof-article-builder" },
+    ],
   },
   {
     section: "professional" as const,
@@ -330,7 +332,9 @@ export const portfolioItems = [
       "Accessibility improvements for compliance-sensitive UI",
       "Reusable form-filler utility for automated workflow testing",
     ],
-    links: [],
+    links: [
+      { title: "Read More", url: "/work/payment-form-flow" },
+    ],
   },
   // {
   //   image: yumble,

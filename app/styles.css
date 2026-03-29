@@ -146,6 +146,137 @@ table {
   --border-radius: 6px;
 }
 
+/* ------------------------------ */
+/* Case Studies                   */
+/* ------------------------------ */
+
+.work-page .main2 {
+  /* Override the portfolio page's extra-tall default */
+  min-height: 100vh;
+}
+
+.work-page .case-study {
+  color: rgba(238, 242, 255, 0.86);
+  line-height: 1.6;
+}
+
+.work-page a {
+  color: rgba(238, 242, 255, 0.86);
+  text-decoration: none;
+}
+
+.work-page a:hover {
+  color: lightgray;
+}
+
+.case-study {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 124px 16px 56px;
+}
+
+.case-study-breadcrumbs a {
+  text-decoration: underline;
+  color: rgba(238, 242, 255, 0.82);
+}
+
+.case-study-title {
+  margin: 10px 0 0;
+}
+
+.work-page .case-study-title {
+  font-size: 46px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.case-study-subtitle {
+  margin: 10px 0 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.case-study-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.case-study-summary {
+  margin-top: 14px;
+  max-width: 90ch;
+}
+
+.case-study-block {
+  margin-top: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: rgba(51, 59, 80, 0.34);
+  padding: 16px;
+}
+
+.work-page .case-study-block h3 {
+  margin: 0;
+}
+
+.work-page .case-study-block h4 {
+  margin: 14px 0 0;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.case-study-checklist {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0 0;
+}
+
+.case-study-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.case-study-checklist li:last-child {
+  border-bottom: 0;
+}
+
+.case-study-checklist input[type="checkbox"] {
+  margin-top: 2px;
+}
+
+.case-study-bullets {
+  margin: 12px 0 0;
+}
+
+.case-study-links {
+  margin: 12px 0 0;
+}
+
+.case-study-body {
+  max-width: 95ch;
+}
+
+/* Restore readable list styling (reset removes bullets globally) */
+.work-page .case-study-body ul {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 10px 0 0;
+}
+
+.work-page .case-study-body ul ul {
+  list-style: circle;
+  margin-top: 8px;
+}
+
+.work-page .case-study-body li {
+  margin: 6px 0;
+}
+
 .portfolio-section-heading {
   margin: 48px 0 8px;
   font-size: 1.1rem;
