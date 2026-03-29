@@ -51,7 +51,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
         />
       </div>
       <div className="col-md-5 portfolio-text">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <h3>{subtitle}</h3>
         <h6 style={{ color: "silver" }}>{date}</h6>
         <p className="p1">{description}</p>
