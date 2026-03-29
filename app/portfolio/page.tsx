@@ -1,7 +1,9 @@
 import React from "react";
 import PortfolioItem from "../components/portfolio/portfolio-item";
 import { portfolioItems } from "../util/const";
-import DeployedProjects from "../components/portfolio/deployed-projects"; // Adjust the path as needed
+
+const personalItems = portfolioItems.filter((item) => item.section === "personal");
+const professionalItems = portfolioItems.filter((item) => item.section === "professional");
 
 const Portfolio = () => {
   return (
@@ -9,9 +11,10 @@ const Portfolio = () => {
       <div className="jumbotron" id="portfolio">
         <div className="main2">
           <div className="portfolio-container">
-            {portfolioItems.map((item, index) => (
+            <h2 className="portfolio-section-heading">Personal Projects</h2>
+            {personalItems.map((item) => (
               <PortfolioItem
-                key={index}
+                key={item.title}
                 image={item.image}
                 title={item.title}
                 subtitle={item.subtitle}
@@ -23,10 +26,21 @@ const Portfolio = () => {
                 links={item.links}
               />
             ))}
-              <div className="portfolio-work-link">
-                <a href="/work">See full case studies →</a>
-              </div>
-              <DeployedProjects />
+            <h2 className="portfolio-section-heading">Professional Case Studies</h2>
+            {professionalItems.map((item) => (
+              <PortfolioItem
+                key={item.title}
+                image={item.image}
+                title={item.title}
+                subtitle={item.subtitle}
+                date={item.date}
+                description={item.description}
+                extendedDescription={item.extendedDescription}
+                technologies={item.technologies}
+                features={item.features || []}
+                links={item.links}
+              />
+            ))}
           </div>
         </div>
       </div>
