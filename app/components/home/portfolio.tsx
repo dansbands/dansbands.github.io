@@ -18,9 +18,27 @@ const Portfolio = () => {
             SELECTED PROJECTS. <a href="portfolio">{"SEE MORE >"}</a>
           </h2>
           <div className="row">
-            <Image alt="Album" src={Album} width="300" />
-            <Image alt="Ript" src={Ript} width="300" />
-            <Image alt="Dansbands" src={Dansbands} width="300" />
+            <Image
+              alt="Fox album artwork"
+              src={Album}
+              width={300}
+              height={300}
+              sizes="(max-width: 767px) 90vw, (max-width: 1199px) 30vw, 300px"
+            />
+            <Image
+              alt="Ript project cover"
+              src={Ript}
+              width={300}
+              height={300}
+              sizes="(max-width: 767px) 90vw, (max-width: 1199px) 30vw, 300px"
+            />
+            <Image
+              alt="dansbands project cover"
+              src={Dansbands}
+              width={300}
+              height={300}
+              sizes="(max-width: 767px) 90vw, (max-width: 1199px) 30vw, 300px"
+            />
           </div>
         </div>
       </div>
