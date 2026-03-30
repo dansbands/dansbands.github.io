@@ -23,21 +23,21 @@ const Portfolio = () => {
               src={Album}
               width={300}
               height={300}
-              sizes="(max-width: 767px) 90vw, (max-width: 1199px) 30vw, 300px"
+              sizes="(max-width: 767px) 200px, (max-width: 1199px) 200px, 300px"
             />
             <Image
               alt="Ript project cover"
               src={Ript}
               width={300}
               height={300}
-              sizes="(max-width: 767px) 90vw, (max-width: 1199px) 30vw, 300px"
+              sizes="(max-width: 767px) 200px, (max-width: 1199px) 200px, 300px"
             />
             <Image
               alt="dansbands project cover"
               src={Dansbands}
               width={300}
               height={300}
-              sizes="(max-width: 767px) 90vw, (max-width: 1199px) 30vw, 300px"
+              sizes="(max-width: 767px) 200px, (max-width: 1199px) 200px, 300px"
             />
           </div>
         </div>
