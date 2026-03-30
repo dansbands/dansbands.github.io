@@ -292,10 +292,9 @@ export const portfolioItems = [
         url: "https://dansbands.wixsite.com/design-lite",
       },
       {
-        title: "Github",
-        url: "https://github.com/dansbands/dansbands.github.io"
+        title: "GitHub",
+        url: "https://github.com/dansbands/dansbands.github.io",
       },
-      
     ],
   },
   {
