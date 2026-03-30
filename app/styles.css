@@ -1420,7 +1420,6 @@ a {
   .portfolio {
     background-attachment: scroll;
     height: auto;
-    min-height: 1000px;
   }
 }
 
