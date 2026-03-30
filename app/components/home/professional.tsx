@@ -4,30 +4,31 @@ import React, { useRef, useEffect } from "react";
 
 const Professional = () => {
   const professionalRef = useRef<HTMLDivElement>(null);
+  const animationContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const element = professionalRef.current;
+    const sectionElement = professionalRef.current;
+    const animationContainer = animationContainerRef.current;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.children[1].children[2].classList.add("is-visible");
-          } else {
-            entry.target.classList.remove("is-visible");
+          if (entry.isIntersecting && animationContainer) {
+            animationContainer.classList.add("is-visible");
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.35 }
     );
 
-    if (element) {
-      observer.observe(element);
+    if (sectionElement) {
+      observer.observe(sectionElement);
     }
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
+      if (sectionElement) {
+        observer.unobserve(sectionElement);
       }
     };
   }, []);
@@ -40,7 +41,7 @@ const Professional = () => {
           <span className="gray">01</span> PROFESSIONAL
         </h1>
         <h2 className="subtitle">CORE TECHNOLOGIES USED IN SHIPPED WORK</h2>
-        <div className="visible-on-scroll">
+        <div className="visible-on-scroll" ref={animationContainerRef}>
           <div id="skills">
             <div id="apps">
               <p>JavaScript</p>
