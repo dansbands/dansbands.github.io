@@ -23,9 +23,13 @@ export default function Resume() {
 
   const scrollSectionHeaderIntoView = (sectionHeader: HTMLDivElement) => {
     window.setTimeout(() => {
-      sectionHeader.scrollIntoView({
+      const headerOffset = 50;
+      const scrollTarget =
+        sectionHeader.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: Math.max(scrollTarget, 0),
         behavior: "smooth",
-        block: "start",
       });
     }, 300);
   };
