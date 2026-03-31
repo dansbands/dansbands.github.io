@@ -15,7 +15,7 @@ const Portfolio = () => {
             <span className="gray">02</span> RECENT WORK
           </h1>
           <h2 className="subtitle">
-            SELECTED PROJECTS. <a href="portfolio">{"SEE MORE >"}</a>
+            SELECTED PROJECTS. <a href="/portfolio">{"SEE MORE >"}</a>
           </h2>
           <div className="row">
             <Image
