@@ -17,7 +17,7 @@ const Welcome = () => {
             problems, make tradeoffs, and ship usable systems.
           </p>
           <div className="welcome-actions">
-            <a className="btn" href="portfolio">
+            <a className="btn" href="/portfolio">
               Selected Work
             </a>
             <a

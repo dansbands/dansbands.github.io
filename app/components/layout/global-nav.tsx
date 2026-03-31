@@ -104,10 +104,10 @@ const GlobalNav = () => {
                 </button>
               </li>
               <li>
-                <Link href="portfolio">PORTFOLIO</Link>
+                <Link href="/portfolio">PORTFOLIO</Link>
               </li>
               <li>
-                <Link href="resume">RESUME</Link>
+                <Link href="/resume">RESUME</Link>
               </li>
             </ul>
           </div>
@@ -156,12 +156,12 @@ const GlobalNav = () => {
             </button>
           </li>
           <li>
-            <Link href="portfolio" onClick={toggleDrawer}>
+            <Link href="/portfolio" onClick={toggleDrawer}>
               PORTFOLIO
             </Link>
           </li>
           <li>
-            <Link href="resume" onClick={toggleDrawer}>
+            <Link href="/resume" onClick={toggleDrawer}>
               RESUME
             </Link>
           </li>
