@@ -2,13 +2,43 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Favicon2 from "@/public/Favicon2.png";
 import "./global-nav.css";
 
 const GlobalNav = () => {
+  const pathname = usePathname();
+  const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    const scrollToHash = () => {
+      const hash = window.location.hash.replace("#", "");
+
+      if (!hash) {
+        return;
+      }
+
+      const element = document.getElementById(hash);
+
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    scrollToHash();
+    window.addEventListener("hashchange", scrollToHash);
+
+    return () => {
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -21,10 +51,15 @@ const GlobalNav = () => {
   }, []);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (window.location.pathname !== "/") {
-      window.location.href = "/";
+    const targetId = e.currentTarget.name;
+
+    if (pathname !== "/") {
+      router.push(`/#${targetId}`);
+      setIsDrawerOpen(false);
+      return;
     }
-    const element = document.getElementById(e.currentTarget.name);
+
+    const element = document.getElementById(targetId);
     element?.scrollIntoView({ behavior: "smooth" });
     setIsDrawerOpen(false);
   };
