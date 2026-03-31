@@ -9,7 +9,7 @@ import { education, icons, leadershipAndInfluence, otherExperience, otherWork } 
 
 type FooterProps = {
   activeSection: string | null;
-  onToggleSection: (sectionId: string) => void;
+  onToggleSection: (sectionId: string, sectionHeader: HTMLDivElement) => void;
 };
 
 function Footer({ activeSection, onToggleSection }: FooterProps) {
@@ -19,7 +19,7 @@ function Footer({ activeSection, onToggleSection }: FooterProps) {
         icon={faBriefcase}
         data={otherWork}
         isCollapsed={activeSection !== "other-work"}
-        onToggle={() => onToggleSection("other-work")}
+        onToggle={(sectionHeader) => onToggleSection("other-work", sectionHeader)}
       >
         Other Work
       </FooterSubsection>
@@ -27,7 +27,7 @@ function Footer({ activeSection, onToggleSection }: FooterProps) {
         icon={faGraduationCap}
         data={education}
         isCollapsed={activeSection !== "education"}
-        onToggle={() => onToggleSection("education")}
+        onToggle={(sectionHeader) => onToggleSection("education", sectionHeader)}
       >
         Education
       </FooterSubsection>
@@ -35,7 +35,9 @@ function Footer({ activeSection, onToggleSection }: FooterProps) {
         icon={faGraduationCap}
         data={leadershipAndInfluence}
         isCollapsed={activeSection !== "leadership-and-influence"}
-        onToggle={() => onToggleSection("leadership-and-influence")}
+        onToggle={(sectionHeader) =>
+          onToggleSection("leadership-and-influence", sectionHeader)
+        }
       >
         Leadership and Influence
       </FooterSubsection>
@@ -44,7 +46,7 @@ function Footer({ activeSection, onToggleSection }: FooterProps) {
         icons={icons}
         otherExperience={otherExperience}
         isCollapsed={activeSection !== "skills"}
-        onToggle={() => onToggleSection("skills")}
+        onToggle={(sectionHeader) => onToggleSection("skills", sectionHeader)}
       >
         Skills
       </FooterSubsection>

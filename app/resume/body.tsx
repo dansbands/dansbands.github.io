@@ -8,7 +8,7 @@ import ExperienceItem from "./experience-item";
 
 type BodyProps = {
   isExperienceCollapsed: boolean;
-  onToggleExperience: () => void;
+  onToggleExperience: (sectionHeader: HTMLDivElement) => void;
 };
 
 export default function Body({
@@ -18,7 +18,10 @@ export default function Body({
 
   return (
     <div className="resume-body">
-      <div className="body-header" onClick={onToggleExperience}>
+      <div
+        className="body-header"
+        onClick={(event) => onToggleExperience(event.currentTarget)}
+      >
         <div className="icon-circle-lg">
           <FontAwesomeIcon icon={faBriefcase} width={20} />
         </div>

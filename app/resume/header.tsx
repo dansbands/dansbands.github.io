@@ -15,7 +15,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 type HeaderProps = {
   isContactCollapsed: boolean;
-  onToggleContact: () => void;
+  onToggleContact: (sectionHeader: HTMLDivElement) => void;
 };
 
 export default function Header({
@@ -39,7 +39,10 @@ export default function Header({
         </div>
       </div>
       <div className="resume-subheader">
-        <div className="contact-header" onClick={onToggleContact}>
+        <div
+          className="contact-header"
+          onClick={(event) => onToggleContact(event.currentTarget)}
+        >
           <div className="icon-circle-lg">
             <FontAwesomeIcon icon={faAddressCard} width={20} />
           </div>

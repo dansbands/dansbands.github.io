@@ -21,10 +21,23 @@ export default function Resume() {
     }, 500);
   };
 
-  const toggleMobileSection = (sectionId: string) => {
+  const scrollSectionHeaderIntoView = (sectionHeader: HTMLDivElement) => {
+    window.setTimeout(() => {
+      sectionHeader.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 300);
+  };
+
+  const toggleMobileSection = (
+    sectionId: string,
+    sectionHeader: HTMLDivElement
+  ) => {
     setActiveMobileSection((currentSection) =>
       currentSection === sectionId ? null : sectionId
     );
+    scrollSectionHeaderIntoView(sectionHeader);
   };
 
   return (
@@ -39,11 +52,15 @@ export default function Resume() {
         <div className="resume-frame">
           <Header
             isContactCollapsed={activeMobileSection !== "contact"}
-            onToggleContact={() => toggleMobileSection("contact")}
+            onToggleContact={(sectionHeader) =>
+              toggleMobileSection("contact", sectionHeader)
+            }
           />
           <Body
             isExperienceCollapsed={activeMobileSection !== "work-experience"}
-            onToggleExperience={() => toggleMobileSection("work-experience")}
+            onToggleExperience={(sectionHeader) =>
+              toggleMobileSection("work-experience", sectionHeader)
+            }
           />
           <Footer
             activeSection={activeMobileSection}

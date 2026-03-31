@@ -10,7 +10,7 @@ const FooterSubsection: React.FC<{
   icon: IconDefinition;
   children: React.ReactNode;
   isCollapsed: boolean;
-  onToggle: () => void;
+  onToggle: (sectionHeader: HTMLDivElement) => void;
   data?: Array<{
     featured: boolean;
     isFlexColumn: boolean;
@@ -25,7 +25,10 @@ const FooterSubsection: React.FC<{
 }> = ({ icon, children, isCollapsed, onToggle, data, icons, otherExperience }) => {
   return (
     <div className="footer-sub-section">
-      <div className="subsection-header" onClick={onToggle}>
+      <div
+        className="subsection-header"
+        onClick={(event) => onToggle(event.currentTarget)}
+      >
         <div className="icon-circle-md">
           <FontAwesomeIcon icon={icon} width={20} />
         </div>
