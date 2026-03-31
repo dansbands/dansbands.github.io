@@ -23,7 +23,7 @@ export default function Resume() {
 
   const scrollSectionHeaderIntoView = (sectionHeader: HTMLDivElement) => {
     window.setTimeout(() => {
-      const headerOffset = 50;
+      const headerOffset = 70;
       const scrollTarget =
         sectionHeader.getBoundingClientRect().top + window.scrollY - headerOffset;
 
@@ -31,7 +31,7 @@ export default function Resume() {
         top: Math.max(scrollTarget, 0),
         behavior: "smooth",
       });
-    }, 300);
+    }, 400);
   };
 
   const toggleMobileSection = (
