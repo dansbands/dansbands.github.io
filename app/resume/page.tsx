@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { faPrint } from "@fortawesome/free-solid-svg-icons";
 import Body from "./body";
 import Footer from "./footer";
@@ -7,6 +8,10 @@ import Header from "./header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Resume() {
+  const [activeMobileSection, setActiveMobileSection] = useState<string | null>(
+    null
+  );
+
   const handlePrint = () => {
     const originalTitle = document.title;
     document.title = "Dan O'Dea Resume";
@@ -14,6 +19,12 @@ export default function Resume() {
     setTimeout(() => {
       document.title = originalTitle;
     }, 500);
+  };
+
+  const toggleMobileSection = (sectionId: string) => {
+    setActiveMobileSection((currentSection) =>
+      currentSection === sectionId ? null : sectionId
+    );
   };
 
   return (
@@ -26,9 +37,18 @@ export default function Resume() {
       </div>
       <div className="resume">
         <div className="resume-frame">
-          <Header />
-          <Body />
-          <Footer />
+          <Header
+            isContactCollapsed={activeMobileSection !== "contact"}
+            onToggleContact={() => toggleMobileSection("contact")}
+          />
+          <Body
+            isExperienceCollapsed={activeMobileSection !== "work-experience"}
+            onToggleExperience={() => toggleMobileSection("work-experience")}
+          />
+          <Footer
+            activeSection={activeMobileSection}
+            onToggleSection={toggleMobileSection}
+          />
         </div>
       </div>
     </>
