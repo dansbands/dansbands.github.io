@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ExperienceItem from "./experience-item";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 const FooterSubsection: React.FC<{
   icon: IconDefinition;
@@ -20,7 +21,7 @@ const FooterSubsection: React.FC<{
     dates: string;
     responsibilities: string[];
   }>;
-  icons?: Array<{ src: string; height: number; width: number; label: string }>;
+  icons?: Array<{ src: StaticImageData; label: string }>;
   otherExperience?: string;
 }> = ({ icon, children, isCollapsed, onToggle, data, icons, otherExperience }) => {
   return (
