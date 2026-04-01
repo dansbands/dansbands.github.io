@@ -183,3 +183,12 @@
     }
   }
 }
+
+@media print {
+  .footer2,
+  .hamburger,
+  .drawer,
+  .overlay {
+    display: none !important;
+  }
+}
