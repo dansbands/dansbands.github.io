@@ -12,6 +12,7 @@ const GlobalNav = () => {
   const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
 
   useEffect(() => {
     if (pathname !== "/") {
@@ -50,6 +51,21 @@ const GlobalNav = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
+
+    const updateViewportState = (event?: MediaQueryListEvent) => {
+      setIsMobileViewport(event ? event.matches : mediaQuery.matches);
+    };
+
+    updateViewportState();
+    mediaQuery.addEventListener("change", updateViewportState);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateViewportState);
+    };
+  }, []);
+
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const targetId = e.currentTarget.name;
 
@@ -67,6 +83,10 @@ const GlobalNav = () => {
   const toggleDrawer = () => {
     setIsDrawerOpen((prev) => !prev);
   };
+
+  if (pathname === "/resume" && isMobileViewport) {
+    return null;
+  }
 
   return (
     <div className="smooth" id="home">
