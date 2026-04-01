@@ -262,7 +262,7 @@ export const portfolioItems = [
   {
     section: "personal" as const,
     image: tonesmith,
-    title: "ToneSmith",
+    title: "ToneGrid",
     subtitle: "Interactive web app",
     date: "March 2026",
     description:
