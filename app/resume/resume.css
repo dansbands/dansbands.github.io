@@ -672,6 +672,11 @@
     page-break-after: auto;
   }
 
+  .contact-header,
+  .toggle-button {
+    display: none !important;
+  }
+
   .print-button {
     display: none; /* Hide the print button during printing */
   }
@@ -691,6 +696,20 @@
       11in * 2 - 40px
     ); /* Constrain content to two pages minus padding */
     overflow: hidden; /* Hide any overflow */
+  }
+
+  .subheader-links,
+  .work-experience-list,
+  .subsection-body {
+    max-height: none !important;
+    overflow: visible !important;
+    transition: none !important;
+  }
+
+  .subheader-links.collapsed,
+  .work-experience-list.collapsed,
+  .subsection-body.collapsed {
+    max-height: none !important;
   }
 
   /* full styles  */
@@ -760,11 +779,23 @@
 
   .resume-body {
     border-top: 1px solid #171717;
-    break-after: page;
+    break-after: auto;
+    page-break-after: auto;
   }
 
   .work-experience-list {
     border-bottom: unset;
+  }
+
+  .body-header,
+  .body-section,
+  .body-section-slim,
+  .footer-sub-section,
+  .subsection-body,
+  .section-header,
+  .job-responsibilities {
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   .footer-section{
