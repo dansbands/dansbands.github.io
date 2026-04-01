@@ -177,18 +177,18 @@ export const otherWork = [
 ];
 
 export const icons = [
-  Express,
-  MongoDB,
-  MUI,
-  Next,
-  Node,
-  Postgres,
-  Rails,
-  React,
-  Redux,
-  StyledComponents,
-  TypeScript,
-  xState,
+  { src: Express, label: "Express" },
+  { src: MongoDB, label: "MongoDB" },
+  { src: MUI, label: "MUI" },
+  { src: Next, label: "Next.js" },
+  { src: Node, label: "Node.js" },
+  { src: Postgres, label: "Postgres" },
+  { src: Rails, label: "Rails" },
+  { src: React, label: "React" },
+  { src: Redux, label: "Redux" },
+  { src: StyledComponents, label: "Styled Components" },
+  { src: TypeScript, label: "TypeScript" },
+  { src: xState, label: "XState" },
 ];
 
 export const otherExperience =

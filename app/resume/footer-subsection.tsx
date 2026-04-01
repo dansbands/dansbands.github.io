@@ -4,7 +4,7 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ExperienceItem from "./experience-item";
-import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 const FooterSubsection: React.FC<{
   icon: IconDefinition;
@@ -20,7 +20,7 @@ const FooterSubsection: React.FC<{
     dates: string;
     responsibilities: string[];
   }>;
-  icons?: Array<{ src: string; height: number; width: number }>;
+  icons?: Array<{ src: StaticImageData; label: string }>;
   otherExperience?: string;
 }> = ({ icon, children, isCollapsed, onToggle, data, icons, otherExperience }) => {
   return (
@@ -62,14 +62,12 @@ const FooterSubsection: React.FC<{
             {icons?.map((icon, index) => {
               return (
                 <div className="icon-container" key={index}>
-                  <Image
-                    key={index}
-                    className="icon-container"
-                    src={icon.src}
-                    height={icon.height}
-                    width={icon.width}
-                    alt={`icon-${index}`}
+                  <img
+                    className="skill-icon"
+                    src={icon.src.src}
+                    alt={icon.label}
                   />
+                  <span className="icon-label">{icon.label}</span>
                 </div>
               );
             })}
