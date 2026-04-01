@@ -909,6 +909,8 @@
   }
 
   .footer-section{
+    break-before: page;
+    page-break-before: always;
     border-top: 1px solid #171717;
     padding-top: 14px;
   }
