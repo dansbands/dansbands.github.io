@@ -2,20 +2,26 @@
 
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
 import { experience } from "../util/const";
 import ExperienceItem from "./experience-item";
 
-export default function Body() {
-  const [isExperienceCollapsed, setIsExperienceCollapsed] = useState(true);
+type BodyProps = {
+  isExperienceCollapsed: boolean;
+  onToggleExperience: (sectionHeader: HTMLDivElement) => void;
+};
 
-  const toggleExperience = () => {
-    setIsExperienceCollapsed(!isExperienceCollapsed);
-  };
+export default function Body({
+  isExperienceCollapsed,
+  onToggleExperience,
+}: BodyProps) {
 
   return (
     <div className="resume-body">
-      <div className="body-header" onClick={toggleExperience}>
+      <div
+        className="body-header"
+        onClick={(event) => onToggleExperience(event.currentTarget)}
+      >
         <div className="icon-circle-lg">
           <FontAwesomeIcon icon={faBriefcase} width={20} />
         </div>

@@ -12,14 +12,16 @@ import {
   faAddressCard,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { useState } from "react";
 
-export default function Header() {
-  const [isContactCollapsed, setIsContactCollapsed] = useState(true);
+type HeaderProps = {
+  isContactCollapsed: boolean;
+  onToggleContact: (sectionHeader: HTMLDivElement) => void;
+};
 
-  const toggleContact = () => {
-    setIsContactCollapsed(!isContactCollapsed);
-  };
+export default function Header({
+  isContactCollapsed,
+  onToggleContact,
+}: HeaderProps) {
 
   return (
     <>
@@ -37,7 +39,10 @@ export default function Header() {
         </div>
       </div>
       <div className="resume-subheader">
-        <div className="contact-header" onClick={toggleContact}>
+        <div
+          className="contact-header"
+          onClick={(event) => onToggleContact(event.currentTarget)}
+        >
           <div className="icon-circle-lg">
             <FontAwesomeIcon icon={faAddressCard} width={20} />
           </div>
