@@ -23,7 +23,6 @@ const Welcome = () => {
             <a
               className="btn"
               href="/resume"
-              rel="noreferrer"
             >
               Résumé
             </a>
