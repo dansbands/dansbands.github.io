@@ -302,13 +302,15 @@
 }
 
 .icon-grid {
-  margin: 20px 0;
+  margin: 16px 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 16px;
 
   .icon-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
@@ -318,8 +320,15 @@
   }
 }
 
+.icon-label {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+}
+
 .other-experience {
-  line-height: 2;
+  line-height: 1.7;
 }
 
 @media screen and (max-width: 768px) {
@@ -657,7 +666,7 @@
     max-width: 1200px; /* Simulate the largest breakpoint width */
     height: auto;
     margin: 0 auto; /* Center the content */
-    padding: 20px; /* Add some padding for print aesthetics */
+    padding: 14px; /* Add some padding for print aesthetics */
     background-color: white;
     box-shadow: none;
     display: block;
@@ -748,7 +757,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
+    padding: 14px;
     border-bottom: 1px solid #171717;
   }
 
@@ -770,7 +779,7 @@
   }
   .resume-header-left h1 {
     font-weight: bold;
-    font-size: 46px;
+    font-size: 42px;
     margin: 0;
     text-align: left;
   }
@@ -784,18 +793,20 @@
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     margin: 0;
+    font-size: 24px;
   }
 
   .resume-header-right h3 {
     font-weight: 400;
     font-family: "Satisfy", cursive;
-    font-size: 20px;
+    font-size: 18px;
+    margin: 6px 0 0;
   }
 
   .subheader-links {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -811,8 +822,61 @@
     page-break-after: auto;
   }
 
+  .body-header {
+    font-size: 28px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+
   .work-experience-list {
     border-bottom: unset;
+    padding-top: 12px;
+    gap: 10px;
+  }
+
+  .company-name {
+    font-size: 15px;
+  }
+
+  .job-responsibilities {
+    margin: 0;
+    padding: 6px 0 0 18px;
+  }
+
+  .job-responsibilities li {
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  .subsection-title {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .icon-grid {
+    margin: 12px 0;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+  }
+
+  .icon-grid .icon-container {
+    gap: 2px;
+  }
+
+  .icon-grid .skill-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  .icon-label {
+    font-size: 9px;
+    line-height: 1.1;
+  }
+
+  .other-experience {
+    font-size: 12px;
+    line-height: 1.4;
   }
 
   .body-header,
@@ -826,7 +890,7 @@
   .footer-section .footer-sub-section {
     border-right: none;
     border-bottom: 1px solid #171717;
-    padding: 0 0 18px;
+    padding: 0 0 10px;
   }
 
   .footer-section .footer-sub-section:last-of-type {
@@ -836,6 +900,6 @@
 
   .footer-section{
     border-top: 1px solid #171717;
-    padding-top: 20px;
+    padding-top: 12px;
   }
 }

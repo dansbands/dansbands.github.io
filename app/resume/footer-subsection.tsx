@@ -20,7 +20,7 @@ const FooterSubsection: React.FC<{
     dates: string;
     responsibilities: string[];
   }>;
-  icons?: Array<{ src: string; height: number; width: number }>;
+  icons?: Array<{ src: string; height: number; width: number; label: string }>;
   otherExperience?: string;
 }> = ({ icon, children, isCollapsed, onToggle, data, icons, otherExperience }) => {
   return (
@@ -64,12 +64,13 @@ const FooterSubsection: React.FC<{
                 <div className="icon-container" key={index}>
                   <Image
                     key={index}
-                    className="icon-container"
+                    className="skill-icon"
                     src={icon.src}
                     height={icon.height}
                     width={icon.width}
-                    alt={`icon-${index}`}
+                    alt={icon.label}
                   />
+                  <span className="icon-label">{icon.label}</span>
                 </div>
               );
             })}
