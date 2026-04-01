@@ -67,8 +67,8 @@ const FooterSubsection: React.FC<{
                     key={index}
                     className="skill-icon"
                     src={icon.src}
-                    height={icon.height}
-                    width={icon.width}
+                    height={icon.src.height}
+                    width={icon.src.width}
                     alt={icon.label}
                   />
                   <span className="icon-label">{icon.label}</span>
