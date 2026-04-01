@@ -4,7 +4,6 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import ExperienceItem from "./experience-item";
-import Image from "next/image";
 import { StaticImageData } from "next/image";
 
 const FooterSubsection: React.FC<{
@@ -63,12 +62,9 @@ const FooterSubsection: React.FC<{
             {icons?.map((icon, index) => {
               return (
                 <div className="icon-container" key={index}>
-                  <Image
-                    key={index}
+                  <img
                     className="skill-icon"
-                    src={icon.src}
-                    height={icon.src.height}
-                    width={icon.src.width}
+                    src={icon.src.src}
                     alt={icon.label}
                   />
                   <span className="icon-label">{icon.label}</span>

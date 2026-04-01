@@ -666,7 +666,7 @@
     max-width: 1200px; /* Simulate the largest breakpoint width */
     height: auto;
     margin: 0 auto; /* Center the content */
-    padding: 14px; /* Add some padding for print aesthetics */
+    padding: 18px; /* Add some padding for print aesthetics */
     background-color: white;
     box-shadow: none;
     display: block;
@@ -757,7 +757,7 @@
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    padding: 14px;
+    padding: 18px;
     border-bottom: 1px solid #171717;
   }
 
@@ -779,7 +779,7 @@
   }
   .resume-header-left h1 {
     font-weight: bold;
-    font-size: 42px;
+    font-size: 44px;
     margin: 0;
     text-align: left;
   }
@@ -795,13 +795,13 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     margin: 0;
-    font-size: 24px;
+    font-size: 25px;
   }
 
   .resume-header-right h3 {
     font-weight: 400;
     font-family: "Satisfy", cursive;
-    font-size: 18px;
+    font-size: 19px;
     margin: 6px 0 0;
   }
 
@@ -823,14 +823,14 @@
   }
 
   .body-header {
-    font-size: 28px;
+    font-size: 30px;
     margin-top: 18px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   .work-experience-list {
     border-bottom: unset;
-    padding-top: 12px;
+    padding-top: 14px;
     gap: 10px;
   }
 
@@ -849,14 +849,14 @@
   }
 
   .subsection-title {
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 2px;
   }
 
   .icon-grid {
-    margin: 12px 0;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    margin: 14px 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
   }
 
   .icon-grid .icon-container {
@@ -864,19 +864,20 @@
   }
 
   .icon-grid .skill-icon {
-    width: 28px;
-    height: 28px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
+    display: block;
   }
 
   .icon-label {
-    font-size: 9px;
+    font-size: 10px;
     line-height: 1.1;
   }
 
   .other-experience {
     font-size: 12px;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
   .body-header,
@@ -890,7 +891,9 @@
   .footer-section .footer-sub-section {
     border-right: none;
     border-bottom: 1px solid #171717;
-    padding: 0 0 10px;
+    padding: 0 0 12px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .footer-section .footer-sub-section:last-of-type {
@@ -900,6 +903,6 @@
 
   .footer-section{
     border-top: 1px solid #171717;
-    padding-top: 12px;
+    padding-top: 14px;
   }
 }
