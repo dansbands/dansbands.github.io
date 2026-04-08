@@ -2,114 +2,64 @@
 
 import React, { useRef, useEffect } from "react";
 
+const techStack = [
+  { label: "React", accent: true },
+  { label: "TypeScript", accent: false },
+  { label: "Next.js", accent: true },
+  { label: "Node.js", accent: false },
+  { label: "XState", accent: false },
+  { label: "CSS Animations", accent: true },
+  { label: "REST APIs", accent: false },
+  { label: "System Design", accent: false },
+  { label: "AI Integration", accent: true },
+  { label: "Figma", accent: false },
+];
+
 const Professional = () => {
-  const professionalRef = useRef<HTMLDivElement>(null);
-  const animationContainerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const compositionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const sectionElement = professionalRef.current;
-    const animationContainer = animationContainerRef.current;
+    const section = sectionRef.current;
+    const composition = compositionRef.current;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && animationContainer) {
-            animationContainer.classList.add("is-visible");
+          if (entry.isIntersecting && composition) {
+            composition.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.35 }
+      { threshold: 0.25 }
     );
 
-    if (sectionElement) {
-      observer.observe(sectionElement);
-    }
+    if (section) observer.observe(section);
 
     return () => {
-      if (sectionElement) {
-        observer.unobserve(sectionElement);
-      }
+      if (section) observer.unobserve(section);
     };
   }, []);
 
   return (
-    <div className="professional" ref={professionalRef}>
+    <div className="professional" ref={sectionRef}>
       <div id="professional" className="smooth"></div>
       <div className="container">
         <h1 className="title">
           <span className="gray">01</span> PROFESSIONAL
         </h1>
-        <h2 className="subtitle">CORE TECHNOLOGIES USED IN SHIPPED WORK</h2>
-        <div className="visible-on-scroll" ref={animationContainerRef}>
-          <div id="skills">
-            <div id="apps">
-              <p>JavaScript</p>
-              <p>HTML5</p>
-              <p>CSS3</p>
-              <p>Express</p>
-              <p>React</p>
-              <p>NextJS</p>
-              <p>Figma</p>
-            </div>
-
-            <div className="grid">
-              <div className="bar pct-95">
-                <div className="inner"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner2"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner3"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-85">
-                <div className="inner"></div>
-                <div className="right">
-                  <p>85%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner3"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner2"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-85">
-                <div className="inner"></div>
-                <div className="right">
-                  <p>85%</p>
-                </div>
-              </div>
-
-              <div className="v-divider one"></div>
-              <div className="v-divider two"></div>
-              <div className="v-divider three"></div>
-
-              <div id="scale">
-                <p className="zero">0%</p>
-                <p className="one">25%</p>
-                <p className="two">50%</p>
-                <p className="three">75%</p>
-                <p className="four">100%</p>
-              </div>
-            </div>
-          </div>
+        <h2 className="subtitle">CORE TECHNOLOGIES IN SHIPPED WORK</h2>
+        <div className="tech-motion-composition" ref={compositionRef}>
+          {techStack.map((item, i) => (
+            <span
+              key={item.label}
+              className={`tech-word${item.accent ? " accent" : ""}`}
+              style={{ "--tech-delay": `${i * 0.1}s` } as React.CSSProperties}
+            >
+              {item.label}
+            </span>
+          ))}
         </div>
       </div>
     </div>
