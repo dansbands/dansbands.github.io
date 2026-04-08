@@ -315,6 +315,136 @@ html {
   display: block;
 }
 
+/* ----------------------------------------- */
+/* Tech Ticker (Professional section)        */
+/* ----------------------------------------- */
+
+@keyframes ticker-forward {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes ticker-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.tech-ticker-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tech-ticker-wrap--reverse {
+  border-top: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tech-ticker {
+  display: flex;
+  gap: 48px;
+  width: max-content;
+}
+
+.tech-ticker--forward {
+  animation: ticker-forward 28s linear infinite;
+}
+
+.tech-ticker--reverse {
+  animation: ticker-reverse 36s linear infinite;
+}
+
+.tech-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-family: var(--font-primary);
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tech-ticker-item--company {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 3px;
+}
+
+.tech-ticker-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+}
+
+.tech-ticker-dot--accent {
+  background-color: var(--primary-color);
+}
+
+/* ----------------------------------------- */
+/* Recent Work Cards (home portfolio section) */
+/* ----------------------------------------- */
+
+.recent-work-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: nowrap;
+}
+
+.recent-work-card {
+  position: relative;
+  display: block;
+  width: 280px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.recent-work-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-4px);
+  color: white;
+  text-decoration: none;
+}
+
+.recent-work-card-image {
+  width: 280px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.recent-work-card-info {
+  padding: 12px 14px 14px;
+  background: rgba(51, 59, 80, 0.85);
+}
+
+.recent-work-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+  font-family: var(--font-primary);
+}
+
+.recent-work-card-subtitle {
+  font-size: 12px;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
 .wrapper {
   height: 90%;
 }
@@ -1404,7 +1534,7 @@ a {
   background: url(./Media/chrysler-center-bg.jpg) no-repeat center center
     fixed;
   background-size: cover;
-  height: 1000px;
+  height: 900px;
   color: white;
   font-family: Arial;
 }
@@ -1443,7 +1573,10 @@ a {
 .portfolio img {
   display: inline-block;
   margin: 0 12px;
-  border: 3px solid white;
+}
+
+.recent-work-card-image img {
+  border: none !important;
 }
 
 .contact-outer {
@@ -1734,7 +1867,7 @@ label {
 
   .professional {
     padding-top: 50px;
-    height: 1200px;
+    height: 900px;
   }
 
   #professional {
@@ -1750,23 +1883,10 @@ label {
     top: 40%;
   }
 
-  #apps {
-    width: 20%;
-    font-size: 20px;
-  }
-
-  .grid {
-    width: 60%;
-  }
-
-  .bar {
-    height: 18px;
-    margin-bottom: 24px;
-  }
-
   .portfolio {
     padding-top: 250px;
-    height: 1000px;
+    height: auto;
+    min-height: 700px;
   }
 
   .portfolio .container {
@@ -1774,20 +1894,21 @@ label {
     overflow: hidden;
   }
 
-  .portfolio .row {
-    height: 250px;
-    margin-top: 0;
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    overflow: scroll;
+  .recent-work-grid {
+    overflow-x: auto;
+    justify-content: flex-start;
     scrollbar-width: none;
+    padding-bottom: 10px;
   }
 
-  .portfolio img {
-    width: 200px;
-    height: 200px;
-    display: block;
+  .recent-work-card {
+    width: 220px;
+    flex-shrink: 0;
+  }
+
+  .recent-work-card-image {
+    width: 220px;
+    height: 160px;
   }
 
   #contact {
@@ -1965,7 +2086,7 @@ label {
 
   .professional {
     padding-top: 50px;
-    height: 900px;
+    height: 700px;
   }
 
   .professional .center {
@@ -1977,28 +2098,13 @@ label {
     top: 40%;
   }
 
-  #apps {
-    width: 25%;
-  }
-
-  .grid {
-    width: 60%;
-  }
-
-  .bar.pct-95 .right {
-    width: 115%;
-  }
-
-  .bar.pct-85 .right {
-    width: 105%;
-  }
-
-  .bar.pct-75 .right {
-    width: 95%;
-  }
-
-  #scale p {
+  .tech-ticker-item {
     font-size: 12px;
+    gap: 8px;
+  }
+
+  .tech-ticker-item--company {
+    font-size: 11px;
   }
 
   .title {
@@ -2011,8 +2117,9 @@ label {
   }
 
   .portfolio {
-    padding-top: 250px;
-    height: 600px;
+    padding-top: 180px;
+    height: auto;
+    min-height: 580px;
   }
 
   .portfolio .container {
@@ -2020,20 +2127,21 @@ label {
     overflow: hidden;
   }
 
-  .portfolio .row {
-    height: 250px;
-    margin-top: 0;
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    overflow: scroll;
+  .recent-work-grid {
+    overflow-x: auto;
+    justify-content: flex-start;
     scrollbar-width: none;
+    padding-bottom: 10px;
   }
 
-  .portfolio img {
-    width: 200px;
-    height: 200px;
-    display: block;
+  .recent-work-card {
+    width: 180px;
+    flex-shrink: 0;
+  }
+
+  .recent-work-card-image {
+    width: 180px;
+    height: 140px;
   }
 
   #contact {

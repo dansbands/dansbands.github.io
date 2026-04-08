@@ -2,6 +2,16 @@
 
 import React, { useRef, useEffect } from "react";
 
+const techRow1 = [
+  "React", "TypeScript", "Next.js", "Node.js", "Redux", "XState",
+  "Express", "PostgreSQL", "MongoDB", "Figma", "CSS3", "HTML5",
+];
+
+const companyRow2 = [
+  "TD Bank / TD Securities", "Care/of", "Comcast Business", "American Express",
+  "AllSocial", "Attck / TimeRepublik", "Crane.ai",
+];
+
 const Professional = () => {
   const professionalRef = useRef<HTMLDivElement>(null);
   const animationContainerRef = useRef<HTMLDivElement>(null);
@@ -19,7 +29,7 @@ const Professional = () => {
           }
         });
       },
-      { threshold: 0.35 }
+      { threshold: 0.25 }
     );
 
     if (sectionElement) {
@@ -40,74 +50,26 @@ const Professional = () => {
         <h1 className="title">
           <span className="gray">01</span> PROFESSIONAL
         </h1>
-        <h2 className="subtitle">CORE TECHNOLOGIES USED IN SHIPPED WORK</h2>
+        <h2 className="subtitle">CORE STACK &amp; EXPERIENCE</h2>
         <div className="visible-on-scroll" ref={animationContainerRef}>
-          <div id="skills">
-            <div id="apps">
-              <p>JavaScript</p>
-              <p>HTML5</p>
-              <p>CSS3</p>
-              <p>Express</p>
-              <p>React</p>
-              <p>NextJS</p>
-              <p>Figma</p>
+          <div className="tech-ticker-wrap" aria-hidden="true">
+            <div className="tech-ticker tech-ticker--forward">
+              {[...techRow1, ...techRow1].map((label, i) => (
+                <span key={i} className="tech-ticker-item">
+                  <span className="tech-ticker-dot" />
+                  {label}
+                </span>
+              ))}
             </div>
-
-            <div className="grid">
-              <div className="bar pct-95">
-                <div className="inner"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner2"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner3"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-85">
-                <div className="inner"></div>
-                <div className="right">
-                  <p>85%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner3"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-95">
-                <div className="inner2"></div>
-                <div className="right">
-                  <p>95%</p>
-                </div>
-              </div>
-              <div className="bar pct-85">
-                <div className="inner"></div>
-                <div className="right">
-                  <p>85%</p>
-                </div>
-              </div>
-
-              <div className="v-divider one"></div>
-              <div className="v-divider two"></div>
-              <div className="v-divider three"></div>
-
-              <div id="scale">
-                <p className="zero">0%</p>
-                <p className="one">25%</p>
-                <p className="two">50%</p>
-                <p className="three">75%</p>
-                <p className="four">100%</p>
-              </div>
+          </div>
+          <div className="tech-ticker-wrap tech-ticker-wrap--reverse" aria-hidden="true">
+            <div className="tech-ticker tech-ticker--reverse">
+              {[...companyRow2, ...companyRow2].map((label, i) => (
+                <span key={i} className="tech-ticker-item tech-ticker-item--company">
+                  <span className="tech-ticker-dot tech-ticker-dot--accent" />
+                  {label}
+                </span>
+              ))}
             </div>
           </div>
         </div>
