@@ -55,7 +55,7 @@ const Professional = () => {
           <div className="tech-ticker-wrap" aria-hidden="true">
             <div className="tech-ticker tech-ticker--forward">
               {[...techRow1, ...techRow1].map((label, i) => (
-                <span key={i} className="tech-ticker-item">
+                <span key={`tech-${label}-${i}`} className="tech-ticker-item">
                   <span className="tech-ticker-dot" />
                   {label}
                 </span>
@@ -65,7 +65,7 @@ const Professional = () => {
           <div className="tech-ticker-wrap tech-ticker-wrap--reverse" aria-hidden="true">
             <div className="tech-ticker tech-ticker--reverse">
               {[...companyRow2, ...companyRow2].map((label, i) => (
-                <span key={i} className="tech-ticker-item tech-ticker-item--company">
+                <span key={`company-${label}-${i}`} className="tech-ticker-item tech-ticker-item--company">
                   <span className="tech-ticker-dot tech-ticker-dot--accent" />
                   {label}
                 </span>

@@ -355,6 +355,13 @@ html {
   animation: ticker-reverse 36s linear infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .tech-ticker--forward,
+  .tech-ticker--reverse {
+    animation: none;
+  }
+}
+
 .tech-ticker-item {
   display: inline-flex;
   align-items: center;
