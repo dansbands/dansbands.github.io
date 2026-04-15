@@ -42,10 +42,11 @@ export const experience = [
     title: "Software Engineer (Full Stack / CMS)",
     dates: "June 2022 - July 2024",
     responsibilities: [
-      "Owned the end-to-end technical lifecycle of a 350+ page Article ecosystem, driving organic growth for a major eCommerce platform",
-      "Developed a custom Markdown-based 'Article Builder' tool, empowering non-technical stakeholders to deploy complex HTML modules with zero-code overhead",
-      "Architected React Portals to inject interactive, stateful components into static CMS-rendered content, bridging the gap between performance and interactivity",
-      "Contributed to high-traffic eCommerce infrastructure focused on conversion optimization and seamless user journeys",
+      "Built and maintained customer-facing features and internal tooling exclusively in a Next.js + React + TypeScript environment for a high-traffic eCommerce platform",
+      "Owned the end-to-end technical lifecycle of a 350+ page article ecosystem, supporting scalable SEO content delivery and organic growth",
+      "Developed a custom Markdown-based Article Builder tool that empowered non-technical stakeholders to publish complex HTML modules with minimal engineering involvement",
+      "Architected React Portals to inject interactive, stateful components into CMS-rendered Next.js pages, bridging the gap between static content performance and rich interactivity",
+      "Contributed across the full stack to improve content workflows, publishing velocity, and user-facing commerce experiences",
     ],
   },
   {
@@ -304,10 +305,10 @@ export const portfolioItems = [
     subtitle: "Internal content platform",
     date: "2021",
     description:
-      "Built an internal publishing tool that helped scale a library of hundreds of doctor-written SEO articles, supporting a content strategy designed to make Care/of the WebMD of vitamins.",
+      "Built an internal publishing tool in a Next.js/React ecosystem at Care/of, where I worked exclusively in Next.js to help scale a library of hundreds of doctor-written SEO articles.",
     extendedDescription:
-      "Developed a custom Markdown-based authoring tool that let non-technical stakeholders publish complex HTML modules with zero engineering overhead. Architected React Portals to inject interactive, stateful components into CMS-rendered content, bridging the gap between performance and interactivity across a 350+ page article ecosystem.",
-    technologies: ["React", "TypeScript", "Node.js", "Markdown", "CMS"],
+      "Developed a custom Markdown-based authoring tool that let non-technical stakeholders publish complex HTML modules with minimal engineering overhead. Worked exclusively in a Next.js + React + TypeScript stack to support a large-scale article platform, and architected React Portals to inject interactive, stateful components into CMS-rendered pages without sacrificing performance.",
+    technologies: ["Next.js", "React", "TypeScript", "Node.js", "Markdown", "CMS"],
     features: [
       "Modular article authoring with reusable content blocks",
       "Self-serve publishing for non-technical content teams",
