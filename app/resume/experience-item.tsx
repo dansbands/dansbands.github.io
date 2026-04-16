@@ -7,6 +7,7 @@ interface ExperienceItemProps {
   company: string;
   title: string;
   dates: string;
+  mobileDates?: string;
   responsibilities: string[];
 }
 
@@ -16,6 +17,7 @@ function ExperienceItem({
   company,
   title,
   dates,
+  mobileDates,
   responsibilities,
 }: ExperienceItemProps) {
   return (
@@ -31,7 +33,10 @@ function ExperienceItem({
           <div className="company-name">{company}</div>
           <div className="job-title">{title}</div>
         </div>
-        <div className={featured ? "" : "dates"}>{dates}</div>
+        <div className="dates">
+          <span className="dates-desktop">{dates}</span>
+          <span className="dates-mobile">{mobileDates ?? dates}</span>
+        </div>
       </div>
       <ul className="job-responsibilities">
         {responsibilities.map((resp) => (

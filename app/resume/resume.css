@@ -6,14 +6,18 @@
   padding-top: 200px;
   padding-bottom: 200px;
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .resume-frame {
   margin: 0 auto;
+  width: 100%;
   max-width: 1250px;
   justify-self: center;
   background-color: #d9d9d9;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .print-container {
@@ -21,6 +25,7 @@
   width: 100%;
   max-width: 1250px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .print-button {
@@ -62,10 +67,12 @@
 .resume-header-left {
   font-family: "Montserrat", sans-serif;
   display: flex;
+  min-width: 0;
 }
 .resume-header-left-text {
   letter-spacing: 7px;
   margin-left: 20px;
+  min-width: 0;
 }
 .resume-header-left img {
   margin-right: 26px;
@@ -228,17 +235,23 @@
   width: 100%;
   flex-basis: 50%;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .section-header-left {
   display: flex;
+  flex: 1;
+  min-width: 0;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 15px;
   letter-spacing: 1.6px;
 }
 
 .section-header-left-column {
   display: flex;
+  flex: 1;
+  min-width: 0;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
@@ -246,13 +259,24 @@
 }
 
 .dates {
-  width: 80px;
+  flex-shrink: 0;
   text-align: right;
+  white-space: nowrap;
+}
+
+.dates-mobile {
+  display: none;
 }
 
 .company-name {
   font-size: 16px;
   font-weight: 700;
+}
+
+.company-name,
+.job-title {
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .job-responsibilities {
@@ -425,6 +449,38 @@
     align-items: flex-start;
   }
 
+  .section-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 12px;
+  }
+
+  .section-header-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .section-header-left-column {
+    gap: 4px;
+  }
+
+  .dates {
+    text-align: right;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .dates-desktop {
+    display: none;
+  }
+
+  .dates-mobile {
+    display: inline;
+  }
+
   .work-experience-list {
     padding: 20px 0;
     flex-direction: column;
@@ -445,7 +501,8 @@
     border-right: none;
     padding: 0;
 
-    &:first-of-type, &:nth-of-type(3) {
+    &:first-of-type,
+    &:nth-of-type(3) {
       padding-left: unset;
     }
   }
@@ -461,9 +518,13 @@
     padding: 20px 10px;
   }
 
+  .print-container {
+    padding: 0 10px;
+  }
+
   .print-button {
     top: 45px;
-    right: 20px;
+    right: 10px;
     padding: 6px;
     min-width: 80px;
     font-size: 12px;
@@ -908,7 +969,7 @@
     border-right: none;
   }
 
-  .footer-section{
+  .footer-section {
     break-before: page;
     page-break-before: always;
     border-top: 1px solid #171717;
