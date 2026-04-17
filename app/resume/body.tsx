@@ -15,7 +15,6 @@ export default function Body({
   isExperienceCollapsed,
   onToggleExperience,
 }: BodyProps) {
-
   return (
     <div className="resume-body">
       <div
@@ -36,7 +35,7 @@ export default function Body({
         }`}
       >
         {experience.map(
-          ({ featured, id, company, title, dates, responsibilities }) => (
+          ({ featured, id, company, title, dates, responsibilities, technologies }) => (
             <ExperienceItem
               featured={featured}
               key={`${id}`}
@@ -44,6 +43,7 @@ export default function Body({
               title={title}
               dates={dates}
               responsibilities={responsibilities}
+              technologies={technologies}
             />
           )
         )}
