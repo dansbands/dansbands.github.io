@@ -745,6 +745,10 @@
     display: none; /* Hide the print button during printing */
   }
 
+  .technologies-menu {
+    display: none; /* Hide technology badges to keep print to two pages */
+  }
+
   .footer,
   .footer2 {
     display: none; /* Hide footer2 during printing */
