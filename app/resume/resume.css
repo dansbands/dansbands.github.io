@@ -872,8 +872,8 @@
 
   .resume-body {
     border-top: 1px solid #171717;
-    break-after: auto;
-    page-break-after: auto;
+    break-after: page;
+    page-break-after: always;
   }
 
   .body-header {
@@ -964,8 +964,8 @@
   }
 
   .footer-section {
-    break-before: page;
-    page-break-before: always;
+    break-before: auto;
+    page-break-before: auto;
     border-top: 1px solid #171717;
     padding-top: 14px;
   }
