@@ -252,7 +252,7 @@ export const portfolioItems = [
     links: [
       {
         title: "Live App",
-        url: "https://dansbands.github.io/ai-todo-list/#/sign-in",
+        url: "https://ai-todo-list-beta.vercel.app",
       },
       { title: "GitHub", url: "https://github.com/dansbands/ai-todo-list" },
       {
@@ -269,7 +269,8 @@ export const portfolioItems = [
     date: "March 2026",
     description:
       "A browser-based app that rivals existing commercially available instrument conditioning software.",
-    extendedDescription: "The paid version, available for signup through the free app, adds groundbreaking features like automated conditioning flows, multiple simultaneous sessions, session recall, and expanded instrument coverage. All this for $15/month vs. $300 per unit for the leading competitor.",
+    extendedDescription:
+      "The paid version, available for signup through the free app, adds groundbreaking features like automated conditioning flows, multiple simultaneous sessions, session recall, and expanded instrument coverage. All this for $15/month vs. $300 per unit for the leading competitor.",
     technologies: ["React", "Next.js", "TypeScript", "Web Audio API"],
     features: [],
     links: [
@@ -309,16 +310,21 @@ export const portfolioItems = [
       "Built an internal publishing tool in a Next.js/React ecosystem at Care/of, where I worked exclusively in Next.js to help scale a library of hundreds of doctor-written SEO articles.",
     extendedDescription:
       "Developed a custom Markdown-based authoring tool that let non-technical stakeholders publish complex HTML modules with minimal engineering overhead. Worked exclusively in a Next.js + React + TypeScript stack to support a large-scale article platform, and architected React Portals to inject interactive, stateful components into CMS-rendered pages without sacrificing performance.",
-    technologies: ["Next.js", "React", "TypeScript", "Node.js", "Markdown", "CMS"],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Markdown",
+      "CMS",
+    ],
     features: [
       "Modular article authoring with reusable content blocks",
       "Self-serve publishing for non-technical content teams",
       "React Portals for injecting interactive components into static content",
       "SEO-optimized output at scale",
     ],
-    links: [
-      { title: "Read More", url: "/work/careof-article-builder" },
-    ],
+    links: [{ title: "Read More", url: "/work/careof-article-builder" }],
     caseStudyUrl: "/work/careof-article-builder",
   },
   {
@@ -338,9 +344,7 @@ export const portfolioItems = [
       "Accessibility improvements for compliance-sensitive UI",
       "Reusable form-filler utility for automated workflow testing",
     ],
-    links: [
-      { title: "Read More", url: "/work/payment-form-flow" },
-    ],
+    links: [{ title: "Read More", url: "/work/payment-form-flow" }],
     caseStudyUrl: "/work/payment-form-flow",
   },
   // {
