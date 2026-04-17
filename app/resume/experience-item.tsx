@@ -74,6 +74,7 @@ function ExperienceItem({
   technologies,
 }: ExperienceItemProps) {
   const mobileDates = formatMobileDates(dates);
+  const technologyMenu = technologies?.join(" | ");
 
   return (
     <div className={featured ? "body-section" : "body-section-slim"}>
@@ -93,25 +94,7 @@ function ExperienceItem({
             </div>
           </div>
           <div className="job-title">{title}</div>
-          {!!technologies?.length && (
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
-              {technologies.map((technology) => (
-                <span
-                  key={technology}
-                  style={{
-                    border: '1px solid rgba(23,23,23,0.2)',
-                    borderRadius: '999px',
-                    padding: '2px 8px',
-                    fontSize: '10px',
-                    fontWeight: 600,
-                    background: 'rgba(255,255,255,0.5)'
-                  }}
-                >
-                  {technology}
-                </span>
-              ))}
-            </div>
-          )}
+          {!!technologyMenu && <div className="technologies-menu">{technologyMenu}</div>}
         </div>
       </div>
       <ul className="job-responsibilities">
