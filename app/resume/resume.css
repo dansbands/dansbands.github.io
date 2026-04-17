@@ -6,14 +6,18 @@
   padding-top: 200px;
   padding-bottom: 200px;
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .resume-frame {
   margin: 0 auto;
+  width: 100%;
   max-width: 1250px;
   justify-self: center;
   background-color: #d9d9d9;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .print-container {
@@ -21,6 +25,12 @@
   width: 100%;
   max-width: 1250px;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.resume *,
+.print-container * {
+  box-sizing: border-box;
 }
 
 .print-button {
@@ -101,7 +111,6 @@
   font-weight: 700;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
   margin-left: 10%;
   text-align: center;
   padding: 5px 0;
@@ -227,14 +236,15 @@
   display: flex;
   width: 100%;
   flex-basis: 50%;
-  justify-content: space-between;
 }
 
 .section-header-left {
   display: flex;
-  align-items: baseline;
-  gap: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
   letter-spacing: 1.6px;
+  width: 100%;
 }
 
 .section-header-left-column {
@@ -243,11 +253,28 @@
   align-items: flex-start;
   gap: 5px;
   letter-spacing: 1.6px;
+  width: 100%;
+}
+
+.section-header-top-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
 }
 
 .dates {
-  width: 80px;
+  flex-shrink: 0;
   text-align: right;
+}
+
+.dates-slim {
+  width: 100px;
+}
+
+.dates-mobile {
+  display: none;
 }
 
 .company-name {
@@ -431,6 +458,14 @@
     gap: 10px;
   }
 
+  .section-header-top-row {
+    gap: 10px;
+  }
+
+  .dates-slim {
+    width: unset;
+  }
+
   .body-section-slim {
     width: 100%;
   }
@@ -445,7 +480,8 @@
     border-right: none;
     padding: 0;
 
-    &:first-of-type, &:nth-of-type(3) {
+    &:first-of-type,
+    &:nth-of-type(3) {
       padding-left: unset;
     }
   }
@@ -647,6 +683,18 @@
 
   .icon-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section-header-top-row {
+    align-items: flex-start;
+  }
+
+  .dates-desktop {
+    display: none;
+  }
+
+  .dates-mobile {
+    display: inline;
   }
 }
 
@@ -908,7 +956,7 @@
     border-right: none;
   }
 
-  .footer-section{
+  .footer-section {
     break-before: page;
     page-break-before: always;
     border-top: 1px solid #171717;
