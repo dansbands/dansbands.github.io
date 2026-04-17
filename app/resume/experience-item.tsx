@@ -8,6 +8,7 @@ interface ExperienceItemProps {
   title: string;
   dates: string;
   responsibilities: string[];
+  technologies?: string[];
 }
 
 const monthLookup: Record<string, string> = {
@@ -70,8 +71,10 @@ function ExperienceItem({
   title,
   dates,
   responsibilities,
+  technologies,
 }: ExperienceItemProps) {
   const mobileDates = formatMobileDates(dates);
+  const technologyMenu = technologies?.join(" | ");
 
   return (
     <div className={featured ? "body-section" : "body-section-slim"}>
@@ -91,6 +94,7 @@ function ExperienceItem({
             </div>
           </div>
           <div className="job-title">{title}</div>
+          {!!technologyMenu && <div className="technologies-menu">{technologyMenu}</div>}
         </div>
       </div>
       <ul className="job-responsibilities">

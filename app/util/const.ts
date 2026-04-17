@@ -20,7 +20,17 @@ import StyledComponents from "@/app/Media/Icons/StyledComponents.svg";
 import TypeScript from "@/app/Media/Icons/TypeScript.svg";
 import xState from "@/app/Media/Icons/xState.svg";
 
-export const experience = [
+type WorkExperienceItem = {
+  featured: boolean;
+  id: number;
+  company: string;
+  title: string;
+  dates: string;
+  responsibilities: string[];
+  technologies?: string[];
+};
+
+export const experience: WorkExperienceItem[] = [
   {
     featured: true,
     id: 1,
@@ -50,7 +60,7 @@ export const experience = [
       "Architected React Portals to inject interactive, stateful components into CMS-rendered Next.js pages, bridging the gap between static content performance and rich interactivity",
       "Contributed across the full stack to improve content workflows, publishing velocity, and user-facing commerce experiences",
     ],
-    technologies: ["Next.js", "React", "TypeScript", "Node.js", "Markdown", "CMS"],
+    technologies: ["Next.js", "React", "TypeScript", "Node.js"],
   },
   {
     featured: true,
@@ -64,7 +74,7 @@ export const experience = [
       "Implemented XState for finite state machine management, modeling complex asynchronous transitions (idle, loading, success, error) to ensure system reliability",
       "Synthesized business requirements with technical constraints to deliver a high-performance, resilient user experience",
     ],
-    technologies: ["React", "TypeScript", "XState"],
+    technologies: ["React", "TypeScript", "XState", "MUI"],
   },
   {
     featured: true,
@@ -77,7 +87,7 @@ export const experience = [
       "Maintained and optimized financial applications within a Redux/React architecture, ensuring 99.9% uptime for critical banking tools",
       "Mastered legacy frameworks rapidly to ensure zero-interruption service during massive platform migrations",
     ],
-    technologies: ["React", "Redux", "Angular"],
+    technologies: ["React", "Redux", "JavaScript", "Angular", "Express", "Bootstrap"],
   },
   {
     featured: false,
@@ -90,7 +100,7 @@ export const experience = [
       "Collaborated directly with the Head of UX to translate high-fidelity designs into a responsive, performant web application",
       "Operated autonomously in a high-speed, distributed team environment to meet aggressive market-entry deadlines",
     ],
-    technologies: ["React", "JavaScript", "CSS"],
+    technologies: ["React", "Redux", "JavaScript", "CSS"],
   },
   {
     featured: false,
@@ -102,7 +112,7 @@ export const experience = [
       "Rapidly developed high-fidelity interactive applications for diverse agency clients, prioritizing pixel-perfect UI and performance",
       "Managed the full front-end lifecycle from design handoff to QA and deployment within a fast-paced agency setting",
     ],
-    technologies: ["React", "JavaScript", "CSS"],
+    technologies: ["React", "Redux", "JavaScript", "CSS"],
   },
   {
     featured: false,
