@@ -813,16 +813,26 @@
   }
 
   .footer-section {
-    display: grid !important;
-    grid-template-columns: 2fr 1fr !important;
-    grid-gap: 20px !important;
-    row-gap: 0 !important;
+    display: block !important;
   }
 
   .footer-sub-section {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid;
+    float: left !important;
+    width: calc(50% - 10px) !important;
+    margin-right: 20px !important;
+    break-inside: auto;
+    page-break-inside: auto;
+    -webkit-column-break-inside: auto;
+  }
+
+  .footer-section > .footer-sub-section:nth-child(2n) {
+    margin-right: 0 !important;
+  }
+
+  .footer-section::after {
+    content: "";
+    display: block;
+    clear: both;
   }
 
   /* full styles  */
@@ -894,8 +904,6 @@
 
   .resume-body {
     border-top: 1px solid #171717;
-    break-after: page;
-    page-break-after: always;
   }
 
   .work-experience-list {
