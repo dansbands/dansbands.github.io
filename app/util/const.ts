@@ -432,3 +432,5 @@ export const portfolioItems = [
   //   ],
   // },
 ];
+
+export const homepageRecentWorkItems = portfolioItems.slice(0, 5);
