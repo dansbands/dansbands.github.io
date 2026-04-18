@@ -710,6 +710,24 @@
     display: none;
   }
 
+  .icon-circle,
+  .icon-circle-md,
+  .icon-circle-lg {
+    background-color: #171717 !important;
+    border: 1px solid #171717 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .icon-circle svg,
+  .icon-circle-md svg,
+  .icon-circle-lg svg {
+    color: #d9d9d9 !important;
+    fill: #d9d9d9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   .dates-desktop {
     display: none !important;
   }
@@ -790,12 +808,12 @@
     justify-content: space-between !important;
   }
 
-  .body-section {
+  .work-experience-list > .body-section {
     float: none !important;
     width: 100% !important;
   }
 
-  .body-section-slim {
+  .work-experience-list > .body-section-slim {
     float: left !important;
     width: 31% !important;
     margin-right: 20px !important;
@@ -823,6 +841,23 @@
     break-inside: auto;
     page-break-inside: auto;
     -webkit-column-break-inside: auto;
+  }
+
+  .footer-sub-section .body-section,
+  .footer-sub-section .body-section-slim {
+    float: none !important;
+    width: 100% !important;
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .footer-section > .footer-sub-section:nth-child(2) .subsection-body {
+    padding-top: 10px !important;
+  }
+
+  .footer-section > .footer-sub-section:nth-child(2) .job-responsibilities li {
+    margin-bottom: 4px !important;
+    line-height: 1.35 !important;
   }
 
   .footer-section > .footer-sub-section:nth-child(2n) {
@@ -952,6 +987,8 @@
     height: 34px;
     object-fit: contain;
     display: block;
+    -webkit-filter: invert(1);
+    filter: invert(1);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
