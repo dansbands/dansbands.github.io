@@ -723,9 +723,15 @@
   .icon-circle-md svg,
   .icon-circle-lg svg {
     color: #d9d9d9 !important;
-    fill: #d9d9d9 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  .icon-circle svg path,
+  .icon-circle-md svg path,
+  .icon-circle-lg svg path {
+    fill: #d9d9d9 !important;
+    stroke: #d9d9d9 !important;
   }
 
   .dates-desktop {
@@ -987,8 +993,8 @@
     height: 34px;
     object-fit: contain;
     display: block;
-    -webkit-filter: invert(1);
-    filter: invert(1);
+    -webkit-filter: none !important;
+    filter: none !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
