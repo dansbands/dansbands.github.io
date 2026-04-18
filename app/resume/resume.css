@@ -745,6 +745,19 @@
     display: none; /* Hide the print button during printing */
   }
 
+  .technologies-menu {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .body-section-slim .technologies-menu {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .footer,
   .footer2 {
     display: none; /* Hide footer2 during printing */
@@ -877,29 +890,34 @@
   }
 
   .body-header {
-    font-size: 30px;
-    margin-top: 18px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-top: 12px;
+    margin-bottom: 6px;
   }
 
   .work-experience-list {
     border-bottom: unset;
-    padding-top: 14px;
-    gap: 10px;
+    padding-top: 8px;
+    gap: 6px;
   }
 
   .company-name {
     font-size: 15px;
   }
 
+  .job-title {
+    font-size: 12px;
+  }
+
   .job-responsibilities {
     margin: 0;
-    padding: 6px 0 0 18px;
+    padding: 2px 0 0 16px;
   }
 
   .job-responsibilities li {
-    margin-bottom: 3px;
-    line-height: 1.3;
+    font-size: 11px;
+    margin-bottom: 1px;
+    line-height: 1.25;
   }
 
   .subsection-title {
@@ -942,6 +960,11 @@
   .job-responsibilities {
     break-inside: auto;
     page-break-inside: auto;
+  }
+
+  .section-header-left,
+  .section-header-left-column {
+    gap: 2px;
   }
 
   .footer-section .footer-sub-section {
