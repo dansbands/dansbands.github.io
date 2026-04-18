@@ -905,13 +905,18 @@
     font-size: 15px;
   }
 
+  .job-title {
+    font-size: 12px;
+  }
+
   .job-responsibilities {
     margin: 0;
-    padding: 2px 0 0 18px;
+    padding: 2px 0 0 16px;
   }
 
   .job-responsibilities li {
-    margin-bottom: 2px;
+    font-size: 11px;
+    margin-bottom: 1px;
     line-height: 1.25;
   }
 
