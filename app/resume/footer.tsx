@@ -1,7 +1,8 @@
 import React from "react";
 import FooterSubsection from "./footer-subsection";
 import {
-  faBriefcase,
+  faBuilding,
+  faCompass,
   faGear,
   faGraduationCap,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +17,7 @@ function Footer({ activeSection, onToggleSection }: FooterProps) {
   return (
     <div className="footer-section">
       <FooterSubsection
-        icon={faBriefcase}
+        icon={faBuilding}
         data={otherWork}
         isCollapsed={activeSection !== "other-work"}
         onToggle={(sectionHeader) => onToggleSection("other-work", sectionHeader)}
@@ -32,7 +33,7 @@ function Footer({ activeSection, onToggleSection }: FooterProps) {
         Education
       </FooterSubsection>
       <FooterSubsection
-        icon={faGraduationCap}
+        icon={faCompass}
         data={leadershipAndInfluence}
         isCollapsed={activeSection !== "leadership-and-influence"}
         onToggle={(sectionHeader) =>
