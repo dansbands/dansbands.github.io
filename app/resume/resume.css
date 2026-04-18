@@ -798,6 +798,12 @@
   .body-section-slim {
     float: left !important;
     width: 31% !important;
+    margin-right: 20px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .work-experience-list > .body-section-slim:nth-child(3n + 1) {
+    margin-right: 0 !important;
   }
 
   .work-experience-list::after {
