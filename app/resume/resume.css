@@ -710,6 +710,14 @@
     display: none;
   }
 
+  .dates-desktop {
+    display: none !important;
+  }
+
+  .dates-mobile {
+    display: inline !important;
+  }
+
   body {
     margin: 0;
     width: 1100px;
@@ -777,17 +785,25 @@
   }
 
   .work-experience-list {
-    display: flex !important;
+    display: block !important;
     flex-wrap: wrap !important;
     justify-content: space-between !important;
   }
 
   .body-section {
+    float: none !important;
     width: 100% !important;
   }
 
   .body-section-slim {
+    float: left !important;
     width: 31% !important;
+  }
+
+  .work-experience-list::after {
+    content: "";
+    display: block;
+    clear: both;
   }
 
   .footer-section {
@@ -944,7 +960,7 @@
     page-break-inside: auto;
   }
 
-  .footer-section{
+  .footer-section {
     border-top: 1px solid #171717;
     padding-top: 14px;
   }
