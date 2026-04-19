@@ -19,6 +19,28 @@ import Redux from "@/app/Media/Icons/Redux.svg";
 import StyledComponents from "@/app/Media/Icons/StyledComponents.svg";
 import TypeScript from "@/app/Media/Icons/TypeScript.svg";
 import xState from "@/app/Media/Icons/xState.svg";
+import { StaticImageData } from "next/image";
+
+export type PortfolioSection = "personal" | "professional";
+
+export interface PortfolioLink {
+  title: string;
+  url: string;
+}
+
+export interface PortfolioItemData {
+  section: PortfolioSection;
+  image: StaticImageData;
+  title: string;
+  subtitle: string;
+  date: string;
+  description: string;
+  extendedDescription?: string;
+  technologies: string[];
+  features?: string[];
+  links: PortfolioLink[];
+  caseStudyUrl?: string;
+}
 
 type WorkExperienceItem = {
   featured: boolean;
@@ -240,7 +262,7 @@ export const leadershipAndInfluence = [
   },
 ];
 
-export const portfolioItems = [
+export const portfolioItems: PortfolioItemData[] = [
   {
     section: "personal" as const,
     image: aiTodoList,
