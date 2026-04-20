@@ -30,10 +30,6 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/Favicon3.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/Favicon3.png" />
         <link rel="apple-touch-icon" href="/Favicon3.png" />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        />
       </head>
       <body>
         <GlobalNav />

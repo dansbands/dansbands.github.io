@@ -135,6 +135,92 @@ table {
     END RESET
  */
 
+
+/* Lightweight layout primitives replacing removed Bootstrap dependency */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row::before,
+.row::after {
+  content: "";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
+
+[class*="col-md-"] {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  [class*="col-md-"] {
+    float: left;
+  }
+
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  background-image: none;
+  user-select: none;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+
 /* CSS Custom Properties for consistency */
 :root {
   --primary-color: #21d44f;
@@ -1544,7 +1630,6 @@ a {
 
 .form-control {
   margin-bottom: 15px;
-  display: inline-block;
   width: 90%;
 }
 

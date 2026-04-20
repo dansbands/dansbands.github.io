@@ -8,7 +8,7 @@ const professionalItems = portfolioItems.filter((item) => item.section === "prof
 
 const Portfolio = () => {
   return (
-    <div data-spy="scroll" data-target="#navbar-example">
+    <div>
       <div className="jumbotron" id="portfolio">
         <div className="main2">
           <div className="portfolio-container">
