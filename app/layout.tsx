@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   const buildSha = process.env.NEXT_PUBLIC_BUILD_SHA ?? "unknown";
   const buildTime = process.env.NEXT_PUBLIC_BUILD_TIME ?? "unknown";
 
