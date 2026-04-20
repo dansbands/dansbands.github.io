@@ -921,7 +921,7 @@ a {
 }
 
 .main {
-  background: url(./Media/hero.png) no-repeat right center fixed;
+  background: url(./Media/hero.jpg) no-repeat right center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1306,7 +1306,7 @@ a {
 .professional {
   padding-top: 150px;
   background: url(./Media/laptop-journal-book-coffee.jpg) no-repeat center
-    center fixed;
+    center;
   background-size: cover;
   height: 1000px;
   color: white;
@@ -1739,8 +1739,7 @@ a {
 
 .portfolio {
   padding-top: 300px;
-  background: url(./Media/chrysler-center-bg.jpg) no-repeat center center
-    fixed;
+  background: url(./Media/chrysler-center-bg.jpg) no-repeat center center;
   background-size: cover;
   height: 1000px;
   color: white;
@@ -1749,7 +1748,6 @@ a {
 
 @media only screen and (max-width: 1024px) {
   .portfolio {
-    background-attachment: scroll;
     height: auto;
   }
 }
@@ -1898,7 +1896,7 @@ label {
 .professional2 {
   padding-top: 250px;
   background: url(./Media/laptop-journal-book-coffee.jpg) no-repeat center
-    center fixed;
+    center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2017,7 +2015,6 @@ label {
     height: 65svh;
     min-height: 520px;
     padding-bottom: 0;
-    background-attachment: scroll;
     background-position: right center;
   }
 
@@ -2199,7 +2196,6 @@ label {
 /* Tablet hero framing */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .main {
-    background-attachment: scroll;
     background-position: right center;
   }
 }
@@ -2227,7 +2223,6 @@ label {
     height: 50svh;
     min-height: 370px;
     padding-bottom: 0;
-    background-attachment: scroll;
     background-position: right center;
   }
 
