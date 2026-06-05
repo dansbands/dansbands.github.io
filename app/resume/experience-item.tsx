@@ -47,8 +47,7 @@ function formatMobileDates(dates: string) {
 
   const formatPart = (value: string) => {
     if (/^present$/i.test(value)) {
-      const now = new Date();
-      return `${now.getMonth() + 1}/${String(now.getFullYear()).slice(-2)}`;
+      return "Present";
     }
 
     const [monthToken, yearToken] = value.split(/\s+/);

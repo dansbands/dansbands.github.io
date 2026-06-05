@@ -36,7 +36,7 @@ export const experience: WorkExperienceItem[] = [
     id: 1,
     company: "TD Bank / TD Securities",
     title: "UI Architect / Senior Software Engineer",
-    dates: "February 2025 - present",
+    dates: "February 2025 - Present",
     responsibilities: [
       "Built and maintained a complex multi-step payments workflow using React, TypeScript, and React Hook Form in a compliance-sensitive banking environment",
       "Led frontend architecture decisions to stabilize and scale a 9-step internal form used by hundreds of employees across ~40 branches",
