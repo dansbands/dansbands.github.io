@@ -211,7 +211,7 @@ export const icons = [
 ];
 
 export const otherExperience =
- "High-Agency Problem Solving, System Architecture, React Native, CSS, Angular, jQuery, Figma, Audio/Video Production, 10 Instruments.";
+ "AWS | Drizzle | Express | GraphQL | MongoDB | MUI | Next.js | Node.js | Postgres | Rails | React | Redux | Styled Components | Tailwind | TypeScript | Vercel | Vite | XState";
 
 export const leadershipAndInfluence = [
   {
