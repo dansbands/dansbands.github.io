@@ -667,20 +667,32 @@
   .subsection-header {
     cursor: pointer;
     padding-left: 5px;
-    padding-right: 40px;
-    position: relative;
+    padding-right: 10px;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .subsection-title {
     font-size: 18px;
     letter-spacing: 2px;
-    flex: 1;
+    flex: 0 1 75%;
+    max-width: 75%;
     min-width: 0;
     display: block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-left: 10px;
+  }
+
+  .subsection-header .toggle-button {
+    position: static;
+    flex-shrink: 0;
+    width: auto;
+    height: auto;
+    min-width: 20px;
+    justify-content: center;
+    margin-left: 8px;
   }
 
   .subsection-body {
