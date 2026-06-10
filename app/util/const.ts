@@ -211,7 +211,7 @@ export const icons = [
 ];
 
 export const otherExperience =
- "AWS | Drizzle | Express | GraphQL | MongoDB | MUI | Next.js | Node.js | Postgres | Rails | React | Redux | Styled Components | Tailwind | TypeScript | Vercel | Vite | XState";
+ "AWS | Drizzle | GraphQL | Tailwind | Vercel | Vite";
 
 export const leadershipAndInfluence = [
   {
