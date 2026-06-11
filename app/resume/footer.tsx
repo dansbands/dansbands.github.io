@@ -22,7 +22,7 @@ function Footer({ activeSection, onToggleSection }: FooterProps) {
         isCollapsed={activeSection !== "other-work"}
         onToggle={(sectionHeader) => onToggleSection("other-work", sectionHeader)}
       >
-        Other Work
+        Founder & Operator Experience
       </FooterSubsection>
       <FooterSubsection
         icon={faGraduationCap}
