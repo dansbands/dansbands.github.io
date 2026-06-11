@@ -626,7 +626,7 @@
     padding-left: 5px;
   }
 
-  .icon-circle-lg {
+  .icon-circle-lg, .icon-circle-md {
     height: 25px;
     width: 25px;
     & svg {
@@ -662,32 +662,38 @@
     border-right: none;
     padding: 0;
     border-bottom: 1px solid #171717;
+    cursor: pointer;
   }
 
-  .subsection-header {
-    cursor: pointer;
+  .body-header {
+    font-size: 18px;
+    letter-spacing: 2px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    margin-top: 15px;
     padding-left: 5px;
-    padding-right: 40px;
-    position: relative;
+    cursor: pointer;
   }
 
   .subsection-title {
     font-size: 18px;
     letter-spacing: 2px;
-    width: 80%;
+    width: 60%;
     display: block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-left: 10px;
+    margin-left: 15px;
     margin-right: 20px;
+  }
+
+  .subsection-header {
+    padding-left: 5px;
   }
 
   .subsection-header .toggle-button {
     position: absolute;
     right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   .subsection-body {
