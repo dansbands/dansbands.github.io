@@ -211,7 +211,7 @@ export const icons = [
 ];
 
 export const otherExperience =
- "AWS | Drizzle | GraphQL | Tailwind | Vercel | Vite";
+  "Vercel | AWS | Drizzle | Tailwind | Vite | Claude Code | Codex | GitHub Copilot | OpenClaw";
 
 export const leadershipAndInfluence = [
   {
